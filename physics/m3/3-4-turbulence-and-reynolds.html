@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.4 &amp;nbsp;Turbulent Flow and Reynolds Number</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 3</a> &nbsp;›&nbsp; M3.S4</div><header class="top"><h1>3.4 &nbsp;Turbulent Flow and Reynolds Number</h1><p class="tagline">Everything in the last two sections stops applying above a threshold, and radius starts mattering more, not less.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State the Reynolds number and identify what each term represents.</li><li>Give the approximate thresholds for laminar, transitional, and turbulent flow.</li><li>Explain why pressure drop scales with the square of flow in turbulence.</li><li>Explain why radius carries a fifth-power dependence in turbulent conditions.</li></ul></div>
+<h3>The dimensionless number</h3>
+<p>Reynolds number is the ratio of inertial forces to viscous forces in a flowing fluid. It has no units, which is what makes it a universal predictor of regime rather than a property of a particular system.</p>
+
+<div class="eq">Re &nbsp;=&nbsp; ρ v D / η
+<span class="where">ρ = density · v = mean velocity · D = diameter · η = dynamic viscosity. Numerator is inertia, denominator is viscosity. Note that <strong>density</strong> appears, not viscosity alone.</span></div>
+
+<table>
+<tr><th>Reynolds number</th><th>Regime</th></tr>
+<tr><td>Below ~2000</td><td>Laminar. Poiseuille applies.</td></tr>
+<tr><td>~2000 to ~4000</td><td>Transitional. Unstable, geometry-dependent.</td></tr>
+<tr><td>Above ~4000</td><td>Turbulent. Poiseuille does not apply.</td></tr>
+</table>
+
+<div class="box known"><span class="label">What you already have</span>
+<p>Dimensionless groups and the idea that a ratio of competing effects predicts qualitative behaviour. The only new content is the specific thresholds and the clinical geometries where the transition sits.</p></div>
+
+<h3>What changes above the transition</h3>
+<div class="chain">
+<div class="step">Flow stops moving in orderly layers. Eddies form and fluid mixes radially.</div>
+<div class="step">Energy is dissipated in the eddies rather than only in viscous shear at the wall.</div>
+<div class="step">Pressure drop stops being linear in flow and becomes roughly proportional to <strong>Q²</strong>.</div>
+<div class="step">Viscosity stops being the dominant fluid property. <strong>Density</strong> takes over.</div>
+<div class="step">The velocity profile flattens, so mean velocity approaches peak rather than being half of it.</div>
+</div>
+
+<div class="box math"><span class="label">Radius goes to the fifth power</span>
+<p>Run turbulent flow through the Darcy-Weisbach relation and the radius dependence comes out as r<sup>5</sup>, not r⁴. Turbulence makes radius matter <strong>more</strong>, which is the opposite of the usual intuition that turbulence somehow blurs the geometry.</p>
+<p>Practically: a narrowing severe enough to make flow turbulent is punished twice, once for being narrow and again for the regime change it caused.</p></div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>Gas moving through an endotracheal tube at ordinary minute ventilation is frequently transitional or frankly turbulent, particularly at the connector and at any bend. Compute it for a 8.0 mm tube at 30 L/min and Reynolds comes out near 5300. This is why measured work of breathing through a tube exceeds what a laminar calculation predicts, and why tube resistance is not simply a Poiseuille problem.</p>
+<p>Stridor is the audible signature of turbulence. Sound requires the pressure fluctuations that eddies produce, so laminar flow is silent. A quiet patient with severe obstruction may be moving no air at all.</p></div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>Turbulence is provoked by <strong>high velocity, high density, large diameter, and low viscosity</strong>. Three of those raise Re in the numerator and one lowers the denominator. The intuition that a narrow tube causes turbulence is backwards as stated: diameter is in the numerator, so a wide tube favours turbulence at a given velocity. What a stenosis does is force velocity up sharply, and the velocity term wins.</p></div>
+
+<details class="recall"><summary>Why is turbulence audible and laminar flow silent?</summary>
+<div class="ans"><p>Sound is a pressure fluctuation. Laminar flow is steady with no radial mixing, so it generates no fluctuation and no sound. Turbulent eddies produce rapid local pressure variation across a broad frequency range, which propagates as noise. Stridor, bruits, and Korotkoff sounds are all turbulence made audible.</p></div></details>
+
+<details class="recall"><summary>A tracheal stenosis narrows the airway. Diameter is in the numerator of Re, so why does turbulence increase?</summary>
+<div class="ans"><p>Because velocity is also in the numerator and rises much faster. For a fixed volumetric flow, velocity scales with 1/r², so halving the radius quadruples velocity while only halving the diameter. Net effect on Re is a doubling. The velocity term dominates.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Reynolds number represents the ratio of:</div>
+<div class="opts">
+<button class="opt">Pressure to flow</button>
+<button class="opt">Viscous to elastic forces</button>
+<button class="opt" data-correct="1">Inertial to viscous forces</button>
+<button class="opt">Density to velocity</button>
+</div>
+<div class="why" data-plain="Numerator ρvD carries inertia, denominator η carries viscosity. Being dimensionless is what lets one threshold apply across all geometries."><b>Mechanism</b>Numerator ρvD carries inertia, denominator η carries viscosity. Being dimensionless is what lets one threshold apply across all geometries.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Flow is generally considered fully turbulent above a Reynolds number of approximately:</div>
+<div class="opts">
+<button class="opt">1000</button>
+<button class="opt">10000</button>
+<button class="opt">2000</button>
+<button class="opt" data-correct="1">4000</button>
+</div>
+<div class="why" data-plain="Below about 2000 flow is laminar, between 2000 and 4000 transitional, and above 4000 fully turbulent."><b>Mechanism</b>Below about 2000 flow is laminar, between 2000 and 4000 transitional, and above 4000 fully turbulent.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">In turbulent flow, pressure drop is approximately proportional to:</div>
+<div class="opts">
+<button class="opt">The square root of flow</button>
+<button class="opt">The fourth power of flow</button>
+<button class="opt" data-correct="1">The square of flow</button>
+<button class="opt">Flow</button>
+</div>
+<div class="why" data-plain="Energy is dissipated in eddies rather than only in wall shear, which makes the relationship quadratic instead of the linear one Poiseuille describes."><b>Mechanism</b>Energy is dissipated in eddies rather than only in wall shear, which makes the relationship quadratic instead of the linear one Poiseuille describes.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Under turbulent conditions, radius carries a dependence of:</div>
+<div class="opts">
+<button class="opt">Second power</button>
+<button class="opt" data-correct="1">Fifth power</button>
+<button class="opt">Fourth power</button>
+<button class="opt">First power</button>
+</div>
+<div class="why" data-plain="From Darcy-Weisbach, turbulent flow varies with r⁵. Turbulence makes geometry matter more, not less."><b>Mechanism</b>From Darcy-Weisbach, turbulent flow varies with r⁵. Turbulence makes geometry matter more, not less.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Turbulent flow is audible whereas laminar flow is silent.</div>
+<div class="opts">
+<button class="opt" data-correct="1">True</button>
+<button class="opt">False</button>
+</div>
+<div class="why" data-plain="Sound requires pressure fluctuation. Laminar flow is steady and produces none, while turbulent eddies generate broadband pressure variation. Stridor and bruits are turbulence made audible."><b>Mechanism</b>Sound requires pressure fluctuation. Laminar flow is steady and produces none, while turbulent eddies generate broadband pressure variation. Stridor and bruits are turbulence made audible.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Which change would most increase the likelihood of turbulence?</div>
+<div class="opts">
+<button class="opt" data-correct="1">Increased gas velocity</button>
+<button class="opt">Increased gas viscosity</button>
+<button class="opt">Reduced flow rate</button>
+<button class="opt">Reduced gas density</button>
+</div>
+<div class="why" data-plain="Velocity sits in the numerator of Reynolds number. Raising viscosity or lowering density both reduce Re and favour laminar flow."><b>Mechanism</b>Velocity sits in the numerator of Reynolds number. Raising viscosity or lowering density both reduce Re and favour laminar flow.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Write the Reynolds number equation.</div>
+<div class="fib" data-answers='["re = pvd/n", "re = rho v d / eta", "re=pvd/n", "re = (rho x v x d)/eta", "rho v d / eta", "pvd/n"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Re = ρvD/η. Density rather than viscosity alone is what makes helium useful, since helium changes ρ dramatically and η barely at all."><b>Mechanism</b>Re = ρvD/η. Density rather than viscosity alone is what makes helium useful, since helium changes ρ dramatically and η barely at all.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="3-3-poiseuille.html">&larr; 3.3 Poiseuille in Full</a><span class="sp"></span><a href="3-5-density-and-viscosity.html">3.5 Density and Viscosity &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 3</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

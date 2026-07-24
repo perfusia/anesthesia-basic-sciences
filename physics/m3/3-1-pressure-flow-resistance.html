@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.1 &amp;nbsp;Pressure, Flow, and Resistance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 3</a> &nbsp;›&nbsp; M3.S1</div><header class="top"><h1>3.1 &nbsp;Pressure, Flow, and Resistance</h1><p class="tagline">The hydraulic analogy, what it buys you, and the four places it quietly stops being true.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State the relationship between pressure gradient, flow, and resistance.</li><li>Explain why resistance is a derived quantity rather than a measured one.</li><li>Compute systemic and pulmonary vascular resistance from haemodynamic data.</li><li>Name the assumptions the hydraulic analogy makes and where each fails in vivo.</li></ul></div>
+<h3>The analogy</h3>
+<p>Flow through a tube is driven by a pressure difference and opposed by resistance. Written out, it is Ohm's law with different letters.</p>
+
+<div class="eq">ΔP &nbsp;=&nbsp; Q × R
+<span class="where">ΔP = pressure gradient across the segment · Q = flow, volume per unit time · R = resistance. Compare V = IR: voltage is a potential difference, current is charge per time, resistance opposes.</span></div>
+
+<div class="box known"><span class="label">What you already have</span>
+<p>All of it, from circuit analysis. The mapping is exact for the linear case: potential difference to pressure gradient, current to volumetric flow, resistance to resistance. Series and parallel combination rules carry over unchanged, which is section 3.6.</p>
+<p>What does not carry over is the assumption that R is a constant of the component. In a circuit, a resistor's resistance is a property of the resistor. In a tube, resistance depends on the flow through it, which makes the equation implicit rather than explicit.</p></div>
+
+<h3>Resistance is calculated, never measured</h3>
+<p>There is no instrument that reads vascular resistance. It is inferred by rearranging the equation around two things you can measure, a pressure gradient and a flow.</p>
+
+<div class="eq">SVR &nbsp;=&nbsp; [(MAP − CVP) / CO] × 80
+<span class="where">Normal 800–1200 dyn·s·cm<sup>−5</sup>. The 80 converts mmHg·min·L<sup>−1</sup> into dyn·s·cm<sup>−5</sup>.</span></div>
+
+<div class="eq">PVR &nbsp;=&nbsp; [(MPAP − PAWP) / CO] × 80
+<span class="where">Normal 40–180 dyn·s·cm<sup>−5</sup>, roughly a tenth of systemic, which is the whole design of the pulmonary circulation.</span></div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>Because SVR is derived from cardiac output, an error in the CO measurement propagates directly into the resistance number. A thermodilution CO that reads falsely low produces a falsely high SVR, and the reflex is to treat a vasoconstriction that is not there. When SVR and the clinical picture disagree, distrust the derived number before the patient, and check the inputs.</p></div>
+
+<h3>Where the analogy fails</h3>
+<table>
+<tr><th>Assumption</th><th>Reality</th><th>Consequence</th></tr>
+<tr><td>Resistance is constant</td><td>Depends on flow regime, laminar or turbulent</td><td>ΔP stops being linear in Q above the transition (3.4)</td></tr>
+<tr><td>Tube is rigid</td><td>Vessels are compliant</td><td>Radius is a function of transmural pressure, so R changes with P</td></tr>
+<tr><td>Fluid is Newtonian</td><td>Blood is shear-thinning</td><td>Viscosity falls as flow rises (3.8)</td></tr>
+<tr><td>Flow is steady</td><td>Arterial flow is pulsatile</td><td>Inertia and wave reflection contribute; impedance, not resistance</td></tr>
+</table>
+
+<p>Every one of these makes the true relationship harder than ΔP = QR, and none of them makes the analogy useless. It is a first-order model. The rest of this module is a systematic tour of the corrections.</p>
+
+<details class="recall"><summary>Why is pulmonary vascular resistance roughly a tenth of systemic when both circulations carry the same cardiac output?</summary>
+<div class="ans"><p>Because the driving gradient is roughly a tenth. Mean pulmonary artery pressure is around 15 mmHg against a wedge of 8, so a gradient near 7, while the systemic side runs a mean of 93 against a CVP of 5, a gradient near 88. Same Q, one twelfth the ΔP, so one twelfth the R. The pulmonary bed achieves it with short, thin-walled, highly compliant, massively parallel vessels.</p></div></details>
+
+<details class="recall"><summary>A patient's SVR is calculated at 1800 with a cardiac output of 2.1 L/min. What should you check before treating the number?</summary>
+<div class="ans"><p>The cardiac output. SVR is inversely proportional to CO, so a low CO drives a high SVR arithmetically whether or not any vasoconstriction exists. Confirm the CO by an independent method before giving a vasodilator on the strength of a derived value.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Vascular resistance is best described as:</div>
+<div class="opts">
+<button class="opt">Measured directly by pulmonary artery catheter</button>
+<button class="opt">Independent of cardiac output</button>
+<button class="opt" data-correct="1">Calculated from pressure gradient and flow</button>
+<button class="opt">A fixed property of the vascular bed</button>
+</div>
+<div class="why" data-plain="No instrument reads resistance. It is derived by rearranging ΔP = QR around two measured quantities, which means measurement error in either propagates into it."><b>Mechanism</b>No instrument reads resistance. It is derived by rearranging ΔP = QR around two measured quantities, which means measurement error in either propagates into it.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">A patient has MAP 90, CVP 10, cardiac output 5 L/min. SVR is closest to:</div>
+<div class="opts">
+<button class="opt">160 dyn·s·cm⁻⁵</button>
+<button class="opt">1440 dyn·s·cm⁻⁵</button>
+<button class="opt">800 dyn·s·cm⁻⁵</button>
+<button class="opt" data-correct="1">1280 dyn·s·cm⁻⁵</button>
+</div>
+<div class="why" data-plain="(90 − 10) / 5 × 80 = 16 × 80 = 1280. Omitting the CVP subtraction gives 1440, which is the intended distractor."><b>Mechanism</b>(90 − 10) / 5 × 80 = 16 × 80 = 1280. Omitting the CVP subtraction gives 1440, which is the intended distractor.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">An erroneously low cardiac output measurement will cause calculated SVR to:</div>
+<div class="opts">
+<button class="opt">Become indeterminate</button>
+<button class="opt">Read falsely low</button>
+<button class="opt">Remain accurate</button>
+<button class="opt" data-correct="1">Read falsely high</button>
+</div>
+<div class="why" data-plain="SVR is inversely proportional to CO. A low CO in the denominator inflates the result, which can prompt treatment of a vasoconstriction that does not exist."><b>Mechanism</b>SVR is inversely proportional to CO. A low CO in the denominator inflates the result, which can prompt treatment of a vasoconstriction that does not exist.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">The hydraulic analogy assumes resistance is independent of the flow through the tube.</div>
+<div class="opts">
+<button class="opt" data-correct="1">True</button>
+<button class="opt">False</button>
+</div>
+<div class="why" data-plain="It does assume that, and the assumption fails above the laminar-turbulent transition, where pressure drop scales with the square of flow rather than linearly."><b>Mechanism</b>It does assume that, and the assumption fails above the laminar-turbulent transition, where pressure drop scales with the square of flow rather than linearly.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Pulmonary vascular resistance is roughly one tenth of systemic primarily because:</div>
+<div class="opts">
+<button class="opt">Pulmonary vessels are longer and wider</button>
+<button class="opt">Pulmonary blood viscosity is lower</button>
+<button class="opt" data-correct="1">The pulmonary pressure gradient is far smaller</button>
+<button class="opt">Pulmonary blood flow is far greater</button>
+</div>
+<div class="why" data-plain="Both circulations carry the same cardiac output, so with Q equal the resistance ratio is set entirely by the gradient. Pulmonary runs about 7 mmHg against roughly 88 systemic."><b>Mechanism</b>Both circulations carry the same cardiac output, so with Q equal the resistance ratio is set entirely by the gradient. Pulmonary runs about 7 mmHg against roughly 88 systemic.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Give the equation for systemic vascular resistance including the conversion factor.</div>
+<div class="fib" data-answers='["(map - cvp)/co x 80", "(map-cvp)/co x 80", "((map - cvp)/co) x 80", "map - cvp / co x 80", "(map - cvp) / co * 80", "80 x (map - cvp)/co"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Rearranged from ΔP = QR, with 80 converting mmHg·min·L⁻¹ into dyn·s·cm⁻⁵. Forgetting to subtract CVP is the standard error."><b>Mechanism</b>Rearranged from ΔP = QR, with 80 converting mmHg·min·L⁻¹ into dyn·s·cm⁻⁵. Forgetting to subtract CVP is the standard error.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><span class="sp"></span><a href="3-2-laminar-flow.html">3.2 Laminar Flow &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 3</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

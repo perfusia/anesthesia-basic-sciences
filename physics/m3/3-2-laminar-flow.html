@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.2 &amp;nbsp;Laminar Flow and the Parabolic Velocity Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 3</a> &nbsp;›&nbsp; M3.S2</div><header class="top"><h1>3.2 &nbsp;Laminar Flow and the Parabolic Velocity Profile</h1><p class="tagline">Where the fourth power actually comes from. Two factors of r squared, not one arbitrary exponent.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Describe laminar flow and state the no-slip condition.</li><li>Derive the parabolic velocity profile from the balance of pressure and shear.</li><li>Show that mean velocity is half peak velocity in laminar flow.</li><li>Derive the r⁴ dependence as the product of two independent r² terms.</li></ul></div>
+<h3>What laminar means</h3>
+<p>Fluid moves in concentric cylindrical layers that slide over one another without mixing. Each layer has its own velocity, and adjacent layers exert viscous shear on each other. Nothing crosses between them.</p>
+
+<p>At the wall, the fluid velocity is <strong>zero</strong>. This is the <em class="term">no-slip condition</em>, and it is the boundary condition the whole derivation hangs on. Fluid in contact with a solid surface does not move relative to it.</p>
+
+<h3>The derivation</h3>
+<p>Consider a cylindrical shell of fluid at radius r inside a tube of radius R. Two forces act on it in steady flow, and they must balance.</p>
+
+<div class="chain">
+<div class="step">Pressure difference across the ends of the cylinder pushes it forward: force = ΔP × πr².</div>
+<div class="step">Viscous shear at its outer surface drags it back: force = η × (dv/dr) × 2πrL.</div>
+<div class="step">Set them equal and rearrange: dv/dr = −ΔP·r / (2ηL).</div>
+<div class="step">Integrate with respect to r, applying v = 0 at r = R.</div>
+<div class="step">v(r) = (ΔP / 4ηL)(R² − r²).</div>
+</div>
+
+<div class="eq">v(r) &nbsp;=&nbsp; (ΔP / 4ηL)(R² − r²)
+<span class="where">A parabola. Zero at the wall where r = R, maximum at the axis where r = 0, giving v<sub>max</sub> = ΔP·R² / 4ηL.</span></div>
+
+<div class="box math"><span class="label">Mean velocity is exactly half peak velocity</span>
+<p>Integrating the parabolic profile over the cross-section and dividing by area gives a mean of exactly v<sub>max</sub>/2. This is not an approximation, it is a property of the parabola. It matters clinically because a Doppler probe on the axis of a vessel reads peak velocity, and converting that to volumetric flow requires halving it. Reporting peak velocity as if it were mean overestimates flow by a factor of two.</p></div>
+
+<h3>Where the fourth power comes from</h3>
+<p>Flow is mean velocity times cross-sectional area. Both terms carry an r².</p>
+
+<div class="chain">
+<div class="step">Cross-sectional area A = πr². That is the first r².</div>
+<div class="step">Mean velocity = v<sub>max</sub>/2 = ΔP·R² / 8ηL. That is the second r².</div>
+<div class="step">Q = A × v̄ = πr² × (ΔP·r² / 8ηL) = πΔP·r⁴ / 8ηL.</div>
+</div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>The second r² is the one people miss, and it is the interesting one. Widening the tube does not merely give the fluid more room, it makes the fluid <strong>move faster for the same pressure gradient</strong>, because the same wall shear is now distributed across more fluid. Area alone would give r². The velocity effect doubles the exponent.</p>
+<p>So doubling the radius gives 4× the area and 4× the mean velocity, and 4 × 4 = 16.</p></div>
+
+<details class="recall"><summary>Why is velocity zero at the wall rather than merely slow?</summary>
+<div class="ans"><p>The no-slip condition. At the molecular level, fluid molecules adjacent to the surface are bound by intermolecular forces to the solid and share its velocity, which for a stationary tube is zero. This is an empirical boundary condition that holds for essentially all ordinary fluids, and every viscous flow derivation depends on it.</p></div></details>
+
+<details class="recall"><summary>An ultrasound reads a peak velocity of 120 cm/s in a vessel with laminar flow. What is the mean velocity?</summary>
+<div class="ans"><p>60 cm/s, exactly half, because the profile is parabolic. Using 120 to compute volumetric flow would overestimate it twofold. In turbulent flow the profile is much flatter and mean approaches peak, so the correction factor is regime-dependent.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">The no-slip condition states that fluid velocity at the tube wall is:</div>
+<div class="opts">
+<button class="opt" data-correct="1">Zero</button>
+<button class="opt">Equal to the axial velocity</button>
+<button class="opt">Maximum</button>
+<button class="opt">Half the mean</button>
+</div>
+<div class="why" data-plain="Fluid molecules in contact with a solid surface share its velocity. This boundary condition is what makes the velocity profile parabolic rather than flat."><b>Mechanism</b>Fluid molecules in contact with a solid surface share its velocity. This boundary condition is what makes the velocity profile parabolic rather than flat.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">In fully developed laminar flow, mean velocity relative to peak velocity is:</div>
+<div class="opts">
+<button class="opt">Equal</button>
+<button class="opt" data-correct="1">Exactly one half</button>
+<button class="opt">Approximately three quarters</button>
+<button class="opt">Exactly one quarter</button>
+</div>
+<div class="why" data-plain="Integrating the parabolic profile across the cross-section gives exactly half the axial maximum. It is a mathematical property of the parabola, not an approximation."><b>Mechanism</b>Integrating the parabolic profile across the cross-section gives exactly half the axial maximum. It is a mathematical property of the parabola, not an approximation.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">The r⁴ term in Poiseuille's law arises from:</div>
+<div class="opts">
+<button class="opt">Squaring the radius twice in the shear term</button>
+<button class="opt">Area contributing r⁴ directly</button>
+<button class="opt">The relationship between radius and viscosity</button>
+<button class="opt" data-correct="1">Area and mean velocity each contributing r²</button>
+</div>
+<div class="why" data-plain="Cross-sectional area gives one r², and mean velocity rising with r² for a given gradient gives the second. Their product is r⁴."><b>Mechanism</b>Cross-sectional area gives one r², and mean velocity rising with r² for a given gradient gives the second. Their product is r⁴.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Widening a tube increases flow only by providing greater cross-sectional area.</div>
+<div class="opts">
+<button class="opt">True</button>
+<button class="opt" data-correct="1">False</button>
+</div>
+<div class="why" data-plain="It also raises mean velocity for the same pressure gradient, because wall shear is distributed across more fluid. That second effect is what takes the exponent from 2 to 4."><b>Mechanism</b>It also raises mean velocity for the same pressure gradient, because wall shear is distributed across more fluid. That second effect is what takes the exponent from 2 to 4.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Doppler measurement of peak velocity overestimates volumetric flow in laminar conditions by a factor of:</div>
+<div class="opts">
+<button class="opt">Four</button>
+<button class="opt">One and a half</button>
+<button class="opt" data-correct="1">Two</button>
+<button class="opt">Sixteen</button>
+</div>
+<div class="why" data-plain="Peak is twice mean in a parabolic profile. Using peak where mean is required doubles the computed flow."><b>Mechanism</b>Peak is twice mean in a parabolic profile. Using peak where mean is required doubles the computed flow.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Write the laminar velocity profile v(r) in terms of ΔP, η, L, R and r.</div>
+<div class="fib" data-answers='["(dp/4nl)(r2 - r2)", "dp/(4nl) x (r^2 - r^2)", "(deltap/4etal)(r^2-r^2)", "dp(r^2-r^2)/4nl", "(dp/4nl)(r^2-r^2)"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="v(r) = (ΔP/4ηL)(R² − r²), obtained by balancing the pressure force on a fluid cylinder against viscous shear at its surface and integrating with v = 0 at the wall."><b>Mechanism</b>v(r) = (ΔP/4ηL)(R² − r²), obtained by balancing the pressure force on a fluid cylinder against viscous shear at its surface and integrating with v = 0 at the wall.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="3-1-pressure-flow-resistance.html">&larr; 3.1 Pressure, Flow, Resistance</a><span class="sp"></span><a href="3-3-poiseuille.html">3.3 Poiseuille in Full &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 3</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

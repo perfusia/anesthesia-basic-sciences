@@ -28,7 +28,7 @@ has a recency problem.
 |---|---|---|---|
 | 1 | Measurement, Units, and the Gas Laws | 8 | 63 |
 | 2 | Vapour, Solubility, and Partition Coefficients | 9 | 72 |
-| 3 | Fluid Dynamics and Flow | — | — |
+| 3 | Fluid Dynamics and Flow | 10 | 76 |
 | 4 | The Anesthesia Delivery System | — | — |
 | 5 | Physics of Monitoring | — | — |
 | 6 | Electricity, Safety, and Hazards in the OR | — | — |
@@ -50,20 +50,21 @@ has a recency problem.
 │   │   ├── index.html              module landing
 │   │   ├── 1-1-units-and-dimensional-analysis.html
 │   │   └── ...
-│   └── m2/
+│   ├── m2/
+│   └── m3/
 └── pharmacology/
     └── index.html                  Track II landing
 ```
 
 Tracks own their own path but share one engine. Adding a module means dropping a data
-file in and registering it; nothing else changes.
+file in and registering it in `site.py`; nothing else changes.
 
 ## Deploying to GitHub Pages
 
 ```bash
 git init
 git add .
-git commit -m "modules 1-2"
+git commit -m "modules 1-3"
 git branch -M main
 git remote add origin https://github.com/<user>/anesthesia-basic-sciences.git
 git push -u origin main
@@ -78,7 +79,6 @@ Live at `https://<user>.github.io/anesthesia-basic-sciences/`.
 **Every path is relative.** A project site serves from `username.github.io/<repo>/`, not
 the domain root, so `/assets/engine.css` would resolve to `username.github.io/assets/`
 and 404. Everything here uses `../` or `../../`, which works on Pages and off disk alike.
-The generator fails the build if a root-absolute path appears.
 
 **Every path is lowercase.** GitHub Pages is case-sensitive, macOS is not. Mixed-case
 filenames produce a site that works locally and 404s once deployed.
@@ -93,6 +93,8 @@ Add a `CNAME` file at the repo root with the domain, then point a DNS `CNAME` re
 ## Rebuilding
 
 Content lives in `m<N>_data.py` as plain dicts. Registration lives in `site.py`.
+The generator clears the output directory on each run and regenerates everything,
+including this file.
 
 ```bash
 python3 site.py             # shared assets (default, for hosting)
@@ -103,7 +105,7 @@ Use `--inline` only for pages that must work standalone outside the folder. For 
 the default is correct: one cached stylesheet beats duplicating it into every page.
 
 The generator balances correct-answer positions across the whole build so the key does
-not cluster on a letter. Current spread: A=25% B=26% C=24% D=24%.
+not cluster on a letter. Current spread: A=25% B=25% C=24% D=24%.
 
 ## Quiz behaviour
 

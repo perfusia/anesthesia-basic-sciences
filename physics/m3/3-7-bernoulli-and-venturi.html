@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.7 &amp;nbsp;Bernoulli, Venturi, and the Coandă Effect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 3</a> &nbsp;›&nbsp; M3.S7</div><header class="top"><h1>3.7 &nbsp;Bernoulli, Venturi, and the Coandă Effect</h1><p class="tagline">Conservation of energy applied to a moving fluid, and the three devices in every operating room that exploit it.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State Bernoulli's principle as an energy conservation statement.</li><li>Explain entrainment via the Venturi effect and compute a fixed FiO2 device's behaviour.</li><li>Describe the Coandă effect and its clinical consequences.</li><li>Apply the modified Bernoulli equation to echocardiographic pressure gradients.</li></ul></div>
+<h3>Bernoulli as energy conservation</h3>
+<p>For an ideal fluid in steady flow, the total energy per unit volume is constant along a streamline. That energy has three forms, and they trade against one another.</p>
+
+<div class="eq">P &nbsp;+&nbsp; ½ρv² &nbsp;+&nbsp; ρgh &nbsp;=&nbsp; constant
+<span class="where">P = static pressure · ½ρv² = kinetic energy per unit volume, the dynamic pressure · ρgh = potential energy per unit volume</span></div>
+
+<div class="box known"><span class="label">What you already have</span>
+<p>This is conservation of mechanical energy with each term divided by volume. If you have done any fluid mechanics, the only new material here is which clinical device exploits which term.</p></div>
+
+<p>The consequence that matters: at constant height, <strong>where velocity rises, static pressure falls</strong>. Fluid speeding through a constriction has converted pressure energy into kinetic energy.</p>
+
+<h3>Venturi and entrainment</h3>
+<div class="chain">
+<div class="step">Gas flows through a constriction. Continuity requires velocity to rise as area falls.</div>
+<div class="step">By Bernoulli, static pressure at the constriction drops below ambient.</div>
+<div class="step">A side port at that point sees a negative pressure relative to the room.</div>
+<div class="step">Room air is drawn in, or <em class="term">entrained</em>, through the port.</div>
+<div class="step">The entrainment ratio is fixed by the geometry, so the delivered mixture is predictable.</div>
+</div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>A Venturi mask delivers a <strong>fixed</strong> F<sub>I</sub>O<sub>2</sub> precisely because the entrainment ratio is geometric. A 24% valve entrains about 25 litres of air per litre of oxygen; a 60% valve entrains about 1 litre per litre. Because total delivered flow exceeds the patient's peak inspiratory flow, dilution by room air does not occur and the F<sub>I</sub>O<sub>2</sub> holds regardless of respiratory pattern. That is the entire reason it is used in patients where a precise, modest oxygen concentration matters.</p>
+<p>The same principle drives jet nebulisers, Venturi suction devices, and jet ventilation, where a high-velocity oxygen jet entrains additional gas to augment tidal volume.</p></div>
+
+<h3>The modified Bernoulli equation</h3>
+<p>In echocardiography, dropping the negligible terms and substituting blood density gives a usable clinical shortcut.</p>
+
+<div class="eq">ΔP &nbsp;≈&nbsp; 4v²
+<span class="where">ΔP in mmHg, v = peak velocity across the lesion in m/s. Estimating pulmonary artery systolic pressure from a tricuspid regurgitant jet is the everyday application.</span></div>
+
+<p>A TR jet velocity of 3.5 m/s implies a right ventricle to right atrium gradient of 4 × 12.25 ≈ 49 mmHg. Add an estimated right atrial pressure and you have a non-invasive PASP.</p>
+
+<h3>The Coandă effect</h3>
+<p>A fluid jet tends to adhere to a nearby curved surface rather than travelling in a straight line, because entrainment on the surface side is restricted and the resulting pressure difference bends the jet toward the wall.</p>
+
+<table>
+<tr><th>Setting</th><th>Consequence</th></tr>
+<tr><td>Airway bifurcations</td><td>Gas preferentially follows one branch, producing uneven distribution and contributing to asymmetric mucus plugging</td></tr>
+<tr><td>Vascular bifurcations</td><td>Uneven flow division, relevant to atheroma distribution and to eccentric regurgitant jets</td></tr>
+<tr><td>Echocardiography</td><td>A wall-hugging regurgitant jet appears smaller than it is, so eccentric jets are systematically underestimated in severity</td></tr>
+<tr><td>Fluidic ventilators</td><td>Deliberately exploited for valveless flow switching</td></tr>
+</table>
+
+<details class="recall"><summary>Why does a Venturi mask deliver a reliable FiO₂ when a simple face mask does not?</summary>
+<div class="ans"><p>Total flow. The Venturi device generates a delivered flow that exceeds the patient's peak inspiratory flow, so the patient never has to draw supplementary room air around the mask. A simple mask delivers less than peak inspiratory flow, so entrained room air dilutes it by a variable amount depending on respiratory pattern, and the actual F<sub>I</sub>O<sub>2</sub> becomes unpredictable.</p></div></details>
+
+<details class="recall"><summary>An eccentric mitral regurgitant jet hugging the atrial wall is reported as mild. Why be sceptical?</summary>
+<div class="ans"><p>The Coandă effect. A wall-adherent jet spreads less and produces a smaller colour Doppler area than a central jet of identical regurgitant volume, so area-based grading systematically underestimates eccentric jets. Volumetric or PISA methods are less vulnerable.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">As fluid velocity increases through a constriction, static pressure:</div>
+<div class="opts">
+<button class="opt">Rises</button>
+<button class="opt">Is unchanged</button>
+<button class="opt">Rises then falls</button>
+<button class="opt" data-correct="1">Falls</button>
+</div>
+<div class="why" data-plain="Total energy is conserved along a streamline, so a rise in the kinetic term ½ρv² must be paid for by a fall in the static pressure term."><b>Mechanism</b>Total energy is conserved along a streamline, so a rise in the kinetic term ½ρv² must be paid for by a fall in the static pressure term.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">A Venturi mask delivers a fixed FiO2 because:</div>
+<div class="opts">
+<button class="opt">Exhaled gas is scavenged from the reservoir</button>
+<button class="opt">The mask seals completely against the face</button>
+<button class="opt">The oxygen flow rate is precisely regulated</button>
+<button class="opt" data-correct="1">Total delivered flow exceeds peak inspiratory flow</button>
+</div>
+<div class="why" data-plain="With delivered flow exceeding the patient&#x27;s demand, no room air is entrained around the mask, so the geometrically fixed entrainment ratio determines the delivered concentration regardless of breathing pattern."><b>Mechanism</b>With delivered flow exceeding the patient's demand, no room air is entrained around the mask, so the geometrically fixed entrainment ratio determines the delivered concentration regardless of breathing pattern.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">A tricuspid regurgitant jet peaks at 3.0 m/s. The estimated RV to RA gradient is:</div>
+<div class="opts">
+<button class="opt">24 mmHg</button>
+<button class="opt">12 mmHg</button>
+<button class="opt" data-correct="1">36 mmHg</button>
+<button class="opt">9 mmHg</button>
+</div>
+<div class="why" data-plain="The modified Bernoulli equation gives ΔP ≈ 4v² = 4 × 9 = 36 mmHg. Adding estimated right atrial pressure yields pulmonary artery systolic pressure."><b>Mechanism</b>The modified Bernoulli equation gives ΔP ≈ 4v² = 4 × 9 = 36 mmHg. Adding estimated right atrial pressure yields pulmonary artery systolic pressure.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">The Coandă effect describes a fluid jet's tendency to:</div>
+<div class="opts">
+<button class="opt" data-correct="1">Adhere to an adjacent curved surface</button>
+<button class="opt">Accelerate through a narrowing lumen</button>
+<button class="opt">Entrain surrounding fluid through a side port</button>
+<button class="opt">Break into turbulent eddies at a constriction</button>
+</div>
+<div class="why" data-plain="Restricted entrainment on the surface side creates a pressure difference that bends the jet toward the wall. Entrainment through a side port is the Venturi effect, a separate phenomenon."><b>Mechanism</b>Restricted entrainment on the surface side creates a pressure difference that bends the jet toward the wall. Entrainment through a side port is the Venturi effect, a separate phenomenon.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">An eccentric wall-hugging regurgitant jet tends to be underestimated on colour Doppler.</div>
+<div class="opts">
+<button class="opt">False</button>
+<button class="opt" data-correct="1">True</button>
+</div>
+<div class="why" data-plain="Coandă adherence limits jet spread, producing a smaller colour area than a central jet of the same regurgitant volume. Area-based grading therefore understates eccentric lesions."><b>Mechanism</b>Coandă adherence limits jet spread, producing a smaller colour area than a central jet of the same regurgitant volume. Area-based grading therefore understates eccentric lesions.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Write the modified Bernoulli equation used in echocardiography.</div>
+<div class="fib" data-answers='["dp = 4v2", "dp = 4v^2", "deltap = 4v^2", "p = 4v2", "4v^2", "dp=4v2"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="ΔP ≈ 4v², with pressure in mmHg and peak velocity in m/s. It is Bernoulli with the negligible terms dropped and blood density substituted into the constant."><b>Mechanism</b>ΔP ≈ 4v², with pressure in mmHg and peak velocity in m/s. It is Bernoulli with the negligible terms dropped and blood density substituted into the constant.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="3-6-series-and-parallel.html">&larr; 3.6 Series and Parallel</a><span class="sp"></span><a href="3-8-non-newtonian-blood.html">3.8 Non-Newtonian Blood &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 3</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

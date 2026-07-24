@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.5 &amp;nbsp;Density Against Viscosity, and Heliox</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 3</a> &nbsp;›&nbsp; M3.S5</div><header class="top"><h1>3.5 &nbsp;Density Against Viscosity, and Heliox</h1><p class="tagline">Which fluid property governs depends entirely on the regime, and that is the whole basis of a therapy that only works in one place.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State which fluid property governs resistance in laminar and in turbulent flow.</li><li>Explain the mechanism by which heliox reduces airway resistance.</li><li>Explain why heliox helps in large-airway obstruction and not in asthma.</li><li>State the oxygenation constraint that limits heliox use.</li></ul></div>
+<h3>The regime decides which property matters</h3>
+<table>
+<tr><th></th><th>Laminar</th><th>Turbulent</th></tr>
+<tr><td>Governing property</td><td>Viscosity (η)</td><td>Density (ρ)</td></tr>
+<tr><td>Appears in</td><td>Poiseuille denominator</td><td>Reynolds numerator, Darcy-Weisbach</td></tr>
+<tr><td>Pressure drop scales as</td><td>Q</td><td>Q²</td></tr>
+<tr><td>Radius dependence</td><td>r⁴</td><td>r⁵</td></tr>
+</table>
+
+<p>This is not a subtlety. It means an intervention that changes density will do essentially nothing in laminar conditions and a great deal in turbulent ones, and that single fact determines where heliox works.</p>
+
+<h3>Helium</h3>
+<table>
+<tr><th>Property</th><th>Nitrogen</th><th>Helium</th><th>Ratio</th></tr>
+<tr><td>Density</td><td>1.25 g/L</td><td>0.18 g/L</td><td>~1/7</td></tr>
+<tr><td>Viscosity</td><td>17.8 μPa·s</td><td>19.9 μPa·s</td><td>~1.1</td></tr>
+</table>
+
+<p>Helium is roughly seven times less dense than nitrogen and very slightly <em>more</em> viscous. That combination is the entire pharmacology of the gas.</p>
+
+<div class="chain">
+<div class="step">Substituting helium for nitrogen cuts density by a large factor.</div>
+<div class="step">Reynolds number falls proportionally, since ρ is in the numerator.</div>
+<div class="step">Flow that was turbulent may return to laminar, eliminating the Q² penalty entirely.</div>
+<div class="step">Where flow stays turbulent, resistance still falls because density governs it.</div>
+<div class="step">Where flow was already laminar, nothing improves. Viscosity governs there, and helium's viscosity is marginally worse.</div>
+</div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p><strong>Heliox helps:</strong> upper and large airway obstruction. Stridor, tracheal stenosis, post-extubation oedema, tumour, foreign body, croup. These are high-velocity turbulent lesions in large conduits, exactly where density governs.</p>
+<p><strong>Heliox does little:</strong> asthma and small airway disease. Flow in the distal airways is already laminar because velocity is low and total cross-sectional area is enormous. Viscosity governs there, and helium is not less viscous.</p>
+<p>The distinction is a standard exam question, and the reasoning is entirely contained in the two equations from 3.3 and 3.4.</p></div>
+
+<div class="box trap"><span class="label">The constraint everyone forgets</span>
+<p>Heliox is a mixture, and the benefit comes from the helium fraction. Commercial blends are 80:20 or 70:30 helium to oxygen, which caps <strong>F<sub>I</sub>O<sub>2</sub> at 0.20 to 0.30</strong>. Below roughly 60% helium the density advantage largely disappears.</p>
+<p>So heliox is unusable in a patient who needs a high F<sub>I</sub>O<sub>2</sub>. It is a therapy for obstruction, not for hypoxaemia, and the two frequently coexist. If the patient needs oxygen more than they need reduced resistance, heliox is the wrong choice.</p></div>
+
+<details class="recall"><summary>A patient has severe post-extubation stridor and an SpO₂ of 88% on 60% oxygen. Is heliox indicated?</summary>
+<div class="ans"><p>The lesion is right for heliox but the oxygen requirement forbids it. An 80:20 mixture would drop F<sub>I</sub>O<sub>2</sub> to 0.20 and the patient would desaturate further. Secure the airway or treat the oedema. Heliox is for obstruction with adequate oxygenation, and this patient has neither.</p></div></details>
+
+<details class="recall"><summary>Why does helium's slightly higher viscosity not undermine its use?</summary>
+<div class="ans"><p>Because it is only deployed where turbulence dominates, and in turbulent flow viscosity is not the governing property. The tiny viscosity penalty is irrelevant against a sevenfold density advantage. In laminar flow the calculus reverses, which is precisely why it fails in small airway disease.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">In turbulent flow, resistance is governed principally by:</div>
+<div class="opts">
+<button class="opt">Surface tension</button>
+<button class="opt">Viscosity</button>
+<button class="opt" data-correct="1">Density</button>
+<button class="opt">Compressibility</button>
+</div>
+<div class="why" data-plain="Density carries the inertial term that dominates turbulent energy dissipation. Viscosity governs only in laminar conditions, where Poiseuille applies."><b>Mechanism</b>Density carries the inertial term that dominates turbulent energy dissipation. Viscosity governs only in laminar conditions, where Poiseuille applies.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Heliox reduces airway resistance principally by:</div>
+<div class="opts">
+<button class="opt">Reducing airway oedema through a direct effect</button>
+<button class="opt" data-correct="1">Lowering gas density and therefore Reynolds number</button>
+<button class="opt">Lowering gas viscosity and therefore Poiseuille resistance</button>
+<button class="opt">Increasing the partial pressure of oxygen delivered</button>
+</div>
+<div class="why" data-plain="Helium is about seven times less dense than nitrogen. Reducing density lowers Reynolds number, which can restore laminar flow or reduce turbulent resistance."><b>Mechanism</b>Helium is about seven times less dense than nitrogen. Reducing density lowers Reynolds number, which can restore laminar flow or reduce turbulent resistance.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Heliox is least likely to help in:</div>
+<div class="opts">
+<button class="opt">Upper airway tumour obstruction</button>
+<button class="opt">Tracheal stenosis</button>
+<button class="opt">Post-extubation stridor</button>
+<button class="opt" data-correct="1">Small airway disease such as asthma</button>
+</div>
+<div class="why" data-plain="Distal airway flow is already laminar because of low velocity and enormous total cross-sectional area. Viscosity governs there, and helium is marginally more viscous, not less."><b>Mechanism</b>Distal airway flow is already laminar because of low velocity and enormous total cross-sectional area. Viscosity governs there, and helium is marginally more viscous, not less.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Helium has a lower viscosity than nitrogen.</div>
+<div class="opts">
+<button class="opt">True</button>
+<button class="opt" data-correct="1">False</button>
+</div>
+<div class="why" data-plain="Helium is slightly more viscous. Its clinical value comes entirely from being about seven times less dense, which is why it only helps where turbulence dominates."><b>Mechanism</b>Helium is slightly more viscous. Its clinical value comes entirely from being about seven times less dense, which is why it only helps where turbulence dominates.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">The principal limitation on heliox therapy is that it:</div>
+<div class="opts">
+<button class="opt" data-correct="1">Caps deliverable FiO2 at 0.20 to 0.30</button>
+<button class="opt">Requires continuous end-tidal monitoring</button>
+<button class="opt">Cannot be delivered through a standard ventilator</button>
+<button class="opt">Causes rapid diffusion into closed air spaces</button>
+</div>
+<div class="why" data-plain="The density benefit requires a helium fraction of at least about 60%, which limits the oxygen fraction. It treats obstruction, not hypoxaemia."><b>Mechanism</b>The density benefit requires a helium fraction of at least about 60%, which limits the oxygen fraction. It treats obstruction, not hypoxaemia.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Approximately how many times less dense is helium than nitrogen?</div>
+<div class="fib" data-answers='["7", "seven", "7x", "~7", "7 times"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Roughly sevenfold, 0.18 g/L against 1.25 g/L. That ratio translates directly into a proportional reduction in Reynolds number."><b>Mechanism</b>Roughly sevenfold, 0.18 g/L against 1.25 g/L. That ratio translates directly into a proportional reduction in Reynolds number.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="3-4-turbulence-and-reynolds.html">&larr; 3.4 Turbulence and Reynolds</a><span class="sp"></span><a href="3-6-series-and-parallel.html">3.6 Series and Parallel &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 3</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

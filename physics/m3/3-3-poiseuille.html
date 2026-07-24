@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.3 &amp;nbsp;Poiseuille&#x27;s Law in Full</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 3</a> &nbsp;›&nbsp; M3.S3</div><header class="top"><h1>3.3 &nbsp;Poiseuille's Law in Full</h1><p class="tagline">Radius gets all the attention. Length and viscosity are in the equation too, and they are the ones you can actually change.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State Poiseuille's law and identify the dependence of each term.</li><li>List the four assumptions the law requires.</li><li>Apply it to intravenous access and endotracheal tube selection.</li><li>Explain why a peripheral cannula outperforms a central line for volume resuscitation.</li></ul></div>
+<div class="eq">Q &nbsp;=&nbsp; πΔP r⁴ / 8ηL
+<span class="where">Q = flow · ΔP = pressure gradient · r = radius · η = dynamic viscosity · L = length. Resistance is the reciprocal: R = 8ηL / πr⁴.</span></div>
+
+<h3>Each term, and how hard it bites</h3>
+<table>
+<tr><th>Term</th><th>Dependence</th><th>Double it and flow…</th></tr>
+<tr><td>Radius</td><td>Fourth power</td><td>Rises 16-fold</td></tr>
+<tr><td>Pressure gradient</td><td>Linear</td><td>Doubles</td></tr>
+<tr><td>Length</td><td>Inverse linear</td><td>Halves</td></tr>
+<tr><td>Viscosity</td><td>Inverse linear</td><td>Halves</td></tr>
+</table>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>Radius dominates, which is why it is the only term most people recall. But radius is usually fixed by anatomy or by the largest cannula that will go in, whereas <strong>length</strong> and <strong>pressure gradient</strong> are frequently under your direct control. Shortening tubing and pressurising a bag are interventions. Wishing for a larger vein is not.</p></div>
+
+<h3>The intravenous access case</h3>
+<p>This is the canonical application and the intuition runs backwards for most people.</p>
+
+<div class="chain">
+<div class="step">A 16-gauge peripheral cannula is short, perhaps 45 mm, with a lumen matching its stated gauge.</div>
+<div class="step">A 16-gauge triple-lumen central catheter is long, perhaps 200 mm, and each individual lumen is far narrower than the catheter's outer gauge implies.</div>
+<div class="step">Length alone imposes a fourfold penalty.</div>
+<div class="step">The narrower lumen imposes a fourth-power penalty on top of that.</div>
+<div class="step">The peripheral line wins decisively, often by an order of magnitude.</div>
+</div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>For rapid volume resuscitation you want <strong>short and fat</strong>, not central. Two large peripheral cannulae beat a triple-lumen central line, and a dedicated large-bore introducer sheath beats both. The same reasoning condemns long micro-bore extension sets and unnecessary in-line filters, each of which quietly adds length and reduces radius on a line you are counting on.</p>
+<p>Central access is for drug delivery, monitoring, and vesicant infusion. It is not a resuscitation line, and the belief that it is has cost patients.</p></div>
+
+<h3>The endotracheal tube case</h3>
+<p>Resistance scales with the inverse fourth power of radius, so tube size choices compound sharply.</p>
+
+<div class="eq">R<sub>6.0</sub> / R<sub>8.0</sub> &nbsp;=&nbsp; (4.0 / 3.0)<sup>4</sup> &nbsp;=&nbsp; 3.16
+<span class="where">A 6.0 mm tube presents more than three times the resistance of an 8.0 mm tube. In a spontaneously breathing patient, that resistance is work the patient performs.</span></div>
+
+<h3>The four assumptions</h3>
+<ol>
+<li><strong>Newtonian fluid.</strong> Viscosity independent of shear rate. Blood is not (3.8).</li>
+<li><strong>Rigid tube.</strong> Radius fixed. Vessels are compliant.</li>
+<li><strong>Laminar flow.</strong> Fails above the Reynolds transition (3.4).</li>
+<li><strong>Steady, fully developed flow.</strong> Not pulsatile, and past the entrance length where the parabolic profile has established.</li>
+</ol>
+
+<p>All four are violated somewhere in the circulation, which is why Poiseuille is a good model of the vasculature rather than a description of it.</p>
+
+<details class="recall"><summary>You need to give 2 litres fast and have both a 20 g peripheral and a triple-lumen central. Which, and what else do you do?</summary>
+<div class="ans"><p>Neither is adequate. Place a large-bore peripheral, 16 g or 14 g, or an introducer sheath. Meanwhile use what you have with the levers Poiseuille gives you: pressurise the bag to raise ΔP, remove any extension tubing to cut L, and use the largest available lumen of the central line. Warming the fluid also helps slightly by lowering viscosity.</p></div></details>
+
+<details class="recall"><summary>Why does halving tubing length help less than going up one cannula size?</summary>
+<div class="ans"><p>Length is inverse linear, so halving it doubles flow. Going from 20 g to 18 g raises radius by roughly 25%, and 1.25⁴ ≈ 2.4. The cannula change wins, and the two are multiplicative, so do both.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">For rapid volume resuscitation, the most effective access is:</div>
+<div class="opts">
+<button class="opt">A mid-line catheter with extension tubing</button>
+<button class="opt">A long peripherally inserted central catheter</button>
+<button class="opt">A triple-lumen central venous catheter</button>
+<button class="opt" data-correct="1">A short large-bore peripheral cannula</button>
+</div>
+<div class="why" data-plain="Flow rises with the fourth power of radius and falls with length. Central catheters are long with narrow individual lumens, which penalises them on both terms."><b>Mechanism</b>Flow rises with the fourth power of radius and falls with length. Central catheters are long with narrow individual lumens, which penalises them on both terms.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Resistance of a 6.0 mm endotracheal tube compared with an 8.0 mm tube is approximately:</div>
+<div class="opts">
+<button class="opt">2 times greater</button>
+<button class="opt">1.3 times greater</button>
+<button class="opt" data-correct="1">3.2 times greater</button>
+<button class="opt">16 times greater</button>
+</div>
+<div class="why" data-plain="Resistance scales with 1/r⁴, so (4.0/3.0)⁴ = 3.16. Radius, not diameter, is the term in the equation."><b>Mechanism</b>Resistance scales with 1/r⁴, so (4.0/3.0)⁴ = 3.16. Radius, not diameter, is the term in the equation.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Which term in Poiseuille's law is most often available as a bedside intervention?</div>
+<div class="opts">
+<button class="opt" data-correct="1">Pressure gradient</button>
+<button class="opt">Radius</button>
+<button class="opt">Viscosity</button>
+<button class="opt">The constant π</button>
+</div>
+<div class="why" data-plain="Pressurising an infusion bag raises ΔP immediately. Radius is limited by the vessel and the largest cannula that will pass, and viscosity is a property of the fluid."><b>Mechanism</b>Pressurising an infusion bag raises ΔP immediately. Radius is limited by the vessel and the largest cannula that will pass, and viscosity is a property of the fluid.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Poiseuille's law assumes the fluid is Newtonian and the tube is rigid.</div>
+<div class="opts">
+<button class="opt" data-correct="1">True</button>
+<button class="opt">False</button>
+</div>
+<div class="why" data-plain="Both, along with laminar and fully developed steady flow. Blood violates the first and vessels violate the second, which is why the law models the circulation rather than describing it."><b>Mechanism</b>Both, along with laminar and fully developed steady flow. Blood violates the first and vessels violate the second, which is why the law models the circulation rather than describing it.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Doubling the length of infusion tubing changes flow by a factor of:</div>
+<div class="opts">
+<button class="opt">0.0625</button>
+<button class="opt">0.25</button>
+<button class="opt">0.71</button>
+<button class="opt" data-correct="1">0.5</button>
+</div>
+<div class="why" data-plain="Length appears in the denominator to the first power, so doubling it halves flow. The fourth-power relationship belongs to radius alone."><b>Mechanism</b>Length appears in the denominator to the first power, so doubling it halves flow. The fourth-power relationship belongs to radius alone.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Adding a long micro-bore extension set to a resuscitation line is harmful because it:</div>
+<div class="opts">
+<button class="opt">Raises the viscosity of the infused fluid</button>
+<button class="opt" data-correct="1">Increases length and reduces radius simultaneously</button>
+<button class="opt">Reduces the pressure gradient at the cannula tip</button>
+<button class="opt">Increases turbulence without changing resistance</button>
+</div>
+<div class="why" data-plain="It penalises two terms at once, one linearly and one to the fourth power, on the line you are relying on to deliver volume."><b>Mechanism</b>It penalises two terms at once, one linearly and one to the fourth power, on the line you are relying on to deliver volume.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Write Poiseuille's law solved for flow.</div>
+<div class="fib" data-answers='["q = pi dp r4 / 8nl", "q=pi x dp x r^4/(8nl)", "q = (pi dp r^4)/(8 n l)", "q = pi deltap r^4 / 8 eta l", "pi dp r^4/8nl"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Q = πΔPr⁴/8ηL. The r⁴ comes from area and mean velocity each contributing r², and the 8ηL carries the viscous and geometric penalty."><b>Mechanism</b>Q = πΔPr⁴/8ηL. The r⁴ comes from area and mean velocity each contributing r², and the 8ηL carries the viscous and geometric penalty.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="3-2-laminar-flow.html">&larr; 3.2 Laminar Flow</a><span class="sp"></span><a href="3-4-turbulence-and-reynolds.html">3.4 Turbulence and Reynolds &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 3</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

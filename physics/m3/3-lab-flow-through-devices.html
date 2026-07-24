@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 3 &amp;nbsp;· &amp;nbsp;Flow Through Real Devices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 3</a> &nbsp;›&nbsp; M3.L3</div><header class="top"><h1>Lab 3 &nbsp;· &nbsp;Flow Through Real Devices</h1><p class="tagline">Ratio calculations on equipment you will actually hold. Work each on paper before revealing.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">Lab objectives</span><ul><li>Compute relative flow and resistance from radius, length, and viscosity ratios.</li><li>Calculate a Reynolds number for gas flow in an endotracheal tube.</li><li>Quantify the heliox effect on flow regime.</li><li>Compute vascular resistance from haemodynamic data.</li></ul></div>
+<div class="box"><span class="label">Reference data</span>
+<p>Q ∝ r⁴ΔP/ηL · Re = ρvD/η · Air: ρ = 1.2 kg/m³, η = 1.8 × 10⁻⁵ Pa·s · Heliox 80:20: ρ ≈ 0.43 kg/m³, η ≈ 2.0 × 10⁻⁵ Pa·s · SVR = [(MAP − CVP)/CO] × 80</p></div>
+
+<h3>Problem 1</h3>
+<p>Compare flow through a 14 g cannula (internal radius ~1.0 mm) with an 18 g cannula (internal radius ~0.6 mm), same length and pressure.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Ratio = (1.0 / 0.6)⁴ = (1.667)⁴ = <strong>7.7×</strong>.</p>
+<p>A 40% increase in radius produces nearly eight times the flow. This is the single most useful piece of arithmetic in the module.</p></div></details>
+
+<h3>Problem 2</h3>
+<p>A 16 g peripheral cannula is 45 mm long with radius 0.8 mm. One lumen of a triple-lumen central catheter is 200 mm long with radius 0.5 mm. Same driving pressure. Compare.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Radius term: (0.8 / 0.5)⁴ = 1.6⁴ = 6.55 in favour of the peripheral.</p>
+<p>Length term: 200 / 45 = 4.44, also in favour of the peripheral.</p>
+<p>Combined: 6.55 × 4.44 = <strong>29×</strong>.</p>
+<p>The peripheral line delivers roughly thirty times the flow. The belief that central access is the resuscitation line is not slightly wrong, it is wrong by more than an order of magnitude.</p></div></details>
+
+<h3>Problem 3</h3>
+<p>A child's cricoid ring has an internal radius of 2.0 mm. Circumferential oedema reduces it by 1.0 mm. Compare with an adult trachea of radius 8.0 mm losing the same 1.0 mm.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Child: (2.0 / 1.0)⁴ = <strong>16× resistance increase</strong>.</p>
+<p>Adult: (8.0 / 7.0)⁴ = 1.70, so a <strong>70% increase</strong>.</p>
+<p>The same millimetre of oedema is an emergency in one airway and an inconvenience in the other. And because the child's flow will also become turbulent, the true penalty exceeds 16-fold, since turbulent flow carries an r⁵ dependence.</p></div></details>
+
+<h3>Problem 4</h3>
+<p>Gas flows through an 8.0 mm internal diameter endotracheal tube at 30 L/min. Compute the Reynolds number and state the regime.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Q = 30 L/min = 5.0 × 10⁻⁴ m³/s.</p>
+<p>A = π(0.004)² = 5.03 × 10⁻⁵ m².</p>
+<p>v = Q/A = 5.0 × 10⁻⁴ / 5.03 × 10⁻⁵ = 9.94 m/s.</p>
+<p>Re = (1.2 × 9.94 × 0.008) / 1.8 × 10⁻⁵ = 0.0954 / 1.8 × 10⁻⁵ = <strong>5300</strong>.</p>
+<p>Above 4000, so <strong>turbulent</strong>. Poiseuille does not describe this flow, which is why measured work of breathing through a tube exceeds laminar predictions.</p></div></details>
+
+<h3>Problem 5</h3>
+<p>Same tube, same flow, now delivering heliox 80:20. What happens to the regime?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Velocity and diameter are unchanged. Only ρ and η change.</p>
+<p>Re = (0.43 × 9.94 × 0.008) / 2.0 × 10⁻⁵ = 0.0342 / 2.0 × 10⁻⁵ = <strong>1710</strong>.</p>
+<p>Below 2000, so flow has returned to <strong>laminar</strong>. The Q² penalty disappears entirely. This is the mechanism of heliox stated numerically, and note that it required no change to the airway itself.</p></div></details>
+
+<h3>Problem 6</h3>
+<p>MAP 65, CVP 12, cardiac output 3.2 L/min. Compute SVR and comment.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>SVR = [(65 − 12) / 3.2] × 80 = (53 / 3.2) × 80 = 16.56 × 80 = <strong>1325 dyn·s·cm⁻⁵</strong>.</p>
+<p>High-normal resistance with a low cardiac output and a low MAP. This is a pump problem with appropriate compensatory vasoconstriction, not vasodilatory shock. Giving a vasoconstrictor here treats the wrong term.</p></div></details>
+
+<h3>Problem 7</h3>
+<p>You cannot change cannula size. Name every remaining lever from Poiseuille and quantify the best case.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p><strong>Raise ΔP:</strong> a pressure bag at 300 mmHg against a gravity head of roughly 40 mmHg is a 7-fold increase in gradient, so up to 7× flow.</p>
+<p><strong>Cut L:</strong> removing a 1 m extension set from a 1.5 m circuit gives 3× flow.</p>
+<p><strong>Lower η:</strong> warming fluid from 20 °C to 37 °C lowers viscosity by roughly 30%, so about 1.4×.</p>
+<p>All three are multiplicative and none requires a new cannula. The pressure bag alone typically dominates.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Flow through a cannula of radius 1.0 mm compared with one of radius 0.6 mm, all else equal, is greater by a factor of approximately:</div>
+<div class="opts">
+<button class="opt">16</button>
+<button class="opt">2.8</button>
+<button class="opt" data-correct="1">7.7</button>
+<button class="opt">1.7</button>
+</div>
+<div class="why" data-plain="(1.0/0.6)⁴ = 7.7. A 67% increase in radius yields nearly eightfold flow because the dependence is fourth power."><b>Mechanism</b>(1.0/0.6)⁴ = 7.7. A 67% increase in radius yields nearly eightfold flow because the dependence is fourth power.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Reynolds number for air at 9.9 m/s through an 8 mm tube is closest to:</div>
+<div class="opts">
+<button class="opt" data-correct="1">5300</button>
+<button class="opt">530</button>
+<button class="opt">17000</button>
+<button class="opt">1700</button>
+</div>
+<div class="why" data-plain="Re = (1.2 × 9.9 × 0.008)/1.8×10⁻⁵ ≈ 5300, which is above 4000 and therefore turbulent. Poiseuille does not apply."><b>Mechanism</b>Re = (1.2 × 9.9 × 0.008)/1.8×10⁻⁵ ≈ 5300, which is above 4000 and therefore turbulent. Poiseuille does not apply.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Switching that same flow to heliox 80:20 changes the Reynolds number to approximately:</div>
+<div class="opts">
+<button class="opt">5300, unchanged</button>
+<button class="opt">3400, transitional</button>
+<button class="opt" data-correct="1">1700, laminar</button>
+<button class="opt">700, laminar</button>
+</div>
+<div class="why" data-plain="Density falls from 1.2 to 0.43 while viscosity barely changes, so Re drops proportionally to about 1710, returning flow to the laminar regime."><b>Mechanism</b>Density falls from 1.2 to 0.43 while viscosity barely changes, so Re drops proportionally to about 1710, returning flow to the laminar regime.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">A paediatric airway of radius 2 mm loses 1 mm to circumferential oedema. Resistance increases by a factor of at least:</div>
+<div class="opts">
+<button class="opt">2</button>
+<button class="opt">8</button>
+<button class="opt">4</button>
+<button class="opt" data-correct="1">16</button>
+</div>
+<div class="why" data-plain="(2/1)⁴ = 16 for laminar flow. Because the flow will also become turbulent, with its r⁵ dependence, the true penalty is greater still."><b>Mechanism</b>(2/1)⁴ = 16 for laminar flow. Because the flow will also become turbulent, with its r⁵ dependence, the true penalty is greater still.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">MAP 80, CVP 8, cardiac output 4 L/min. Give SVR in dyn·s·cm⁻⁵.</div>
+<div class="fib" data-answers='["1440", "1440 dyn", "1440 dyn.s.cm-5", "1,440"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="[(80 − 8)/4] × 80 = 18 × 80 = 1440. Forgetting to subtract CVP would give 1600."><b>Mechanism</b>[(80 − 8)/4] × 80 = 18 × 80 = 1440. Forgetting to subtract CVP would give 1600.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Name the two Poiseuille terms other than radius that are modifiable at the bedside.</div>
+<div class="fib" data-answers='["pressure; length", "pressure gradient; length", "dp; length", "driving pressure; length", "pressure; tubing length"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Raising ΔP with a pressure bag and cutting L by removing extension tubing are both immediate interventions. Viscosity is modifiable only marginally, by warming."><b>Mechanism</b>Raising ΔP with a pressure bag and cutting L by removing extension tubing are both immediate interventions. Viscosity is modifiable only marginally, by warming.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="3-8-non-newtonian-blood.html">&larr; 3.8 Non-Newtonian Blood</a><span class="sp"></span><a href="3-exam.html">Module 3 Exam &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 3</footer></div><script src="../../assets/engine.js"></script>
+</body></html>
