@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1.3 &amp;nbsp;Boyle, Charles, and Gay-Lussac</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 1</a> &nbsp;›&nbsp; M1.S3</div><header class="top"><h1>1.3 &nbsp;Boyle, Charles, and Gay-Lussac</h1><p class="tagline">Three special cases of one equation, and the only three you will ever be asked to apply.</p></header><div class="accentbar" style="background:var(--induction)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State each of the three gas laws and identify which variable is held constant.</li><li>Collapse all three into the combined gas law and the ideal gas equation.</li><li>Apply Boyle's law to cylinder contents estimation.</li><li>Apply Gay-Lussac's law to predict cylinder pressure change with temperature.</li><li>Explain why absolute temperature is mandatory in all three.</li></ul></div>
+<div class="box known"><span class="label">What you already have</span>
+<p>PV = nRT, and the kinetic theory behind it. This section is entirely recall for you. The only thing worth slowing down for is the clinical arithmetic, because the exam questions are applied and the errors are almost always unit errors rather than conceptual ones.</p></div>
+
+<h3>Three laws, one equation</h3>
+
+<table>
+<tr><th>Law</th><th>Relationship</th><th>Held constant</th><th>Clinical use</th></tr>
+<tr><td>Boyle</td><td>P ∝ 1/V</td><td>Temperature</td><td>Cylinder contents, lung mechanics, plethysmography</td></tr>
+<tr><td>Charles</td><td>V ∝ T</td><td>Pressure</td><td>Gas volume correction, BTPS conversion</td></tr>
+<tr><td>Gay-Lussac</td><td>P ∝ T</td><td>Volume</td><td>Cylinder pressure change with ambient temperature</td></tr>
+</table>
+
+<div class="eq">P<sub>1</sub>V<sub>1</sub> / T<sub>1</sub> &nbsp;=&nbsp; P<sub>2</sub>V<sub>2</sub> / T<sub>2</sub>
+<span class="where">The combined gas law. Hold any one variable constant and it degenerates into one of the three above. Add the mole term and it becomes PV = nRT.</span></div>
+
+<h3>Temperature must be absolute</h3>
+<p>All three laws are proportionalities in absolute temperature. Kelvin, not Celsius. The reason is structural: a proportionality demands that zero on the scale means zero of the quantity, and 0 °C is an arbitrary point on a water phase diagram, not an absence of thermal energy.</p>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>Using Celsius in a Gay-Lussac calculation is the single most common arithmetic error in this material, and it produces answers that are wrong by a wide and non-obvious margin. Convert first, always: <strong>K = °C + 273</strong>.</p></div>
+
+<h3>Boyle applied: what is left in the cylinder</h3>
+<p>An oxygen cylinder is a fixed volume of true gas above its critical temperature, so contents are directly proportional to gauge pressure.</p>
+
+<div class="chain">
+<div class="step">A full E-cylinder holds about 660 L at about 2000 psi.</div>
+<div class="step">Contents scale linearly: at 1000 psi it holds about 330 L.</div>
+<div class="step">Divide remaining volume by flow rate to get time to empty.</div>
+<div class="step">Subtract a working reserve, because the last portion of a cylinder is not reliably usable at pressure.</div>
+</div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>Transporting a ventilated patient on an E-cylinder reading 1500 psi at 6 L/min gives you (1500/2000) × 660 = 495 L, so 495 / 6 ≈ 82 minutes. That calculation is worth being able to do in your head, because the situations that demand it are the ones where you have no time to do it on paper.</p></div>
+
+<h3>Gay-Lussac applied: the cylinder that got warm</h3>
+<p>Cylinder volume is fixed, so pressure tracks absolute temperature directly.</p>
+
+<div class="eq">P<sub>1</sub> / T<sub>1</sub> &nbsp;=&nbsp; P<sub>2</sub> / T<sub>2</sub>
+<span class="where">A cylinder reading 2000 psi at 20 °C (293 K), moved into a 35 °C (308 K) environment, rises to 2000 × 308/293 ≈ 2102 psi. Nothing was added. The molecules simply hit the walls harder.</span></div>
+
+<details class="recall"><summary>Why does the same reasoning fail for a nitrous oxide cylinder?</summary>
+<div class="ans"><p>Because nitrous contains liquid. Its pressure is set by the saturated vapour pressure of the liquid at that temperature, not by the ideal gas law applied to a fixed number of gas molecules. Warming a nitrous cylinder does raise its pressure, but through the vapour pressure curve rather than through Gay-Lussac, and the rise is much steeper.</p></div></details>
+
+<details class="recall"><summary>Why is the ideal gas law an approximation, and where does it break down clinically?</summary>
+<div class="ans"><p>It assumes point molecules with no intermolecular forces. Real gases deviate as they approach condensation, which is to say at high pressure and low temperature. That is exactly the regime inside a cylinder, which is why cylinder contents are quoted from measurement rather than calculated from PV = nRT, and why the Joule-Thomson effect in section 1.6 exists at all.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">An oxygen E-cylinder reads 1500 psi. A full cylinder holds 660 L at 2000 psi. At 6 L/min, time to empty is approximately:</div>
+<div class="opts">
+<button class="opt">110 minutes</button>
+<button class="opt">165 minutes</button>
+<button class="opt">55 minutes</button>
+<button class="opt" data-correct="1">82 minutes</button>
+</div>
+<div class="why" data-plain="Contents scale linearly with pressure for a true gas: (1500/2000) × 660 = 495 L. Dividing by 6 L/min gives 82.5 minutes."><b>Mechanism</b>Contents scale linearly with pressure for a true gas: (1500/2000) × 660 = 495 L. Dividing by 6 L/min gives 82.5 minutes.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">A cylinder reading 1800 psi at 17 °C is moved to a room at 42 °C. The new pressure is closest to:</div>
+<div class="opts">
+<button class="opt">1810 psi</button>
+<button class="opt" data-correct="1">1955 psi</button>
+<button class="opt">4450 psi</button>
+<button class="opt">2140 psi</button>
+</div>
+<div class="why" data-plain="Gay-Lussac in Kelvin: 290 K → 315 K. 1800 × 315/290 = 1955 psi. Using Celsius directly gives a wildly wrong answer, which is the point of the question."><b>Mechanism</b>Gay-Lussac in Kelvin: 290 K → 315 K. 1800 × 315/290 = 1955 psi. Using Celsius directly gives a wildly wrong answer, which is the point of the question.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Which law describes the pressure change in a rigid cylinder as ambient temperature rises?</div>
+<div class="opts">
+<button class="opt">Avogadro's law</button>
+<button class="opt" data-correct="1">Gay-Lussac's law</button>
+<button class="opt">Charles' law</button>
+<button class="opt">Boyle's law</button>
+</div>
+<div class="why" data-plain="Volume is fixed by the cylinder wall, so pressure varies directly with absolute temperature. Boyle holds temperature constant and Charles holds pressure constant, so neither applies."><b>Mechanism</b>Volume is fixed by the cylinder wall, so pressure varies directly with absolute temperature. Boyle holds temperature constant and Charles holds pressure constant, so neither applies.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Gas law calculations may be performed using degrees Celsius provided both temperatures use the same scale.</div>
+<div class="opts">
+<button class="opt" data-correct="1">False</button>
+<button class="opt">True</button>
+</div>
+<div class="why" data-plain="These are proportionalities in absolute temperature. Using Celsius makes the ratio meaningless because zero on that scale does not represent zero thermal energy."><b>Mechanism</b>These are proportionalities in absolute temperature. Using Celsius makes the ratio meaningless because zero on that scale does not represent zero thermal energy.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Boyle's law is applied clinically in all of the following except:</div>
+<div class="opts">
+<button class="opt">Estimating remaining oxygen cylinder contents</button>
+<button class="opt">Explaining gas expansion in a pneumothorax at altitude</button>
+<button class="opt">Body plethysmography for lung volumes</button>
+<button class="opt" data-correct="1">Predicting cylinder pressure rise in a warm room</button>
+</div>
+<div class="why" data-plain="Cylinder pressure rise with temperature at fixed volume is Gay-Lussac. The other three all hold temperature roughly constant and trade pressure against volume."><b>Mechanism</b>Cylinder pressure rise with temperature at fixed volume is Gay-Lussac. The other three all hold temperature roughly constant and trade pressure against volume.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Convert 27 °C to kelvin.</div>
+<div class="fib" data-answers='["300", "300 k", "300k", "300 kelvin"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="K = °C + 273. Absolute temperature is required because the gas laws are proportionalities, and a proportionality needs a scale whose zero means none of the quantity."><b>Mechanism</b>K = °C + 273. Absolute temperature is required because the gas laws are proportionalities, and a proportionality needs a scale whose zero means none of the quantity.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Approximate volume in litres of a full oxygen E-cylinder.</div>
+<div class="fib" data-answers='["660", "660 l", "660 litres", "660 liters", "~660"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="About 660 L at roughly 2000 psi. Contents fall linearly with gauge pressure because oxygen at room temperature is above its critical temperature and behaves as a true gas."><b>Mechanism</b>About 660 L at roughly 2000 psi. Contents fall linearly with gauge pressure because oxygen at room temperature is above its critical temperature and behaves as a true gas.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="1-2-states-of-matter.html">&larr; 1.2 States of Matter</a><span class="sp"></span><a href="1-4-daltons-law.html">1.4 Dalton's Law &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 1</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

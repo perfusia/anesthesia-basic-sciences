@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 1 &amp;nbsp;· &amp;nbsp;Cylinder Calculations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 1</a> &nbsp;›&nbsp; M1.L1</div><header class="top"><h1>Lab 1 &nbsp;· &nbsp;Cylinder Calculations</h1><p class="tagline">Worked problem set. Do these on paper first, then check. The exam questions in this module are calculation questions.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">Lab objectives</span><ul><li>Compute remaining contents and time to empty for an oxygen cylinder.</li><li>Compute nitrous oxide contents from cylinder mass.</li><li>Apply Gay-Lussac to a temperature-shifted cylinder using absolute temperature.</li><li>Compute inspired oxygen partial pressure at altitude with the humidification correction.</li></ul></div>
+<div class="box"><span class="label">Reference data</span>
+<p>Oxygen E-cylinder: 660 L at 2000 psi · Nitrous E-cylinder: ~1590 L at 745 psi, tare weight stamped on shoulder · Molar mass N<sub>2</sub>O = 44 g/mol · Molar volume = 22.4 L/mol · Saturated water vapour pressure at 37 °C = 47 mmHg · K = °C + 273</p></div>
+
+<h3>Problem 1</h3>
+<p>An oxygen E-cylinder gauge reads 900 psi. You are transporting a ventilated patient at a fresh gas flow of 8 L/min. How long until the cylinder is empty, and what would you actually plan for?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>(900 / 2000) × 660 = <strong>297 L</strong>. 297 / 8 = <strong>37 minutes</strong>.</p>
+<p>Plan for substantially less. Cylinder output becomes unreliable as pressure approaches the regulator's minimum, and no transport should be started on a margin this thin. The practical answer is to swap the cylinder.</p></div></details>
+
+<h3>Problem 2</h3>
+<p>A nitrous oxide cylinder weighs 9.2 kg. The tare weight stamped on the shoulder is 5.8 kg. How much gas will it deliver?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Contents = 9.2 − 5.8 = 3.4 kg = 3400 g.</p>
+<p>Moles = 3400 / 44 = <strong>77.3 mol</strong>.</p>
+<p>Volume = 77.3 × 22.4 = <strong>1731 L</strong>.</p></div></details>
+
+<h3>Problem 3</h3>
+<p>The same nitrous cylinder's gauge reads 745 psi. What does that tell you about remaining contents?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p><strong>Nothing.</strong> That is the saturated vapour pressure of nitrous oxide at room temperature, and it will read 745 psi whether the cylinder is 95% full or 5% full. The gauge only begins to fall once the last liquid has evaporated. This is the entire clinical point of section 1.2.</p></div></details>
+
+<h3>Problem 4</h3>
+<p>An oxygen cylinder reads 1900 psi in a 19 °C storage room. It is moved to an ambulance bay at 38 °C and left in the sun. What does the gauge now read?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Convert to kelvin first: 292 K → 311 K.</p>
+<p>P<sub>2</sub> = 1900 × (311 / 292) = <strong>2024 psi</strong>.</p>
+<p>No gas was added. The rise is entirely Gay-Lussac. Running this in Celsius gives 1900 × 38/19 = 3800 psi, which is nonsense and is exactly the error the question is designed to catch.</p></div></details>
+
+<h3>Problem 5</h3>
+<p>A patient is anesthetised in a facility at 2,400 m where barometric pressure is 565 mmHg. You set F<sub>I</sub>O<sub>2</sub> to 0.35. What is the inspired oxygen partial pressure, and how does it compare to the same setting at sea level?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>At altitude: 0.35 × (565 − 47) = 0.35 × 518 = <strong>181 mmHg</strong>.</p>
+<p>At sea level: 0.35 × (760 − 47) = 0.35 × 713 = <strong>250 mmHg</strong>.</p>
+<p>A 28% reduction in driving pressure from an identical dial setting. Note also that the fixed 47 mmHg water vapour term consumes 8.3% of ambient pressure at altitude against 6.2% at sea level, so it bites proportionally harder as you climb.</p></div></details>
+
+<h3>Problem 6</h3>
+<p>You have an oxygen E-cylinder at 2000 psi and a nitrous E-cylinder at 745 psi. Running 2 L/min of each, which empties first?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Oxygen: 660 / 2 = <strong>330 minutes</strong>.</p>
+<p>Nitrous: 1590 / 2 = <strong>795 minutes</strong>.</p>
+<p>Oxygen empties first, and by a wide margin, despite reading nearly three times the pressure. The lesson is that gauge pressure and gas quantity are only linked for a true gas above its critical temperature.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">An oxygen E-cylinder reads 500 psi and flow is 10 L/min. Time to empty is closest to:</div>
+<div class="opts">
+<button class="opt">8 minutes</button>
+<button class="opt">33 minutes</button>
+<button class="opt" data-correct="1">17 minutes</button>
+<button class="opt">66 minutes</button>
+</div>
+<div class="why" data-plain="(500/2000) × 660 = 165 L. 165 / 10 = 16.5 minutes. Contents fall linearly with gauge pressure for a true gas."><b>Mechanism</b>(500/2000) × 660 = 165 L. 165 / 10 = 16.5 minutes. Contents fall linearly with gauge pressure for a true gas.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">A cylinder reads 2000 psi at 22 °C. Moved to 45 °C, the new reading is approximately:</div>
+<div class="opts">
+<button class="opt">4090 psi</button>
+<button class="opt">1860 psi</button>
+<button class="opt">2020 psi</button>
+<button class="opt" data-correct="1">2156 psi</button>
+</div>
+<div class="why" data-plain="Kelvin conversion is mandatory: 295 K → 318 K. 2000 × 318/295 = 2156 psi. Working in Celsius produces the 4090 distractor."><b>Mechanism</b>Kelvin conversion is mandatory: 295 K → 318 K. 2000 × 318/295 = 2156 psi. Working in Celsius produces the 4090 distractor.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Running 3 L/min from a full nitrous E-cylinder, time to empty is approximately:</div>
+<div class="opts">
+<button class="opt">1590 minutes</button>
+<button class="opt" data-correct="1">530 minutes</button>
+<button class="opt">250 minutes</button>
+<button class="opt">220 minutes</button>
+</div>
+<div class="why" data-plain="1590 L / 3 L/min = 530 minutes. The nitrous cylinder holds far more gas than its lower gauge pressure suggests because it is stored as a liquid."><b>Mechanism</b>1590 L / 3 L/min = 530 minutes. The nitrous cylinder holds far more gas than its lower gauge pressure suggests because it is stored as a liquid.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">A nitrous cylinder holds 2.2 kg of contents. Deliverable volume in litres, to the nearest ten.</div>
+<div class="fib" data-answers='["1120", "1120 l", "1119", "1120 litres", "1118"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="(2200 / 44) × 22.4 = 50 mol × 22.4 = 1120 L. Mass is the only route to contents because the gauge is pinned to vapour pressure."><b>Mechanism</b>(2200 / 44) × 22.4 = 50 mol × 22.4 = 1120 L. Mass is the only route to contents because the gauge is pinned to vapour pressure.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Inspired oxygen partial pressure on 0.5 FiO2 at a barometric pressure of 620 mmHg, in mmHg.</div>
+<div class="fib" data-answers='["286.5", "287", "286", "286.5 mmhg", "287 mmhg"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="0.5 × (620 − 47) = 286.5 mmHg. The 47 mmHg humidification term is subtracted before applying the fraction, and it is pressure-independent."><b>Mechanism</b>0.5 × (620 − 47) = 286.5 mmHg. The 47 mmHg humidification term is subtracted before applying the fraction, and it is pressure-independent.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="1-6-adiabatic-and-joule-thomson.html">&larr; 1.6 Adiabatic Change</a><span class="sp"></span><a href="1-exam.html">Module 1 Exam &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 1</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

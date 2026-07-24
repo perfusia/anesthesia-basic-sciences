@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.6 &amp;nbsp;Blood:Gas, Oil:Gas, and Brain:Blood Partition Coefficients</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 2</a> &nbsp;›&nbsp; M2.S6</div><header class="top"><h1>2.6 &nbsp;Blood:Gas, Oil:Gas, and Brain:Blood Partition Coefficients</h1><p class="tagline">Three numbers per agent. From them you can predict speed of onset, potency, and duration without knowing anything else about the drug.</p></header><div class="accentbar" style="background:var(--induction)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Explain why a LOW blood:gas coefficient produces FAST induction.</li><li>Relate the oil:gas coefficient to potency via the Meyer-Overton correlation.</li><li>Use brain:blood and fat:blood coefficients to predict equilibration and emergence.</li><li>Rank the volatile agents on all three coefficients from memory.</li></ul></div>
+<h3>The table</h3>
+<table>
+<tr><th>Agent</th><th>Blood:gas</th><th>Oil:gas</th><th>MAC (%)</th><th>Brain:blood</th></tr>
+<tr><td>Desflurane</td><td>0.42</td><td>19</td><td>6.0</td><td>1.3</td></tr>
+<tr><td>Nitrous oxide</td><td>0.47</td><td>1.4</td><td>104</td><td>1.1</td></tr>
+<tr><td>Sevoflurane</td><td>0.65</td><td>47</td><td>2.0</td><td>1.7</td></tr>
+<tr><td>Isoflurane</td><td>1.4</td><td>91</td><td>1.15</td><td>2.6</td></tr>
+<tr><td>Halothane</td><td>2.4</td><td>224</td><td>0.75</td><td>2.9</td></tr>
+</table>
+
+<h3>Blood:gas and the counterintuitive result</h3>
+<p>The correct statement is that a <strong>low</strong> blood:gas coefficient produces a <strong>fast</strong> induction. Almost everyone gets this backwards on first encounter, because "more soluble" sounds like "gets into the patient faster." Here is why it is the reverse.</p>
+
+<div class="chain">
+<div class="step">The brain does not respond to how much agent is in the blood. It responds to <strong>partial pressure</strong>.</div>
+<div class="step">Alveolar partial pressure is what drives agent into blood, and brain partial pressure chases alveolar partial pressure.</div>
+<div class="step">A highly soluble agent is greedily taken up by blood, which drains the alveolus and holds alveolar partial pressure down.</div>
+<div class="step">Partial pressure cannot rise until blood is close to saturated, and a large capacity takes a long time to fill.</div>
+<div class="step">A poorly soluble agent saturates blood almost immediately, so alveolar partial pressure rises fast toward inspired.</div>
+<div class="step">Low solubility therefore means fast onset, and fast offset by exactly the same argument run backwards.</div>
+</div>
+
+<div class="box math"><span class="label">The sink analogy, stated carefully</span>
+<p>Think of blood as a reservoir being filled, where partial pressure is the <em>level</em> and solubility is the <em>cross-sectional area</em>. A wide reservoir, meaning high solubility, takes a large volume of agent before the level rises appreciably. A narrow one comes up to level almost immediately. The brain reads the level, not the volume delivered. That is the whole mechanism.</p></div>
+
+<h3>Oil:gas and potency</h3>
+<p>The <em class="term">Meyer-Overton correlation</em> is the observation that anesthetic potency tracks lipid solubility across an enormous range of chemically unrelated compounds. Higher oil:gas means more potent, which means lower MAC.</p>
+
+<div class="eq">oil:gas &nbsp;×&nbsp; MAC &nbsp;≈&nbsp; constant (roughly 150)
+<span class="where">Desflurane: 19 × 6.0 = 114. Sevoflurane: 47 × 2.0 = 94. Isoflurane: 91 × 1.15 = 105. Halothane: 224 × 0.75 = 168. Nitrous: 1.4 × 104 = 146. The correlation is strong but not exact, and its exceptions are what eventually undermined the lipid theory of anesthetic action.</span></div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>Two different coefficients, two different properties, and they are routinely confused:</p>
+<ul>
+<li><strong>Blood:gas</strong> predicts <strong>speed</strong>. Low means fast.</li>
+<li><strong>Oil:gas</strong> predicts <strong>potency</strong>. High means potent, so MAC is low.</li>
+</ul>
+<p>Desflurane makes the distinction concrete: lowest blood:gas of the volatiles, so fastest, and low oil:gas, so weakest. Fast and weak are not contradictory because they are governed by different numbers.</p></div>
+
+<h3>Brain:blood and fat:blood</h3>
+<p>Brain:blood governs how quickly the brain equilibrates once blood partial pressure has risen. It is close to 1 to 3 for all agents, so it modifies the picture rather than driving it.</p>
+
+<p>Fat:blood is where the long cases live. Fat coefficients are very large, roughly 27 for sevoflurane, 45 for isoflurane, and 51 for halothane, and adipose perfusion is poor. Fat therefore fills slowly and empties slowly. In a short case it is almost irrelevant. In a six-hour case it becomes a substantial reservoir that keeps releasing agent long after the vaporiser is off.</p>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>This is why emergence times converge on short cases and diverge on long ones. For a 30-minute case the difference between sevoflurane and isoflurane is modest. For a six-hour case in an obese patient it is large, and it is the reason desflurane retains a niche in prolonged bariatric surgery despite its cost and its airway irritation.</p></div>
+
+<details class="recall"><summary>Nitrous oxide has a blood:gas coefficient of 0.47 and an oil:gas of 1.4. Predict its clinical profile.</summary>
+<div class="ans"><p>Very fast on and off, because blood:gas is low and second only to desflurane. And very weak, because oil:gas is tiny, giving a MAC of 104% that cannot be reached at one atmosphere. Fast and unable to produce anesthesia alone. Both facts read directly off the two numbers.</p></div></details>
+
+<details class="recall"><summary>Two agents have identical blood:gas coefficients but oil:gas values differing tenfold. What differs clinically?</summary>
+<div class="ans"><p>Onset and offset speed would be essentially identical, since that is governed by blood:gas. Potency would differ roughly tenfold, so their MAC values differ by about the same factor and you would dial very different percentages to reach the same anesthetic depth.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">An agent with a low blood:gas partition coefficient produces:</div>
+<div class="opts">
+<button class="opt">Slow induction and rapid emergence</button>
+<button class="opt">Rapid induction and slow emergence</button>
+<button class="opt">Slow induction and slow emergence</button>
+<button class="opt" data-correct="1">Rapid induction and rapid emergence</button>
+</div>
+<div class="why" data-plain="Low solubility means blood saturates quickly, so alveolar partial pressure rises rapidly toward inspired. The same argument reversed gives rapid washout, so both onset and offset are fast."><b>Mechanism</b>Low solubility means blood saturates quickly, so alveolar partial pressure rises rapidly toward inspired. The same argument reversed gives rapid washout, so both onset and offset are fast.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">The oil:gas partition coefficient correlates with:</div>
+<div class="opts">
+<button class="opt" data-correct="1">Potency</button>
+<button class="opt">Duration of action</button>
+<button class="opt">Metabolic clearance</button>
+<button class="opt">Speed of onset</button>
+</div>
+<div class="why" data-plain="This is the Meyer-Overton correlation. Higher lipid solubility means greater potency and therefore lower MAC. Speed is governed by blood:gas, which is a separate number."><b>Mechanism</b>This is the Meyer-Overton correlation. Higher lipid solubility means greater potency and therefore lower MAC. Speed is governed by blood:gas, which is a separate number.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Which agent has the lowest blood:gas partition coefficient?</div>
+<div class="opts">
+<button class="opt">Halothane</button>
+<button class="opt" data-correct="1">Desflurane</button>
+<button class="opt">Isoflurane</button>
+<button class="opt">Sevoflurane</button>
+</div>
+<div class="why" data-plain="Desflurane at 0.42, with nitrous oxide close behind at 0.47. Sevoflurane is 0.65, isoflurane 1.4, and halothane 2.4."><b>Mechanism</b>Desflurane at 0.42, with nitrous oxide close behind at 0.47. Sevoflurane is 0.65, isoflurane 1.4, and halothane 2.4.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">A highly blood-soluble agent produces a faster rise in alveolar partial pressure.</div>
+<div class="opts">
+<button class="opt">True</button>
+<button class="opt" data-correct="1">False</button>
+</div>
+<div class="why" data-plain="The opposite. High solubility means blood takes up agent avidly and drains the alveolus, holding alveolar partial pressure down until blood approaches saturation."><b>Mechanism</b>The opposite. High solubility means blood takes up agent avidly and drains the alveolus, holding alveolar partial pressure down until blood approaches saturation.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Nitrous oxide cannot produce surgical anesthesia alone at one atmosphere because:</div>
+<div class="opts">
+<button class="opt">It lacks affinity for lipid membranes entirely</button>
+<button class="opt">It is metabolised too rapidly to accumulate</button>
+<button class="opt">Its blood:gas coefficient is too low for uptake</button>
+<button class="opt" data-correct="1">Its MAC of 104% exceeds deliverable concentration</button>
+</div>
+<div class="why" data-plain="A MAC above 100% cannot be reached at one atmosphere without producing a hypoxic mixture. The low oil:gas coefficient of 1.4 is why potency is so poor."><b>Mechanism</b>A MAC above 100% cannot be reached at one atmosphere without producing a hypoxic mixture. The low oil:gas coefficient of 1.4 is why potency is so poor.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Emergence times between agents diverge most after:</div>
+<div class="opts">
+<button class="opt" data-correct="1">Prolonged cases in obese patients</button>
+<button class="opt">Cases performed at high fresh gas flow</button>
+<button class="opt">Any case using a circle system</button>
+<button class="opt">Brief cases in lean patients</button>
+</div>
+<div class="why" data-plain="Fat:blood coefficients are large and adipose perfusion is poor, so fat fills and empties slowly. It is negligible in a short case and a substantial reservoir in a long one."><b>Mechanism</b>Fat:blood coefficients are large and adipose perfusion is poor, so fat fills and empties slowly. It is negligible in a short case and a substantial reservoir in a long one.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Blood:gas partition coefficient of sevoflurane.</div>
+<div class="fib" data-answers='["0.65", "0.69", "0.65 ", ".65", "0.6"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="About 0.65, sitting between desflurane at 0.42 and isoflurane at 1.4. Sources cite 0.65 to 0.69 depending on the reference."><b>Mechanism</b>About 0.65, sitting between desflurane at 0.42 and isoflurane at 1.4. Sources cite 0.65 to 0.69 depending on the reference.</div></div>
+<div class="q"><div class="qnum">Q8</div><div class="qtext">Name the correlation linking lipid solubility to anesthetic potency.</div>
+<div class="fib" data-answers='["meyer-overton", "meyer overton", "meyer-overton correlation", "meyer overton correlation", "meyer-overton rule", "overton-meyer"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Potency tracks oil:gas solubility across chemically unrelated compounds. The correlation is strong but imperfect, and its exceptions eventually undermined the lipid theory of anesthetic action."><b>Mechanism</b>Potency tracks oil:gas solubility across chemically unrelated compounds. The correlation is strong but imperfect, and its exceptions eventually undermined the lipid theory of anesthetic action.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="2-5-solubility-coefficients.html">&larr; 2.5 Solubility Coefficients</a><span class="sp"></span><a href="2-7-diffusion.html">2.7 Diffusion &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 2</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

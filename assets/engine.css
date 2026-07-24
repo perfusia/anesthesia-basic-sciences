@@ -1,0 +1,186 @@
+/* ANES 710/720 — shared engine
+   Paper-and-ink base carried over from BIOD 152.
+   Accent palette follows ISO 26825 anesthesia syringe label colours
+   plus standard monitor trace colours. */
+
+:root{
+  --paper:#f6f1e7;
+  --paper-2:#fbf8f2;
+  --paper-3:#f2ebdd;
+  --ink:#2b2724;
+  --ink-2:#5c554d;
+  --ink-3:#8a8177;
+  --rule:#ded5c6;
+  --rule-2:#ebe3d6;
+
+  /* ISO 26825 syringe label colours */
+  --induction:#c9a227;   /* yellow  — induction agents */
+  --opioid:#3d7ab5;      /* blue    — opioids */
+  --nmb:#c0392b;         /* red     — neuromuscular blockers */
+  --vasopressor:#8e5aa8; /* violet  — vasopressors */
+  --anticholinergic:#4a8a4f;/* green — anticholinergics */
+  --benzo:#d97a2b;       /* orange  — benzodiazepines */
+  --local:#6b6560;       /* grey    — local anaesthetics */
+
+  /* monitor trace colours */
+  --ecg:#3f9c52;
+  --spo2:#2b9cb0;
+  --abp:#c0392b;
+  --etco2:#c9a227;
+
+  --ok:#3f7a4a;
+  --miss:#b8412e;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Spline Sans',system-ui,-apple-system,sans-serif;
+  font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:880px;margin:0 auto;padding:34px 24px 100px}
+
+/* ---------- header ---------- */
+.crumb{
+  font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:12px;
+}
+.crumb a{color:var(--ink-3);text-decoration:none;border-bottom:1px solid var(--rule)}
+.crumb a:hover{color:var(--ink)}
+header.top{border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:14px}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:33px;line-height:1.14;margin:0 0 10px}
+.tagline{color:var(--ink-2);font-size:16px;margin:0;max-width:64ch}
+.accentbar{height:4px;border-radius:2px;margin-bottom:20px}
+
+h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:24px;margin:44px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19px;margin:30px 0 8px}
+h4{font-family:'Spline Sans',sans-serif;font-weight:600;font-size:15.5px;margin:20px 0 6px;color:var(--ink-2)}
+p{margin:0 0 15px;max-width:72ch}
+ul,ol{max-width:72ch;padding-left:22px}
+li{margin-bottom:7px}
+a{color:var(--opioid)}
+
+em.term{font-style:normal;font-weight:600;color:var(--opioid)}
+strong{font-weight:600}
+
+.label{
+  font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:6px;
+}
+
+/* ---------- objectives ---------- */
+.objectives{background:var(--paper-2);border:1px solid var(--rule);border-radius:9px;padding:18px 20px;margin:0 0 26px}
+.objectives ul{margin:0;padding-left:20px}
+.objectives li{font-size:15px;color:var(--ink-2)}
+
+/* ---------- boxes ---------- */
+.box{border-left:3px solid var(--ink-3);background:var(--paper-2);padding:14px 17px;border-radius:0 7px 7px 0;margin:20px 0}
+.box p:last-child{margin-bottom:0}
+.box.clinical{border-left-color:var(--abp);background:#f8efe9}
+.box.trap{border-left-color:var(--benzo);background:#f9f0e4}
+.box.math{border-left-color:var(--opioid);background:#edf2f8}
+.box.known{border-left-color:var(--anticholinergic);background:#eff4ec}
+
+/* ---------- mechanism chain ---------- */
+.chain{margin:20px 0;counter-reset:step}
+.chain .step{
+  display:flex;gap:13px;padding:9px 0;border-bottom:1px dashed var(--rule-2);
+  font-size:15px;align-items:flex-start;
+}
+.chain .step:last-child{border-bottom:none}
+.chain .step::before{
+  counter-increment:step;content:counter(step);
+  font-family:'Spline Sans Mono',monospace;font-size:11px;
+  background:var(--ink);color:var(--paper);width:20px;height:20px;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:2px;
+}
+
+/* ---------- equations ---------- */
+.eq{
+  font-family:'Spline Sans Mono',monospace;font-size:16px;
+  background:var(--paper-3);border:1px solid var(--rule);border-radius:7px;
+  padding:15px 18px;margin:18px 0;text-align:center;
+}
+.eq .where{display:block;font-size:12px;color:var(--ink-3);margin-top:9px;text-align:left;line-height:1.7}
+code{font-family:'Spline Sans Mono',monospace;font-size:.9em;background:var(--paper-3);padding:1px 5px;border-radius:3px}
+
+/* ---------- tables ---------- */
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
+th{
+  text-align:left;font-family:'Spline Sans Mono',monospace;font-size:10.5px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);
+  border-bottom:1.5px solid var(--rule);padding:8px 10px 8px 0;font-weight:500;
+}
+td{padding:9px 10px 9px 0;border-bottom:1px solid var(--rule-2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+
+/* ---------- recall cards ---------- */
+.recall{
+  border:1px solid var(--rule);border-radius:8px;background:var(--paper-2);
+  margin:16px 0;padding:0;
+}
+.recall summary{
+  cursor:pointer;padding:13px 16px;font-weight:500;font-size:15px;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.recall summary::-webkit-details-marker{display:none}
+.recall summary::after{content:'reveal';font-family:'Spline Sans Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);flex-shrink:0}
+.recall[open] summary::after{content:'hide'}
+.recall summary:hover{background:var(--paper-3)}
+.recall .ans{padding:0 16px 15px;font-size:15px;color:var(--ink-2);border-top:1px solid var(--rule-2);padding-top:13px}
+.recall .ans p:last-child{margin-bottom:0}
+
+/* ---------- quiz ---------- */
+.quiz{border:1.5px solid var(--ink);border-radius:10px;background:var(--paper-2);padding:22px 22px 18px;margin:36px 0 20px}
+.quiz h3{margin-top:0}
+.qhead{font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px}
+.q{margin:0 0 24px;padding-bottom:20px;border-bottom:1px solid var(--rule-2)}
+.q:last-of-type{border-bottom:none;margin-bottom:8px;padding-bottom:0}
+.qnum{font-family:'Spline Sans Mono',monospace;font-size:11px;color:var(--ink-3);margin-bottom:5px}
+.qtext{font-size:15.5px;margin-bottom:12px;font-weight:500}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{
+  text-align:left;font:inherit;font-size:15px;padding:10px 13px;
+  border:1px solid var(--rule);border-radius:7px;background:var(--paper);
+  cursor:pointer;color:var(--ink);transition:background .12s;
+}
+.opt:hover:not(:disabled){background:var(--paper-3)}
+.opt:disabled{cursor:default}
+.opt.correct{background:#e8f2e9;border-color:var(--ok);color:#245c31}
+.opt.wrong{background:#f7e9e6;border-color:var(--miss);color:#8e3323}
+.fib{display:flex;gap:8px;flex-wrap:wrap}
+.fib input{
+  font:inherit;font-size:15px;padding:9px 12px;border:1px solid var(--rule);
+  border-radius:7px;background:var(--paper);color:var(--ink);flex:1;min-width:200px;
+}
+.fib button{font:inherit;font-size:14px;padding:9px 16px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:7px;cursor:pointer}
+.fib input:disabled{background:var(--paper-3)}
+.why{
+  margin-top:11px;padding:11px 14px;border-radius:7px;font-size:14.5px;
+  background:var(--paper-3);border-left:3px solid var(--ink-3);display:none;
+}
+.why.show{display:block}
+.why b{font-family:'Spline Sans Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:4px}
+.scorebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1.5px solid var(--rule);margin-top:18px;flex-wrap:wrap}
+.score{font-family:'Spline Sans Mono',monospace;font-size:14px}
+.btn{font:inherit;font-size:13.5px;padding:8px 15px;border:1px solid var(--rule);background:var(--paper);border-radius:7px;cursor:pointer;color:var(--ink-2)}
+.btn:hover{background:var(--paper-3)}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* ---------- nav ---------- */
+.pagenav{display:flex;justify-content:space-between;gap:14px;margin-top:52px;padding-top:22px;border-top:1px solid var(--rule);flex-wrap:wrap}
+.pagenav a{
+  font-size:14.5px;text-decoration:none;color:var(--ink-2);
+  border:1px solid var(--rule);border-radius:7px;padding:10px 15px;background:var(--paper-2);
+}
+.pagenav a:hover{background:var(--paper-3);color:var(--ink)}
+.pagenav .sp{flex:1}
+footer{margin-top:40px;font-size:12.5px;color:var(--ink-3);font-family:'Spline Sans Mono',monospace}
+
+@media(max-width:640px){
+  .wrap{padding:24px 16px 70px}
+  h1{font-size:27px}
+  body{font-size:16px}
+}

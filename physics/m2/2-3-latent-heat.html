@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.3 &amp;nbsp;Latent Heat of Vaporisation and Specific Heat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 2</a> &nbsp;›&nbsp; M2.S3</div><header class="top"><h1>2.3 &nbsp;Latent Heat of Vaporisation and Specific Heat</h1><p class="tagline">Why a vaporiser is a heavy lump of metal, and what would happen if it were not.</p></header><div class="accentbar" style="background:var(--induction)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Define latent heat of vaporisation and specific heat capacity.</li><li>Explain the cooling that accompanies vaporisation and its effect on agent output.</li><li>Justify the material choice and mass of a variable bypass vaporiser.</li><li>Describe the role of the bimetallic strip in temperature compensation.</li></ul></div>
+<h3>Two quantities</h3>
+<p><em class="term">Latent heat of vaporisation</em> is the energy required to convert a given mass of liquid into vapour <strong>without any change in temperature</strong>. It is spent breaking intermolecular bonds rather than raising kinetic energy, which is why the temperature does not move while it is being paid.</p>
+
+<p><em class="term">Specific heat capacity</em> is the energy required to raise the temperature of one kilogram of a substance by one kelvin. High specific heat means a substance resists temperature change.</p>
+
+<div class="box known"><span class="label">What you already have</span>
+<p>Both quantities and the phase-change plateau on a heating curve. The new content is entirely in the engineering consequence: this is the section that explains a design decision, not a physical principle you have not met.</p></div>
+
+<h3>The problem</h3>
+<div class="chain">
+<div class="step">Fresh gas passes over liquid agent and carries vapour away.</div>
+<div class="step">Producing that vapour costs latent heat, which has to come from somewhere.</div>
+<div class="step">It comes from the remaining liquid and from the vaporiser body.</div>
+<div class="step">The liquid cools.</div>
+<div class="step">Saturated vapour pressure falls, because SVP depends on temperature.</div>
+<div class="step">Agent output falls, progressively, exactly when a long case needs it to be stable.</div>
+</div>
+
+<h3>Three engineering answers</h3>
+
+<table>
+<tr><th>Problem</th><th>Solution</th><th>Mechanism</th></tr>
+<tr><td>Liquid cools during use</td><td>High specific heat body</td><td>Stores thermal energy, resists temperature change</td></tr>
+<tr><td>Heat must reach the liquid</td><td>High thermal conductivity metal</td><td>Copper and bronze move heat from the body to the sump quickly</td></tr>
+<tr><td>Residual temperature drift</td><td>Bimetallic strip valve</td><td>Two metals with different expansion coefficients bend with temperature and mechanically alter the splitting ratio</td></tr>
+</table>
+
+<p>The bimetallic strip is the elegant part. As the vaporiser cools and SVP falls, the strip bends and opens the vaporising chamber further, sending a larger fraction of carrier gas over the agent. More flow across a weaker vapour pressure yields the same output concentration. It is a purely mechanical negative feedback loop with no electronics and no power supply.</p>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>A modern vaporiser weighs several kilograms and most of that mass is thermal ballast, not structure. That weight is the reason output stays within specification at high fresh gas flows over a long case. It is also why a vaporiser that has just been refilled with cold agent, or one run hard immediately after removal from a cold store, may sit briefly outside its calibration.</p></div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>Latent heat is absorbed at <strong>constant temperature</strong>. It is the energy of the phase transition itself. Specific heat is the energy that produces a <strong>change</strong> in temperature within a single phase. Questions mix these deliberately, and the giveaway is whether the temperature is stated to be changing.</p></div>
+
+<details class="recall"><summary>Why does the desflurane vaporiser not need a bimetallic strip?</summary>
+<div class="ans"><p>Because it does not rely on ambient thermal equilibrium at all. It actively heats the agent to 39 °C and holds it under pressure, so its vapour pressure is a controlled constant rather than something drifting with the room and with use. It solves the same problem by electrical brute force rather than mechanical compensation.</p></div></details>
+
+<details class="recall"><summary>Why do you feel cold stepping out of a pool, even into warm air?</summary>
+<div class="ans"><p>Water evaporating from your skin draws its latent heat of vaporisation from you. The identical mechanism cools a vaporiser sump, and it is why alcohol on skin feels colder than water despite starting at the same temperature, since it evaporates faster.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Latent heat of vaporisation is the energy required to:</div>
+<div class="opts">
+<button class="opt">Increase vapour temperature by one kelvin</button>
+<button class="opt">Raise a liquid to its boiling point</button>
+<button class="opt">Overcome ambient pressure during boiling</button>
+<button class="opt" data-correct="1">Change phase at constant temperature</button>
+</div>
+<div class="why" data-plain="It is spent breaking intermolecular bonds rather than increasing kinetic energy, which is why temperature is unchanged throughout the transition."><b>Mechanism</b>It is spent breaking intermolecular bonds rather than increasing kinetic energy, which is why temperature is unchanged throughout the transition.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Vaporiser bodies are built from copper or bronze principally because these metals offer:</div>
+<div class="opts">
+<button class="opt" data-correct="1">High specific heat and thermal conductivity</button>
+<button class="opt">Low density for portability</button>
+<button class="opt">Chemical inertness to halogenated agents</button>
+<button class="opt">Resistance to pressure deformation</button>
+</div>
+<div class="why" data-plain="High specific heat stores thermal energy against the cooling of vaporisation, and high conductivity delivers that energy to the liquid fast enough to matter during high-flow use."><b>Mechanism</b>High specific heat stores thermal energy against the cooling of vaporisation, and high conductivity delivers that energy to the liquid fast enough to matter during high-flow use.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">As a variable bypass vaporiser cools during prolonged use, the bimetallic strip:</div>
+<div class="opts">
+<button class="opt">Triggers an electrical heating element</button>
+<button class="opt" data-correct="1">Opens the vaporising chamber further</button>
+<button class="opt">Shuts off the bypass channel entirely</button>
+<button class="opt">Restricts flow into the vaporising chamber</button>
+</div>
+<div class="why" data-plain="Cooling lowers SVP, so a larger fraction of carrier gas must be routed over the agent to hold output constant. The strip bends with temperature and does this mechanically."><b>Mechanism</b>Cooling lowers SVP, so a larger fraction of carrier gas must be routed over the agent to hold output constant. The strip bends with temperature and does this mechanically.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Temperature remains constant while a substance absorbs its latent heat of vaporisation.</div>
+<div class="opts">
+<button class="opt" data-correct="1">True</button>
+<button class="opt">False</button>
+</div>
+<div class="why" data-plain="The energy goes into breaking intermolecular bonds rather than raising molecular kinetic energy, which is what temperature measures. This produces the plateau on a heating curve."><b>Mechanism</b>The energy goes into breaking intermolecular bonds rather than raising molecular kinetic energy, which is what temperature measures. This produces the plateau on a heating curve.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Vaporisation cools the agent, which reduces output because:</div>
+<div class="opts">
+<button class="opt">Carrier gas density rises when cooled</button>
+<button class="opt">Liquid viscosity increases and restricts flow</button>
+<button class="opt" data-correct="1">Saturated vapour pressure falls with temperature</button>
+<button class="opt">The splitting ratio is fixed at manufacture</button>
+</div>
+<div class="why" data-plain="SVP is temperature-dependent. A cooler sump produces less vapour per unit of carrier gas, so delivered concentration drifts down unless something compensates."><b>Mechanism</b>SVP is temperature-dependent. A cooler sump produces less vapour per unit of carrier gas, so delivered concentration drifts down unless something compensates.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Name the temperature-compensating component in a variable bypass vaporiser.</div>
+<div class="fib" data-answers='["bimetallic strip", "bimetallic valve", "bi-metallic strip", "bimetallic", "bimetallic strip valve"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Two bonded metals with different expansion coefficients bend as temperature changes, mechanically adjusting the splitting ratio. It is passive negative feedback requiring no power."><b>Mechanism</b>Two bonded metals with different expansion coefficients bend as temperature changes, mechanically adjusting the splitting ratio. It is passive negative feedback requiring no power.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="2-2-boiling-point.html">&larr; 2.2 Boiling Point</a><span class="sp"></span><a href="2-4-henrys-law.html">2.4 Henry's Law &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 2</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

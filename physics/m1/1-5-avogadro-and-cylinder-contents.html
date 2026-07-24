@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1.5 &amp;nbsp;Avogadro&#x27;s Law and Cylinder Contents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 1</a> &nbsp;›&nbsp; M1.S5</div><header class="top"><h1>1.5 &nbsp;Avogadro's Law and Cylinder Contents</h1><p class="tagline">Turning a mass on a scale into a volume of gas, which is the only way to audit a nitrous cylinder.</p></header><div class="accentbar" style="background:var(--induction)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State Avogadro's law and the molar volume of an ideal gas at STP.</li><li>Convert cylinder mass to delivered gas volume for nitrous oxide.</li><li>Explain why this calculation is necessary for nitrous and unnecessary for oxygen.</li><li>Compute time to empty from contents and flow rate.</li></ul></div>
+<h3>The law</h3>
+<p>Equal volumes of any gases, at the same temperature and pressure, contain equal numbers of molecules. One mole of any ideal gas occupies <strong>22.4 L</strong> at standard temperature and pressure, and about <strong>24 L</strong> at 20 °C and one atmosphere.</p>
+
+<div class="box known"><span class="label">What you already have</span>
+<p>Molar arithmetic. The only new content here is the clinical procedure it enables and the specific constants for nitrous oxide.</p></div>
+
+<h3>Why this matters only for nitrous</h3>
+<p>Oxygen is a true gas at room temperature, so its gauge pressure is a direct proxy for contents and no mass measurement is needed. Nitrous is stored as a liquid at a pressure fixed by its vapour pressure, so the gauge carries no contents information at all. Mass is the only remaining handle.</p>
+
+<div class="chain">
+<div class="step">Weigh the cylinder.</div>
+<div class="step">Subtract the tare weight stamped on the cylinder shoulder. The difference is the mass of nitrous.</div>
+<div class="step">Divide by the molar mass of N<sub>2</sub>O, which is 44 g/mol.</div>
+<div class="step">Multiply by molar volume, 22.4 L/mol at STP.</div>
+<div class="step">The result is the volume of gas that cylinder will deliver.</div>
+</div>
+
+<div class="eq">V &nbsp;=&nbsp; (mass in grams / 44) &nbsp;×&nbsp; 22.4
+<span class="where">A full nitrous E-cylinder holds about 3.4 kg of liquid. (3400 / 44) × 22.4 = 1731 L, which is why the nominal figure is quoted as roughly 1590–1730 L depending on the source and reference conditions.</span></div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>The nitrous E-cylinder carries more than twice the gas volume of the oxygen E-cylinder despite reading a quarter of the pressure. If that seems backwards, it is because pressure and quantity are only linked for a true gas. Liquid storage packs vastly more molecules into the same cylinder volume.</p></div>
+
+<h3>Time to empty</h3>
+<div class="eq">t &nbsp;=&nbsp; V<sub>remaining</sub> / flow rate
+<span class="where">Trivial arithmetic, and the reason for every calculation above it.</span></div>
+
+<details class="recall"><summary>Why does molar volume differ between 22.4 L and 24 L depending on the source?</summary>
+<div class="ans"><p>Reference conditions. 22.4 L/mol is at standard temperature and pressure, meaning 0 °C and 1 atm. At 20 °C the same mole expands to about 24 L by Charles' law. Exam questions almost always intend 22.4, but the discrepancy is worth recognising rather than treating as an error.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">A nitrous oxide cylinder weighs 8.9 kg. Its stamped tare weight is 5.5 kg. Approximate deliverable volume is:</div>
+<div class="opts">
+<button class="opt">660 L</button>
+<button class="opt">780 L</button>
+<button class="opt" data-correct="1">1730 L</button>
+<button class="opt">3400 L</button>
+</div>
+<div class="why" data-plain="Contents are 3.4 kg. (3400 g / 44 g·mol⁻¹) × 22.4 L·mol⁻¹ = 1731 L. The 660 L distractor is the oxygen cylinder figure."><b>Mechanism</b>Contents are 3.4 kg. (3400 g / 44 g·mol⁻¹) × 22.4 L·mol⁻¹ = 1731 L. The 660 L distractor is the oxygen cylinder figure.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Cylinder contents must be determined by weight for nitrous oxide because:</div>
+<div class="opts">
+<button class="opt" data-correct="1">Gauge pressure is fixed by vapour pressure, not quantity</button>
+<button class="opt">The cylinder valve prevents direct pressure reading</button>
+<button class="opt">Nitrous gauges are less accurate than oxygen gauges</button>
+<button class="opt">Nitrous is stored at too low a pressure to gauge</button>
+</div>
+<div class="why" data-plain="While liquid remains, the vapour above it sits at its saturated vapour pressure, which depends only on temperature. The gauge therefore reads the same whether the cylinder is nearly full or nearly empty."><b>Mechanism</b>While liquid remains, the vapour above it sits at its saturated vapour pressure, which depends only on temperature. The gauge therefore reads the same whether the cylinder is nearly full or nearly empty.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">One mole of an ideal gas at standard temperature and pressure occupies:</div>
+<div class="opts">
+<button class="opt">44 L</button>
+<button class="opt" data-correct="1">22.4 L</button>
+<button class="opt">18 L</button>
+<button class="opt">760 L</button>
+</div>
+<div class="why" data-plain="22.4 L/mol at 0 °C and 1 atm, from Avogadro&#x27;s law. The 44 distractor is the molar mass of nitrous oxide in grams, not a volume."><b>Mechanism</b>22.4 L/mol at 0 °C and 1 atm, from Avogadro's law. The 44 distractor is the molar mass of nitrous oxide in grams, not a volume.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">A nitrous oxide E-cylinder holds a greater volume of gas than an oxygen E-cylinder despite a lower gauge pressure.</div>
+<div class="opts">
+<button class="opt" data-correct="1">True</button>
+<button class="opt">False</button>
+</div>
+<div class="why" data-plain="Nitrous is stored as a liquid, which is far denser than compressed gas, so the same cylinder volume contains many more molecules despite the lower pressure reading."><b>Mechanism</b>Nitrous is stored as a liquid, which is far denser than compressed gas, so the same cylinder volume contains many more molecules despite the lower pressure reading.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Molar mass of nitrous oxide, in grams per mole.</div>
+<div class="fib" data-answers='["44", "44 g", "44g/mol", "44 g/mol", "44 grams"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Two nitrogen at 14 plus one oxygen at 16 gives 44 g/mol. This is the divisor that converts cylinder mass into moles before applying molar volume."><b>Mechanism</b>Two nitrogen at 14 plus one oxygen at 16 gives 44 g/mol. This is the divisor that converts cylinder mass into moles before applying molar volume.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="1-4-daltons-law.html">&larr; 1.4 Dalton's Law</a><span class="sp"></span><a href="1-6-adiabatic-and-joule-thomson.html">1.6 Adiabatic Change &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 1</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

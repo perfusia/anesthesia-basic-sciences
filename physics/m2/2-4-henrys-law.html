@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.4 &amp;nbsp;Henry&#x27;s Law</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 2</a> &nbsp;›&nbsp; M2.S4</div><header class="top"><h1>2.4 &nbsp;Henry's Law</h1><p class="tagline">How much gas dissolves, why warming a solution releases it, and why this is not the same thing as haemoglobin binding.</p></header><div class="accentbar" style="background:var(--induction)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State Henry's law and apply it to dissolved oxygen content.</li><li>Explain why gas solubility falls as temperature rises.</li><li>Distinguish dissolved gas from chemically bound gas.</li><li>Apply Henry's law to rewarming, decompression, and gas embolism.</li></ul></div>
+<h3>The law</h3>
+<p>At constant temperature, the quantity of a gas dissolved in a liquid is directly proportional to the partial pressure of that gas in equilibrium with the liquid.</p>
+
+<div class="eq">C &nbsp;=&nbsp; k × P
+<span class="where">C is dissolved concentration, P is partial pressure above the liquid, and k is a constant specific to that gas, that liquid, and that temperature.</span></div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>Dissolved oxygen in plasma obeys Henry's law exactly, at <strong>0.003 mL per dL per mmHg</strong>. At a P<sub>a</sub>O<sub>2</sub> of 100 mmHg that is 0.3 mL/dL, against roughly 20 mL/dL carried on haemoglobin. Dissolved oxygen is a rounding error under normal conditions and becomes the entire oxygen supply under hyperbaric conditions, where a P<sub>a</sub>O<sub>2</sub> of 2000 mmHg dissolves 6 mL/dL, enough to sustain tissue with no functioning haemoglobin at all. That is the physical basis of hyperbaric therapy for carbon monoxide poisoning.</p></div>
+
+<h3>The temperature relationship, which runs backwards from intuition</h3>
+<p>Gas solubility <strong>decreases</strong> as temperature rises. This is the opposite of the behaviour of most solids, where warming dissolves more.</p>
+
+<div class="chain">
+<div class="step">A dissolved gas molecule is held in solution by weak interaction with the solvent.</div>
+<div class="step">Raising temperature increases the kinetic energy of every molecule in the liquid.</div>
+<div class="step">More dissolved molecules acquire enough energy to escape into the gas phase.</div>
+<div class="step">The equilibrium shifts out of solution, and solubility falls.</div>
+</div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>This is a genuine hazard on cardiopulmonary bypass. Blood cooled during bypass holds more dissolved gas. Rewarming it lowers solubility, and gas comes out of solution as bubbles precisely when the blood is being returned to the patient. It is the same physics as opening a warm carbonated drink, and it is why rewarming is deliberately gradual and why arterial line filters exist.</p></div>
+
+<h3>Where else this shows up</h3>
+
+<table>
+<tr><th>Scenario</th><th>Mechanism</th></tr>
+<tr><td>Decompression sickness</td><td>Ambient pressure falls rapidly, dissolved nitrogen exceeds its new solubility limit and forms bubbles in tissue</td></tr>
+<tr><td>Rewarming after bypass</td><td>Solubility falls with temperature, dissolved gas comes out of solution</td></tr>
+<tr><td>Nitrous oxide and air-filled spaces</td><td>Nitrous is 34 times more soluble in blood than nitrogen, so it enters a closed space far faster than nitrogen leaves</td></tr>
+<tr><td>Hyperbaric oxygen therapy</td><td>Raising partial pressure raises dissolved content linearly, bypassing haemoglobin entirely</td></tr>
+</table>
+
+<div class="box math"><span class="label">Why nitrous expands a pneumothorax</span>
+<p>Both nitrous and nitrogen move down their partial pressure gradients, but Henry's law fixes how fast. Nitrous is roughly 34 times more soluble in blood than nitrogen, so blood delivers nitrous into an air-filled space vastly faster than it can carry nitrogen out. Volume rises in a compliant space such as bowel or a pneumothorax, and pressure rises in a non-compliant one such as the middle ear or a pneumocephalus.</p></div>
+
+<details class="recall"><summary>Why does Henry's law not describe oxygen carriage on haemoglobin?</summary>
+<div class="ans"><p>Because haemoglobin binding is a chemical reaction with a saturable binding site, not physical dissolution. It produces a sigmoid curve that plateaus, whereas Henry's law is strictly linear with no ceiling. Only the dissolved fraction, the 0.003 mL/dL/mmHg term, is Henry's law behaviour.</p></div></details>
+
+<details class="recall"><summary>A blood gas sample sits at room temperature for an hour before analysis. Predict the error.</summary>
+<div class="ans"><p>Leucocytes and erythrocytes keep metabolising, consuming oxygen and producing CO<sub>2</sub>, so measured P<sub>a</sub>O<sub>2</sub> falls and P<sub>a</sub>CO<sub>2</sub> rises. Icing the sample slows metabolism, and it also raises gas solubility, which is why iced samples must be analysed on a corrected basis rather than treated as identical to fresh ones.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Henry's law states that dissolved gas concentration is proportional to:</div>
+<div class="opts">
+<button class="opt">Absolute temperature of the solvent</button>
+<button class="opt">The square root of molecular weight</button>
+<button class="opt">Total pressure of the gas mixture</button>
+<button class="opt" data-correct="1">Partial pressure above the liquid</button>
+</div>
+<div class="why" data-plain="Each gas dissolves according to its own partial pressure, independent of the other gases present. Total pressure only matters through its contribution to that partial pressure."><b>Mechanism</b>Each gas dissolves according to its own partial pressure, independent of the other gases present. Total pressure only matters through its contribution to that partial pressure.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Dissolved oxygen in plasma is approximately:</div>
+<div class="opts">
+<button class="opt" data-correct="1">0.003 mL/dL/mmHg</button>
+<button class="opt">0.03 mL/dL/mmHg</button>
+<button class="opt">1.34 mL/g</button>
+<button class="opt">0.3 mL/dL/mmHg</button>
+</div>
+<div class="why" data-plain="0.003 mL/dL per mmHg, giving 0.3 mL/dL at a PaO2 of 100. The 1.34 figure is haemoglobin&#x27;s carrying capacity per gram, which is chemical binding rather than dissolution."><b>Mechanism</b>0.003 mL/dL per mmHg, giving 0.3 mL/dL at a P<sub>a</sub>O<sub>2</sub> of 100. The 1.34 figure is haemoglobin's carrying capacity per gram, which is chemical binding rather than dissolution.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Gas solubility in a liquid changes with temperature in which direction?</div>
+<div class="opts">
+<button class="opt">Unchanged with temperature</button>
+<button class="opt">Rises as temperature rises</button>
+<button class="opt" data-correct="1">Falls as temperature rises</button>
+<button class="opt">Rises to a peak then falls</button>
+</div>
+<div class="why" data-plain="Warming gives dissolved molecules enough kinetic energy to escape the solvent, shifting equilibrium out of solution. This runs opposite to most solids, which is why the relationship is easy to state backwards."><b>Mechanism</b>Warming gives dissolved molecules enough kinetic energy to escape the solvent, shifting equilibrium out of solution. This runs opposite to most solids, which is why the relationship is easy to state backwards.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Rewarming blood after hypothermic bypass increases the risk of bubble formation.</div>
+<div class="opts">
+<button class="opt">False</button>
+<button class="opt" data-correct="1">True</button>
+</div>
+<div class="why" data-plain="Cold blood holds more dissolved gas. As it warms, solubility falls and the excess comes out of solution as bubbles, which is why rewarming is gradual and arterial filters are used."><b>Mechanism</b>Cold blood holds more dissolved gas. As it warms, solubility falls and the excess comes out of solution as bubbles, which is why rewarming is gradual and arterial filters are used.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Nitrous oxide expands a pneumothorax because compared with nitrogen it is:</div>
+<div class="opts">
+<button class="opt">Of substantially lower molecular weight</button>
+<button class="opt">Actively secreted across the pleura</button>
+<button class="opt">About 34 times less soluble in blood</button>
+<button class="opt" data-correct="1">About 34 times more soluble in blood</button>
+</div>
+<div class="why" data-plain="Higher blood solubility means blood delivers nitrous into the space far faster than it can carry nitrogen out. Net molecules enter, and a compliant space expands."><b>Mechanism</b>Higher blood solubility means blood delivers nitrous into the space far faster than it can carry nitrogen out. Net molecules enter, and a compliant space expands.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Give Henry's law as an equation relating dissolved concentration to partial pressure.</div>
+<div class="fib" data-answers='["c = k x p", "c=kp", "c = kp", "c = k*p", "c equals kp", "c = k p"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Dissolved concentration is directly proportional to the partial pressure above the liquid, with k specific to the gas, solvent, and temperature. It is linear with no saturation ceiling, unlike haemoglobin binding."><b>Mechanism</b>Dissolved concentration is directly proportional to the partial pressure above the liquid, with k specific to the gas, solvent, and temperature. It is linear with no saturation ceiling, unlike haemoglobin binding.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="2-3-latent-heat.html">&larr; 2.3 Latent Heat</a><span class="sp"></span><a href="2-5-solubility-coefficients.html">2.5 Solubility Coefficients &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 2</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

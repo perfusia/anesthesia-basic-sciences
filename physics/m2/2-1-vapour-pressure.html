@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.1 &amp;nbsp;Vapour Pressure and Saturated Vapour Pressure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 2</a> &nbsp;›&nbsp; M2.S1</div><header class="top"><h1>2.1 &nbsp;Vapour Pressure and Saturated Vapour Pressure</h1><p class="tagline">One property, dependent on temperature and nothing else, from which the entire design of a vaporiser follows.</p></header><div class="accentbar" style="background:var(--induction)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Explain vapour pressure in terms of the kinetic energy distribution of molecules at a liquid surface.</li><li>Define saturated vapour pressure and state the only variable it depends on.</li><li>Compute saturated vapour concentration from SVP and ambient pressure.</li><li>Rank the volatile agents by SVP and explain why desflurane is the outlier.</li></ul></div>
+<h3>Where vapour pressure comes from</h3>
+<p>Molecules in a liquid do not all carry the same kinetic energy. Energy is distributed, and at any instant a minority of surface molecules carry enough to break free of intermolecular attraction and enter the gas phase.</p>
+
+<div class="chain">
+<div class="step">Molecules escape the liquid surface and enter the space above it.</div>
+<div class="step">Some of those molecules collide back into the liquid and are recaptured.</div>
+<div class="step">As vapour accumulates, the recapture rate rises.</div>
+<div class="step">At some density, escape rate equals recapture rate. The system is at equilibrium.</div>
+<div class="step">The pressure exerted by the vapour at that equilibrium is the <em class="term">saturated vapour pressure</em>.</div>
+</div>
+
+<div class="box math"><span class="label">The one fact this module is built on</span>
+<p>Saturated vapour pressure depends on <strong>temperature and the identity of the substance</strong>. Nothing else.</p>
+<p>It does not depend on ambient pressure. It does not depend on the volume of the container. It does not depend on how much liquid is present. Raising the temperature shifts the kinetic energy distribution rightward, more molecules clear the escape threshold, and SVP rises non-linearly.</p>
+<p>Every apparently strange behaviour later in this course, the nitrous cylinder gauge from Module 1, altitude compensation in Module 4, and the entire existence of the desflurane vaporiser, is a direct consequence of that sentence.</p></div>
+
+<h3>The numbers</h3>
+<p>SVP at 20 °C, with saturated vapour concentration computed as SVP / 760 at one atmosphere:</p>
+
+<table>
+<tr><th>Agent</th><th>SVP at 20 °C</th><th>Saturated vapour conc.</th><th>Boiling point</th></tr>
+<tr><td>Desflurane</td><td>669 mmHg</td><td>88%</td><td>22.8 °C</td></tr>
+<tr><td>Halothane</td><td>243 mmHg</td><td>32%</td><td>50.2 °C</td></tr>
+<tr><td>Isoflurane</td><td>238 mmHg</td><td>31%</td><td>48.5 °C</td></tr>
+<tr><td>Enflurane</td><td>172 mmHg</td><td>23%</td><td>56.5 °C</td></tr>
+<tr><td>Sevoflurane</td><td>157 mmHg</td><td>21%</td><td>58.6 °C</td></tr>
+</table>
+
+<p>Published values vary by a few mmHg between sources. Learn the ranking and the order of magnitude rather than the third significant figure.</p>
+
+<div class="eq">Saturated vapour concentration (%) &nbsp;=&nbsp; (SVP / P<sub>ambient</sub>) × 100
+<span class="where">Sevoflurane: 157 / 760 = 20.7%. This is the maximum concentration obtainable from a fully saturated carrier stream, and it is the ceiling a vaporiser must dilute down from.</span></div>
+
+<h3>Why desflurane breaks the pattern</h3>
+<p>Desflurane's SVP of 669 mmHg is within 12% of one atmosphere at room temperature, and its boiling point of 22.8 °C sits below the temperature of many operating rooms. A conventional variable bypass vaporiser cannot handle this. The saturated stream is 88% agent, so the required dilution ratio becomes enormous and unstable, and on a warm day the liquid is boiling rather than evaporating.</p>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>This is why the desflurane vaporiser is a heated, pressurised, electronically controlled gas blender rather than a splitting-ratio device. It holds the agent at 39 °C and about 2 atmospheres, keeps it as a pressurised liquid, and injects measured vapour into the fresh gas stream. Module 4 covers the machine. Module 2 explains why the machine has to exist.</p></div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>SVP is <strong>independent of ambient pressure</strong>. Boiling point is not. Boiling point is the temperature at which SVP happens to equal ambient pressure, so it falls as you climb. Section 2.2 is entirely this distinction.</p></div>
+
+<details class="recall"><summary>Two sealed containers of sevoflurane at 20 °C, one holding 5 mL of liquid and one holding 200 mL. Which has the higher vapour pressure above the liquid?</summary>
+<div class="ans"><p>Neither. Both read 157 mmHg. SVP is an equilibrium property of the substance at that temperature and is completely independent of the quantity of liquid present. This is the same reasoning that makes a nitrous cylinder gauge useless for estimating contents.</p></div></details>
+
+<details class="recall"><summary>Why does SVP rise non-linearly with temperature rather than proportionally?</summary>
+<div class="ans"><p>Because the fraction of molecules exceeding the escape energy follows a Boltzmann distribution, which is exponential in temperature. A small temperature rise moves a disproportionately large number of molecules past the threshold, so the SVP curve steepens as it climbs.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Saturated vapour pressure depends on:</div>
+<div class="opts">
+<button class="opt">Ambient pressure and container volume</button>
+<button class="opt">The volume of liquid present</button>
+<button class="opt">Temperature and ambient pressure</button>
+<button class="opt" data-correct="1">Temperature and the substance only</button>
+</div>
+<div class="why" data-plain="SVP is the equilibrium pressure where escape rate equals recapture rate. That equilibrium is set by the kinetic energy distribution, which depends on temperature and the intermolecular forces of the substance."><b>Mechanism</b>SVP is the equilibrium pressure where escape rate equals recapture rate. That equilibrium is set by the kinetic energy distribution, which depends on temperature and the intermolecular forces of the substance.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Saturated vapour concentration of isoflurane at 20 °C and one atmosphere is closest to:</div>
+<div class="opts">
+<button class="opt">88%</button>
+<button class="opt">48%</button>
+<button class="opt" data-correct="1">31%</button>
+<button class="opt">21%</button>
+</div>
+<div class="why" data-plain="238 / 760 = 31.3%. The 21% figure is sevoflurane and 88% is desflurane."><b>Mechanism</b>238 / 760 = 31.3%. The 21% figure is sevoflurane and 88% is desflurane.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Desflurane requires a fundamentally different vaporiser design because:</div>
+<div class="opts">
+<button class="opt">Its molecular weight prevents accurate splitting</button>
+<button class="opt">It degrades in soda lime at high temperature</button>
+<button class="opt" data-correct="1">Its boiling point is near room temperature</button>
+<button class="opt">Its blood:gas coefficient is unusually low</button>
+</div>
+<div class="why" data-plain="A boiling point of 22.8 °C and an SVP of 669 mmHg mean the agent may be boiling at ambient temperature and the saturated stream is 88% agent, which no splitting-ratio device can dilute stably."><b>Mechanism</b>A boiling point of 22.8 °C and an SVP of 669 mmHg mean the agent may be boiling at ambient temperature and the saturated stream is 88% agent, which no splitting-ratio device can dilute stably.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Doubling the volume of liquid agent in a vaporiser sump doubles the saturated vapour pressure above it.</div>
+<div class="opts">
+<button class="opt">True</button>
+<button class="opt" data-correct="1">False</button>
+</div>
+<div class="why" data-plain="SVP is independent of quantity. It is an equilibrium property fixed by temperature and the identity of the substance, which is why a partly empty sump delivers the same concentration as a full one."><b>Mechanism</b>SVP is independent of quantity. It is an equilibrium property fixed by temperature and the identity of the substance, which is why a partly empty sump delivers the same concentration as a full one.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Which agent has the highest saturated vapour pressure at 20 °C?</div>
+<div class="opts">
+<button class="opt">Halothane</button>
+<button class="opt">Sevoflurane</button>
+<button class="opt">Isoflurane</button>
+<button class="opt" data-correct="1">Desflurane</button>
+</div>
+<div class="why" data-plain="Desflurane at 669 mmHg, against 243 for halothane, 238 for isoflurane, and 157 for sevoflurane. Its weak intermolecular forces let far more molecules escape at a given temperature."><b>Mechanism</b>Desflurane at 669 mmHg, against 243 for halothane, 238 for isoflurane, and 157 for sevoflurane. Its weak intermolecular forces let far more molecules escape at a given temperature.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Saturated vapour pressure of sevoflurane at 20 °C, in mmHg.</div>
+<div class="fib" data-answers='["157", "157 mmhg", "160", "~157"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="About 157 mmHg, giving a saturated vapour concentration of roughly 21%. Sources cite 157 to 160 depending on the reference temperature used."><b>Mechanism</b>About 157 mmHg, giving a saturated vapour concentration of roughly 21%. Sources cite 157 to 160 depending on the reference temperature used.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Give the equation for saturated vapour concentration as a percentage.</div>
+<div class="fib" data-answers='["svp/patm x 100", "svp / patm x 100", "(svp/patm) x 100", "svp/pambient x 100", "svp divided by patm times 100", "svp/pb x 100"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="The vapour&#x27;s partial pressure divided by total pressure gives its fractional concentration, by Dalton&#x27;s law. This is the ceiling a variable bypass vaporiser must dilute down from."><b>Mechanism</b>The vapour's partial pressure divided by total pressure gives its fractional concentration, by Dalton's law. This is the ceiling a variable bypass vaporiser must dilute down from.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><span class="sp"></span><a href="2-2-boiling-point.html">2.2 Boiling Point &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 2</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

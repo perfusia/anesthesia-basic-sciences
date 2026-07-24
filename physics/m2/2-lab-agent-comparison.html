@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 2 &amp;nbsp;· &amp;nbsp;Agent Comparison and Prediction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 2</a> &nbsp;›&nbsp; M2.L2</div><header class="top"><h1>Lab 2 &nbsp;· &nbsp;Agent Comparison and Prediction</h1><p class="tagline">Build the table from the coefficients, then predict behaviour from it. Do these on paper before revealing.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">Lab objectives</span><ul><li>Compute saturated vapour concentration for each agent.</li><li>Rank agents by onset speed and by potency from their coefficients alone.</li><li>Predict emergence behaviour for short and prolonged cases.</li><li>Apply the oil:gas × MAC relationship to estimate an unknown.</li></ul></div>
+<div class="box"><span class="label">Reference data at 20 °C, 1 atm</span>
+<p>Desflurane SVP 669, BP 22.8 °C, blood:gas 0.42, oil:gas 19, MAC 6.0 · Sevoflurane SVP 157, BP 58.6 °C, blood:gas 0.65, oil:gas 47, MAC 2.0 · Isoflurane SVP 238, BP 48.5 °C, blood:gas 1.4, oil:gas 91, MAC 1.15 · Halothane SVP 243, BP 50.2 °C, blood:gas 2.4, oil:gas 224, MAC 0.75 · Nitrous oxide blood:gas 0.47, oil:gas 1.4, MAC 104</p></div>
+
+<h3>Problem 1</h3>
+<p>Compute the saturated vapour concentration of each volatile agent at 20 °C and one atmosphere.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Desflurane 669/760 = <strong>88%</strong> · Halothane 243/760 = <strong>32%</strong> · Isoflurane 238/760 = <strong>31%</strong> · Sevoflurane 157/760 = <strong>21%</strong></p>
+<p>Note how far above clinical concentrations all of these sit. A vaporiser's job is dilution, not concentration, and desflurane's 88% is why splitting-ratio dilution becomes impractical for it.</p></div></details>
+
+<h3>Problem 2</h3>
+<p>Rank the five agents by speed of onset, fastest first, and justify from a single number.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Desflurane 0.42 → nitrous 0.47 → sevoflurane 0.65 → isoflurane 1.4 → halothane 2.4.</p>
+<p>The number is blood:gas, and lower is faster. Low solubility means blood saturates quickly, so alveolar partial pressure rises rapidly toward inspired and the brain follows.</p></div></details>
+
+<h3>Problem 3</h3>
+<p>Rank the same five by potency, most potent first. Is the ordering the same?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Halothane 224 → isoflurane 91 → sevoflurane 47 → desflurane 19 → nitrous 1.4.</p>
+<p>The number is oil:gas, and higher is more potent. The ordering is <strong>almost exactly reversed</strong> from onset speed, which is a coincidence of chemistry rather than a physical law: the same molecular properties that reduce lipid affinity also reduce blood solubility. Do not state it as a rule.</p></div></details>
+
+<h3>Problem 4</h3>
+<p>A novel agent has an oil:gas coefficient of 30. Estimate its MAC.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Using oil:gas × MAC ≈ 150: MAC ≈ 150 / 30 = <strong>5%</strong>.</p>
+<p>Sanity check against the real agents: their products range from 94 to 168, so an estimate of 3% to 5.6% is the honest interval. The Meyer-Overton correlation is strong enough for an order-of-magnitude prediction and not strong enough for a dose.</p></div></details>
+
+<h3>Problem 5</h3>
+<p>Two patients, one 25-minute case and one seven-hour case, both on sevoflurane. Predict how emergence differs and name the physical reason.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Short case: emergence is fast and governed almost entirely by the blood:gas coefficient of 0.65. Fat has barely begun to load.</p>
+<p>Long case: emergence is markedly slower. Fat:blood for sevoflurane is roughly 27 and adipose is poorly perfused, so seven hours is long enough to load a large, slowly emptying reservoir that continues releasing agent after the vaporiser is off.</p>
+<p>This is the mechanism behind desflurane's niche in prolonged bariatric surgery.</p></div></details>
+
+<h3>Problem 6</h3>
+<p>Why does an agent's blood:gas coefficient not predict its potency, given that both describe solubility?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Because they describe solubility in different phases, serving different functions. Blood:gas describes how much agent the blood <em>reservoir</em> must absorb before partial pressure rises, which is a kinetic question about speed. Oil:gas describes affinity for the lipid <em>target</em>, which is a pharmacodynamic question about effect at the site. Same physical quantity, different compartment, different clinical meaning.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Saturated vapour concentration of halothane at 20 °C and one atmosphere is closest to:</div>
+<div class="opts">
+<button class="opt">88%</button>
+<button class="opt" data-correct="1">32%</button>
+<button class="opt">24%</button>
+<button class="opt">21%</button>
+</div>
+<div class="why" data-plain="243 / 760 = 32%. Isoflurane is very close at 31%, sevoflurane is 21%, and desflurane is the outlier at 88%."><b>Mechanism</b>243 / 760 = 32%. Isoflurane is very close at 31%, sevoflurane is 21%, and desflurane is the outlier at 88%.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">An agent with oil:gas of 60 would have an estimated MAC closest to:</div>
+<div class="opts">
+<button class="opt" data-correct="1">2.5%</button>
+<button class="opt">9%</button>
+<button class="opt">36%</button>
+<button class="opt">0.6%</button>
+</div>
+<div class="why" data-plain="Using oil:gas × MAC ≈ 150, MAC ≈ 150/60 = 2.5%. The correlation gives an order-of-magnitude estimate, not a precise dose."><b>Mechanism</b>Using oil:gas × MAC ≈ 150, MAC ≈ 150/60 = 2.5%. The correlation gives an order-of-magnitude estimate, not a precise dose.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Ranked from fastest to slowest onset, the correct order is:</div>
+<div class="opts">
+<button class="opt">Isoflurane, desflurane, sevoflurane, halothane</button>
+<button class="opt">Halothane, isoflurane, sevoflurane, desflurane</button>
+<button class="opt" data-correct="1">Desflurane, sevoflurane, isoflurane, halothane</button>
+<button class="opt">Sevoflurane, desflurane, halothane, isoflurane</button>
+</div>
+<div class="why" data-plain="Ordering follows ascending blood:gas: 0.42, 0.65, 1.4, 2.4. Lower solubility means alveolar partial pressure rises faster toward inspired."><b>Mechanism</b>Ordering follows ascending blood:gas: 0.42, 0.65, 1.4, 2.4. Lower solubility means alveolar partial pressure rises faster toward inspired.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">After a seven-hour anesthetic, fat becomes a clinically significant reservoir delaying emergence.</div>
+<div class="opts">
+<button class="opt" data-correct="1">True</button>
+<button class="opt">False</button>
+</div>
+<div class="why" data-plain="Fat:blood coefficients are large and adipose perfusion is poor, so it loads slowly across a long case and then releases agent slowly after the vaporiser is off."><b>Mechanism</b>Fat:blood coefficients are large and adipose perfusion is poor, so it loads slowly across a long case and then releases agent slowly after the vaporiser is off.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Saturated vapour concentration of desflurane at 20 °C, as a percentage.</div>
+<div class="fib" data-answers='["88", "88%", "88 percent", "87", "88 %"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="669 / 760 = 88%. This is why a splitting-ratio vaporiser cannot dilute it stably and why the desflurane vaporiser is a heated gas blender instead."><b>Mechanism</b>669 / 760 = 88%. This is why a splitting-ratio vaporiser cannot dilute it stably and why the desflurane vaporiser is a heated gas blender instead.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="2-7-diffusion.html">&larr; 2.7 Diffusion</a><span class="sp"></span><a href="2-exam.html">Module 2 Exam &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 2</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

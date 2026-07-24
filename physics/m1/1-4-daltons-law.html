@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1.4 &amp;nbsp;Dalton&#x27;s Law of Partial Pressures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 1</a> &nbsp;›&nbsp; M1.S4</div><header class="top"><h1>1.4 &nbsp;Dalton's Law of Partial Pressures</h1><p class="tagline">The most-used concept in anesthesia, and the one most often stated loosely.</p></header><div class="accentbar" style="background:var(--induction)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State Dalton's law and compute a partial pressure from fractional concentration and total pressure.</li><li>Explain why partial pressure, not concentration, drives diffusion and clinical effect.</li><li>Predict the effect of altitude on inspired oxygen partial pressure at constant FiO<sub>2</sub>.</li><li>Explain why MAC is defined at one atmosphere.</li><li>Distinguish the altitude behaviour of a variable bypass vaporiser from a gas-blending vaporiser.</li></ul></div>
+<p>If you retain one thing from Module 1, retain this. Partial pressure is the currency of every gas exchange, every anesthetic depth, and every diffusion gradient you will ever manage.</p>
+
+<h3>The law</h3>
+<p>In a mixture of gases, each gas exerts the pressure it would exert if it occupied the container alone, and the total pressure is the sum of these <em class="term">partial pressures</em>.</p>
+
+<div class="eq">P<sub>total</sub> = P<sub>1</sub> + P<sub>2</sub> + P<sub>3</sub> … &nbsp;&nbsp;and&nbsp;&nbsp; P<sub>gas</sub> = F<sub>gas</sub> × P<sub>total</sub>
+<span class="where">F is the fractional concentration. Room air at sea level: F<sub>O2</sub> = 0.21, so P<sub>O2</sub> = 0.21 × 760 = 160 mmHg.</span></div>
+
+<h3>Why concentration is the wrong variable</h3>
+<p>Molecules diffuse down a <strong>partial pressure</strong> gradient, not a concentration gradient. This distinction is invisible at sea level, where the two track each other exactly, and becomes decisive the moment total pressure changes.</p>
+
+<div class="chain">
+<div class="step">A patient breathes 21% oxygen at sea level. P<sub>O2</sub> = 0.21 × 760 = 160 mmHg.</div>
+<div class="step">The same patient breathes 21% oxygen at 4,000 m, where ambient pressure is about 460 mmHg.</div>
+<div class="step">P<sub>O2</sub> = 0.21 × 460 = 97 mmHg. The concentration has not changed at all.</div>
+<div class="step">The driving gradient into blood has fallen by 40%, and the patient is hypoxic.</div>
+</div>
+
+<div class="box math"><span class="label">The correction everyone forgets</span>
+<p>Inspired gas is humidified to saturation in the airway, and water vapour contributes its own partial pressure of <strong>47 mmHg at 37 °C</strong>, which is temperature-dependent and pressure-independent. Subtract it before applying the fraction:</p>
+<div class="eq" style="margin:12px 0 0">P<sub>I</sub>O<sub>2</sub> = F<sub>I</sub>O<sub>2</sub> × (P<sub>atm</sub> − 47)</div>
+<p style="margin-top:12px">At sea level on room air: 0.21 × (760 − 47) = 150 mmHg, not 160. That 47 mmHg is a fixed subtraction, so its <em>proportional</em> impact grows as ambient pressure falls, which makes altitude worse than the naive calculation suggests.</p></div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p><em class="term">MAC</em> is defined as a percentage at one atmosphere, but the brain responds to partial pressure. A MAC of 2% sevoflurane means 0.02 × 760 = 15.2 mmHg of anesthetic in the alveolus. Quote MAC as a percentage in Denver and you are describing a different pharmacological state than the same percentage at sea level. This returns as a full section in Module 9.</p></div>
+
+<h3>The vaporiser consequence</h3>
+<p>This is the classic altitude question and it separates the two vaporiser designs you will meet in Module 4.</p>
+
+<table>
+<tr><th></th><th>Variable bypass (sevo, iso)</th><th>Gas blender (desflurane)</th></tr>
+<tr><td>Output at altitude</td><td>Higher volume %</td><td>Unchanged volume %</td></tr>
+<tr><td>Partial pressure delivered</td><td>Roughly preserved</td><td>Falls with ambient pressure</td></tr>
+<tr><td>Clinical effect</td><td>Approximately maintained</td><td>Under-dosed</td></tr>
+</table>
+
+<p>The reason is that saturated vapour pressure depends on temperature, not on ambient pressure. A variable bypass vaporiser therefore adds the same absolute quantity of vapour regardless of altitude, and since total pressure has fallen, that same quantity now represents a larger fraction. The partial pressure delivered is roughly unchanged, which is what the patient responds to. A desflurane vaporiser, which blends to a set percentage electronically, has no such self-correction.</p>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>The intuitive answer is that a vaporiser under-doses at altitude. For a <strong>variable bypass</strong> vaporiser that is wrong, and the mechanism above is why. The device that genuinely under-doses at altitude is the <strong>desflurane</strong> vaporiser, because it delivers a set percentage rather than a set vapour quantity.</p></div>
+
+<details class="recall"><summary>Why does the 47 mmHg water vapour term not scale with altitude?</summary>
+<div class="ans"><p>Because saturated vapour pressure is a function of temperature alone. Body temperature does not change with altitude, so the water vapour contribution stays at 47 mmHg while everything around it shrinks. Its proportional bite therefore grows as ambient pressure falls.</p></div></details>
+
+<details class="recall"><summary>A patient on 100% oxygen at sea level. What is the inspired partial pressure?</summary>
+<div class="ans"><p>1.00 × (760 − 47) = 713 mmHg. Not 760. Humidification takes its share regardless of what fraction you are delivering.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">A patient breathes 40% oxygen where ambient pressure is 600 mmHg. Inspired oxygen partial pressure is closest to:</div>
+<div class="opts">
+<button class="opt">259 mmHg</button>
+<button class="opt">185 mmHg</button>
+<button class="opt" data-correct="1">221 mmHg</button>
+<button class="opt">240 mmHg</button>
+</div>
+<div class="why" data-plain="Subtract water vapour first: 0.40 × (600 − 47) = 221 mmHg. Omitting the 47 mmHg term gives 240 and is the intended distractor."><b>Mechanism</b>Subtract water vapour first: 0.40 × (600 − 47) = 221 mmHg. Omitting the 47 mmHg term gives 240 and is the intended distractor.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Molecular diffusion across the alveolar membrane is driven by a gradient of:</div>
+<div class="opts">
+<button class="opt">Molar density</button>
+<button class="opt">Total gas pressure</button>
+<button class="opt">Fractional concentration</button>
+<button class="opt" data-correct="1">Partial pressure</button>
+</div>
+<div class="why" data-plain="Partial pressure is the driving force. Concentration only predicts diffusion correctly when total pressure is fixed, which is why the two appear interchangeable at sea level and diverge at altitude."><b>Mechanism</b>Partial pressure is the driving force. Concentration only predicts diffusion correctly when total pressure is fixed, which is why the two appear interchangeable at sea level and diverge at altitude.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">A variable bypass sevoflurane vaporiser used at high altitude delivers:</div>
+<div class="opts">
+<button class="opt">A higher volume percent at increased partial pressure</button>
+<button class="opt">An unchanged volume percent at reduced partial pressure</button>
+<button class="opt" data-correct="1">A higher volume percent at roughly unchanged partial pressure</button>
+<button class="opt">A lower volume percent at reduced partial pressure</button>
+</div>
+<div class="why" data-plain="Saturated vapour pressure depends on temperature, not ambient pressure, so the same absolute vapour quantity is added. Against a lower total pressure that represents a larger fraction, leaving partial pressure roughly preserved."><b>Mechanism</b>Saturated vapour pressure depends on temperature, not ambient pressure, so the same absolute vapour quantity is added. Against a lower total pressure that represents a larger fraction, leaving partial pressure roughly preserved.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Water vapour contributes 47 mmHg to inspired gas at body temperature regardless of altitude.</div>
+<div class="opts">
+<button class="opt" data-correct="1">True</button>
+<button class="opt">False</button>
+</div>
+<div class="why" data-plain="Saturated vapour pressure is a function of temperature alone. Core temperature is unchanged at altitude, so the 47 mmHg term is fixed while ambient pressure falls around it."><b>Mechanism</b>Saturated vapour pressure is a function of temperature alone. Core temperature is unchanged at altitude, so the 47 mmHg term is fixed while ambient pressure falls around it.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">MAC is specified at one atmosphere because:</div>
+<div class="opts">
+<button class="opt">Blood solubility changes with barometric pressure</button>
+<button class="opt" data-correct="1">Anesthetic effect depends on partial pressure, not percentage</button>
+<button class="opt">Vaporiser calibration is only valid at sea level</button>
+<button class="opt">Alveolar concentration cannot be measured at altitude</button>
+</div>
+<div class="why" data-plain="The brain responds to the partial pressure of anesthetic. A given percentage corresponds to different partial pressures at different ambient pressures, so the percentage must be anchored to a stated total pressure."><b>Mechanism</b>The brain responds to the partial pressure of anesthetic. A given percentage corresponds to different partial pressures at different ambient pressures, so the percentage must be anchored to a stated total pressure.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Give the equation for inspired oxygen partial pressure including the humidification term.</div>
+<div class="fib" data-answers='["fio2 x (patm - 47)", "fio2 (patm - 47)", "fio2 * (patm - 47)", "fio2 x (pb - 47)", "fio2(patm-47)", "fio2 x patm - 47"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Airway gas is fully saturated at 37 °C, so 47 mmHg of the total is water vapour and is unavailable to the fraction of interest. Subtract before multiplying."><b>Mechanism</b>Airway gas is fully saturated at 37 °C, so 47 mmHg of the total is water vapour and is unavailable to the fraction of interest. Subtract before multiplying.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Inspired oxygen partial pressure on room air at sea level, in mmHg, using the humidified equation.</div>
+<div class="fib" data-answers='["150", "150 mmhg", "~150", "149", "149.7"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="0.21 × (760 − 47) = 149.7, conventionally quoted as 150 mmHg. The unhumidified figure of 160 ignores water vapour and is the standard trap."><b>Mechanism</b>0.21 × (760 − 47) = 149.7, conventionally quoted as 150 mmHg. The unhumidified figure of 160 ignores water vapour and is the standard trap.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="1-3-gas-laws.html">&larr; 1.3 The Gas Laws</a><span class="sp"></span><a href="1-5-avogadro-and-cylinder-contents.html">1.5 Avogadro and Cylinder Contents &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 1</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

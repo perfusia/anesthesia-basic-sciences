@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1.1 &amp;nbsp;SI Units and Dimensional Analysis in Anesthesia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 1</a> &nbsp;›&nbsp; M1.S1</div><header class="top"><h1>1.1 &nbsp;SI Units and Dimensional Analysis in Anesthesia</h1><p class="tagline">Why five different pressure units are in use in the same operating room, and which one belongs where.</p></header><div class="accentbar" style="background:var(--induction)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State the SI definition of pressure and derive the pascal from base units.</li><li>Convert freely between mmHg, cmH<sub>2</sub>O, kPa, psi, bar, and atm.</li><li>Explain why mercury and water manometry differ by a factor of 13.6.</li><li>Distinguish gauge pressure from absolute pressure and say which one a cylinder gauge reports.</li><li>Predict which unit will be used for a given clinical measurement and justify it.</li></ul></div>
+<p>Anesthesia is the only clinical setting where you will routinely read five different pressure units within one metre of each other. Arterial line in mmHg. Airway pressure in cmH<sub>2</sub>O. Cylinder in psi. Gas analyser in kPa. None of this is arbitrary, and once you see why each unit survived, you stop needing a conversion table.</p>
+
+<h3>Pressure is force per unit area</h3>
+<p>That is the whole definition. Everything else is a unit choice.</p>
+
+<div class="eq">P = F / A
+<span class="where">F in newtons (kg·m·s<sup>−2</sup>), A in m². One newton over one square metre is one <em class="term">pascal</em>. The pascal is tiny, which is the root of the entire mess below.</span></div>
+
+<div class="box known"><span class="label">What you already have</span>
+Dimensional analysis and SI base units. Nothing in this section is a new capability. What is new is the set of historical constants and the clinical convention for where each unit is used. Treat it as vocabulary, not physics.</div>
+
+<h3>Why manometry left us two units</h3>
+<p>Before transducers, you measured a pressure by letting it push a liquid column up a tube and reading the height. The unit became the height of the column, which means the unit silently encodes the density of whatever liquid was in it.</p>
+
+<div class="chain">
+<div class="step">A column of liquid exerts pressure P = ρgh, where ρ is density, g is gravity, h is height.</div>
+<div class="step">Mercury has a density of 13,600 kg/m³. Water is 1,000 kg/m³.</div>
+<div class="step">For the same pressure, the water column must be 13.6 times taller than the mercury column.</div>
+<div class="step">So 1 mmHg = 13.6 mmH<sub>2</sub>O = 1.36 cmH<sub>2</sub>O.</div>
+</div>
+
+<p>That single ratio explains the whole convention. Arterial pressures are large, so mercury keeps the column short enough to fit on a wall. Airway pressures are small, so water gives you finer resolution across the clinically useful range. Neither unit is more correct. They are two different liquids in two different tubes.</p>
+
+<h3>The conversion set worth memorising</h3>
+<p>One standard atmosphere, expressed six ways:</p>
+
+<table>
+<tr><th>Unit</th><th>1 atm equals</th><th>Where you meet it</th></tr>
+<tr><td>mmHg (torr)</td><td>760</td><td>Blood pressure, partial pressures, vapour pressure</td></tr>
+<tr><td>cmH<sub>2</sub>O</td><td>1033</td><td>Airway pressure, PEEP, CVP on older systems</td></tr>
+<tr><td>kPa</td><td>101.3</td><td>Gas analysis, blood gases outside the US</td></tr>
+<tr><td>psi</td><td>14.7</td><td>Cylinders and pipelines</td></tr>
+<tr><td>bar</td><td>1.013</td><td>European cylinder gauges</td></tr>
+<tr><td>atm</td><td>1</td><td>Hyperbaric, MAC definitions</td></tr>
+</table>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>Pipeline gas arrives at roughly <strong>50–55 psi</strong>, and every anesthesia machine is designed around that number. A full oxygen E-cylinder sits near <strong>2000 psi</strong>, which is why the first-stage regulator drops it to around 45 psi so the pipeline always wins if both are connected. PEEP of 5 cmH<sub>2</sub>O is about 3.7 mmHg, which is worth internalising the moment you start comparing airway pressure to venous pressure across the same alveolar capillary.</p></div>
+
+<h3>Gauge versus absolute</h3>
+<p>A cylinder gauge reads <em class="term">gauge pressure</em>: pressure relative to ambient. It reads zero when the cylinder is at atmospheric pressure, not when it is at true vacuum. <em class="term">Absolute pressure</em> is gauge plus one atmosphere.</p>
+
+<div class="eq">P<sub>absolute</sub> = P<sub>gauge</sub> + P<sub>atmospheric</sub></div>
+
+<p>For cylinder arithmetic at 2000 psi the distinction is a rounding error. For anything near atmospheric it is not, which is why blood gas partial pressures and alveolar gas equations are always absolute.</p>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>An E-cylinder gauge reading <strong>zero</strong> does not contain no gas. It contains gas at ambient pressure. This matters for scavenging and for any calculation that treats the gauge number as a proportion of contents.</p></div>
+
+<details class="recall"><summary>Why is central venous pressure sometimes quoted in cmH<sub>2</sub>O and sometimes in mmHg?</summary>
+<div class="ans"><p>Historical transducer choice. Water manometers were the original bedside method and gave better resolution at the low pressures involved. Electronic transducers report in mmHg by convention because they are shared with arterial monitoring. A CVP of 8 mmHg is roughly 11 cmH<sub>2</sub>O, so failing to note the unit produces a 36% error in the direction of thinking the patient is drier than they are.</p></div></details>
+
+<details class="recall"><summary>Derive the pascal from SI base units without looking it up.</summary>
+<div class="ans"><p>Pressure is force over area. Force is mass times acceleration, so kg·m·s<sup>−2</sup>. Divide by m²: kg·m<sup>−1</sup>·s<sup>−2</sup>. That is one pascal.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">A ventilator reports a peak airway pressure of 34 cmH<sub>2</sub>O. Expressed in mmHg, this is closest to:</div>
+<div class="opts">
+<button class="opt" data-correct="1">25 mmHg</button>
+<button class="opt">63 mmHg</button>
+<button class="opt">13 mmHg</button>
+<button class="opt">46 mmHg</button>
+</div>
+<div class="why" data-plain="Divide by 1.36 to go from cmH2O to mmHg, because a mercury column is 13.6 times denser than water. 34 / 1.36 = 25."><b>Mechanism</b>Divide by 1.36 to go from cmH<sub>2</sub>O to mmHg, because a mercury column is 13.6 times denser than water. 34 / 1.36 = 25.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">The factor of 13.6 relating mmHg to cmH<sub>2</sub>O originates in:</div>
+<div class="opts">
+<button class="opt">The temperature coefficient of the manometer</button>
+<button class="opt" data-correct="1">The relative densities of the two liquids</button>
+<button class="opt">The compressibility of mercury vapour</button>
+<button class="opt">The difference between gauge and absolute pressure</button>
+</div>
+<div class="why" data-plain="Column pressure is ρgh. Mercury&#x27;s density is 13,600 kg/m³ against water&#x27;s 1,000, so for equal pressure the water column stands 13.6 times taller."><b>Mechanism</b>Column pressure is ρgh. Mercury's density is 13,600 kg/m³ against water's 1,000, so for equal pressure the water column stands 13.6 times taller.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Pipeline oxygen is delivered to the anesthesia machine at approximately:</div>
+<div class="opts">
+<button class="opt">2000 psi</button>
+<button class="opt">760 psi</button>
+<button class="opt">14 psi</button>
+<button class="opt" data-correct="1">50 psi</button>
+</div>
+<div class="why" data-plain="Pipeline supply runs near 50–55 psi. Cylinder first-stage regulators drop to about 45 psi deliberately, so that when both sources are open the pipeline supplies the machine and the cylinder is held in reserve."><b>Mechanism</b>Pipeline supply runs near 50–55 psi. Cylinder first-stage regulators drop to about 45 psi deliberately, so that when both sources are open the pipeline supplies the machine and the cylinder is held in reserve.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">A cylinder pressure gauge reading zero indicates the cylinder contains no gas at all.</div>
+<div class="opts">
+<button class="opt">True</button>
+<button class="opt" data-correct="1">False</button>
+</div>
+<div class="why" data-plain="Gauges read pressure relative to ambient. Zero gauge means the contents are at atmospheric pressure, so the cylinder still holds a full volume of gas at 1 atm."><b>Mechanism</b>Gauges read pressure relative to ambient. Zero gauge means the contents are at atmospheric pressure, so the cylinder still holds a full volume of gas at 1 atm.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Which measurement would conventionally be reported in kilopascals?</div>
+<div class="opts">
+<button class="opt">Cylinder contents on a US machine</button>
+<button class="opt">Mean arterial pressure on a US monitor</button>
+<button class="opt" data-correct="1">Arterial oxygen tension outside the US</button>
+<button class="opt">Positive end-expiratory pressure</button>
+</div>
+<div class="why" data-plain="kPa is the SI unit and is standard for blood gas partial pressures in most countries outside the US. Cylinders use psi or bar, airway pressure uses cmH2O, and US arterial pressure uses mmHg."><b>Mechanism</b>kPa is the SI unit and is standard for blood gas partial pressures in most countries outside the US. Cylinders use psi or bar, airway pressure uses cmH<sub>2</sub>O, and US arterial pressure uses mmHg.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Give the SI base-unit expression for the pascal.</div>
+<div class="fib" data-answers='["kg m-1 s-2", "kg/m/s2", "kg m^-1 s^-2", "kg per metre per second squared", "kg m\u22121 s\u22122", "kgm-1s-2"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Pressure is force over area. Force is kg·m·s−2; dividing by m² gives kg·m−1·s−2."><b>Mechanism</b>Pressure is force over area. Force is kg·m·s<sup>−2</sup>; dividing by m² gives kg·m<sup>−1</sup>·s<sup>−2</sup>.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">One standard atmosphere expressed in cmH<sub>2</sub>O (whole number).</div>
+<div class="fib" data-answers='["1033", "1034", "1030"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="760 mmHg × 1.36 = 1033.6 cmH2O. The 1.36 is the mercury-to-water density ratio."><b>Mechanism</b>760 mmHg × 1.36 = 1033.6 cmH<sub>2</sub>O. The 1.36 is the mercury-to-water density ratio.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><span class="sp"></span><a href="1-2-states-of-matter.html">1.2 States of Matter &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 1</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

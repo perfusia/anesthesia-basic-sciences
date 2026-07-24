@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.7 &amp;nbsp;Diffusion, Fick&#x27;s Law, and Graham&#x27;s Law</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track I</a> &nbsp;›&nbsp; <a href="index.html">Module 2</a> &nbsp;›&nbsp; M2.S7</div><header class="top"><h1>2.7 &nbsp;Diffusion, Fick's Law, and Graham's Law</h1><p class="tagline">Two laws that look similar, apply to different geometries, and give opposite answers about whether molecular weight matters.</p></header><div class="accentbar" style="background:var(--induction)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>State Fick's law of diffusion and identify each term.</li><li>State Graham's law and specify the geometry in which it applies.</li><li>Explain why carbon dioxide diffuses far faster than oxygen despite being heavier.</li><li>Predict which clinical scenarios are diffusion-limited.</li></ul></div>
+<h3>Fick's law: diffusion through a membrane</h3>
+
+<div class="eq">Rate &nbsp;∝&nbsp; (A × ΔP × s) / (d × √MW)
+<span class="where">A = surface area · ΔP = partial pressure gradient · s = solubility in the membrane · d = membrane thickness · MW = molecular weight</span></div>
+
+<p>Read the structure rather than memorising the string. Rate rises with area, driving gradient, and solubility. It falls with distance and with the square root of molecular weight. Only two terms are in the denominator, and molecular weight sits under a square root, which caps how much it can ever matter.</p>
+
+<h3>Graham's law: effusion through an orifice</h3>
+
+<div class="eq">Rate &nbsp;∝&nbsp; 1 / √MW
+<span class="where">No solubility term, because there is no membrane to dissolve into.</span></div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>The distinction is <strong>geometry</strong>, and it decides whether solubility appears at all.</p>
+<ul>
+<li>Through a <strong>membrane</strong>: Fick. Solubility matters, and usually dominates.</li>
+<li>Through an <strong>orifice</strong>: Graham. Only molecular weight matters.</li>
+</ul></div>
+
+<h3>The case that proves solubility dominates</h3>
+<p>Carbon dioxide has a molecular weight of 44 against oxygen's 32, so on molecular weight alone CO<sub>2</sub> should diffuse more slowly, by a factor of √(32/44) = 0.85. In fact CO<sub>2</sub> crosses the alveolar membrane roughly <strong>20 times faster</strong>.</p>
+
+<div class="chain">
+<div class="step">CO<sub>2</sub> is about 24 times more soluble in plasma and membrane lipid than O<sub>2</sub>.</div>
+<div class="step">Fick's law puts solubility in the numerator, unmodified.</div>
+<div class="step">Molecular weight sits in the denominator under a square root, so its 15% penalty is small.</div>
+<div class="step">24 × 0.85 ≈ 20. Solubility wins decisively.</div>
+</div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>This is why a thickened alveolar membrane produces hypoxaemia long before it produces hypercapnia. Diffusion impairment from pulmonary fibrosis, oedema, or pneumonitis limits oxygen first, and CO<sub>2</sub> continues crossing readily. A patient with a diffusion defect who has become hypercapnic has a ventilation problem, not a diffusion problem, and that distinction changes the management entirely.</p></div>
+
+<h3>Where each term becomes the clinical lever</h3>
+
+<table>
+<tr><th>Term</th><th>Clinical situation</th></tr>
+<tr><td>Area, reduced</td><td>Emphysema, lobectomy, pulmonary embolism</td></tr>
+<tr><td>Thickness, increased</td><td>Pulmonary oedema, fibrosis, ARDS</td></tr>
+<tr><td>Gradient, reduced</td><td>Altitude, low F<sub>I</sub>O<sub>2</sub></td></tr>
+<tr><td>Gradient, increased</td><td>Supplemental oxygen, the single most available intervention</td></tr>
+</table>
+
+<p>Raising F<sub>I</sub>O<sub>2</sub> works on the only term in Fick's law that you can change at the bedside within seconds. You cannot alter area, thickness, solubility, or molecular weight. You can always alter the gradient.</p>
+
+<details class="recall"><summary>Why is nitrous oxide's speed of onset explained by Henry's law and solubility rather than by Graham's law?</summary>
+<div class="ans"><p>Because the alveolar membrane is a membrane, not an orifice. Graham's law describes effusion through a hole, where nothing dissolves and only molecular velocity matters. Uptake into blood requires dissolving into tissue and plasma, which puts it squarely under Fick, where the solubility term dominates.</p></div></details>
+
+<details class="recall"><summary>A patient has severe pulmonary fibrosis. Which blood gas abnormality appears first, and why?</summary>
+<div class="ans"><p>Hypoxaemia. Thickening increases d for both gases equally, but oxygen has almost no solubility reserve to absorb the penalty while carbon dioxide has a twenty-fold margin. Oxygen transfer fails first, and by a wide margin.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">In Fick's law of diffusion, molecular weight appears as:</div>
+<div class="opts">
+<button class="opt">A logarithmic correction factor</button>
+<button class="opt">A squared term in the denominator</button>
+<button class="opt" data-correct="1">A square root in the denominator</button>
+<button class="opt">A direct multiplier in the numerator</button>
+</div>
+<div class="why" data-plain="Rate is inversely proportional to the square root of molecular weight, which caps how much a heavier molecule can be penalised and is why the solubility term usually dominates."><b>Mechanism</b>Rate is inversely proportional to the square root of molecular weight, which caps how much a heavier molecule can be penalised and is why the solubility term usually dominates.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Carbon dioxide crosses the alveolar membrane roughly 20 times faster than oxygen because it is:</div>
+<div class="opts">
+<button class="opt" data-correct="1">Far more soluble in membrane and plasma</button>
+<button class="opt">Actively transported by carbonic anhydrase</button>
+<button class="opt">Of substantially lower molecular weight</button>
+<button class="opt">Present at a much larger partial pressure gradient</button>
+</div>
+<div class="why" data-plain="CO2 is about 24 times more soluble, and solubility sits unmodified in the numerator. Its higher molecular weight costs only 15% because that term is under a square root."><b>Mechanism</b>CO<sub>2</sub> is about 24 times more soluble, and solubility sits unmodified in the numerator. Its higher molecular weight costs only 15% because that term is under a square root.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Graham's law applies to movement of gas through:</div>
+<div class="opts">
+<button class="opt">A lipid membrane</button>
+<button class="opt">The alveolar-capillary barrier</button>
+<button class="opt">A perfused capillary bed</button>
+<button class="opt" data-correct="1">An orifice</button>
+</div>
+<div class="why" data-plain="Graham describes effusion through a hole, where nothing dissolves and only molecular velocity matters. Any membrane brings solubility into play, which is Fick&#x27;s domain."><b>Mechanism</b>Graham describes effusion through a hole, where nothing dissolves and only molecular velocity matters. Any membrane brings solubility into play, which is Fick's domain.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Impaired alveolar diffusion typically produces hypoxaemia before hypercapnia.</div>
+<div class="opts">
+<button class="opt">False</button>
+<button class="opt" data-correct="1">True</button>
+</div>
+<div class="why" data-plain="Thickening penalises both gases equally, but CO2 has a roughly twenty-fold transfer reserve and oxygen has none. Oxygen fails first."><b>Mechanism</b>Thickening penalises both gases equally, but CO<sub>2</sub> has a roughly twenty-fold transfer reserve and oxygen has none. Oxygen fails first.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Which term of Fick's law is most readily manipulated at the bedside?</div>
+<div class="opts">
+<button class="opt">Gas solubility</button>
+<button class="opt">Membrane surface area</button>
+<button class="opt" data-correct="1">The partial pressure gradient</button>
+<button class="opt">Membrane thickness</button>
+</div>
+<div class="why" data-plain="Raising FIO2 increases the gradient within seconds. Area, thickness, and solubility are all fixed properties of the patient and the gas."><b>Mechanism</b>Raising F<sub>I</sub>O<sub>2</sub> increases the gradient within seconds. Area, thickness, and solubility are all fixed properties of the patient and the gas.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">In Fick's law, which two terms sit in the denominator?</div>
+<div class="fib" data-answers='["thickness; molecular weight", "distance; molecular weight", "thickness; mw", "membrane thickness; molecular weight", "d; mw"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Rate falls with membrane thickness and with the square root of molecular weight. Area, gradient, and solubility all sit in the numerator."><b>Mechanism</b>Rate falls with membrane thickness and with the square root of molecular weight. Area, gradient, and solubility all sit in the numerator.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="2-6-partition-coefficients.html">&larr; 2.6 Partition Coefficients</a><span class="sp"></span><a href="2-lab-agent-comparison.html">Lab 2 &rarr;</a></div><footer>Anesthesia Basic Sciences · Track I · Module 2</footer></div><script src="../../assets/engine.js"></script>
+</body></html>
