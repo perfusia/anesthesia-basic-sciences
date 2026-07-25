@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.4 &amp;nbsp;First-Order and Zero-Order Kinetics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track II</a> &nbsp;›&nbsp; <a href="index.html">Module 7</a> &nbsp;›&nbsp; M7.S4</div><header class="top"><h1>7.4 &nbsp;First-Order and Zero-Order Kinetics</h1><p class="tagline">A constant fraction against a constant amount, the saturation that separates them, and why half-life stops meaning anything on the wrong side of the line.</p></header><div class="accentbar" style="background:var(--pk)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Distinguish first-order from zero-order elimination.</li><li>Relate both to the Michaelis-Menten equation as limiting cases.</li><li>Name drugs that show zero-order kinetics at clinical doses.</li><li>Explain why half-life is undefined for zero-order elimination.</li></ul></div>
+<h3>Two orders</h3>
+<table>
+<tr><th></th><th>First-order</th><th>Zero-order</th></tr>
+<tr><td>Rate depends on</td><td>Concentration</td><td>Nothing; it is fixed</td></tr>
+<tr><td>Per unit time, removes</td><td>A constant <strong>fraction</strong></td><td>A constant <strong>amount</strong></td></tr>
+<tr><td>Concentration-time plot</td><td>Exponential decay</td><td>Straight line</td></tr>
+<tr><td>Semi-log plot</td><td>Straight line</td><td>Curved</td></tr>
+<tr><td>Half-life</td><td>Constant and meaningful</td><td>Undefined</td></tr>
+<tr><td>Clearance</td><td>Constant</td><td>Falls as concentration rises</td></tr>
+</table>
+
+<div class="eq">First-order: &nbsp; dC/dt = −kC &nbsp;&nbsp;&nbsp;&nbsp; Zero-order: &nbsp; dC/dt = −k<sub>0</sub>
+<span class="where">One is a homogeneous linear ODE with an exponential solution. The other integrates to a line.</span></div>
+
+<div class="box known"><span class="label">What you already have</span>
+<p>Both are one-line integrations. The pharmacological content is entirely in <em>why</em> a system would be one or the other, which is saturation, and in which drugs sit near the boundary at doses people actually give.</p></div>
+
+<h3>They are the same equation at two extremes</h3>
+<p>Enzymatic elimination follows Michaelis-Menten kinetics, and first- and zero-order are its two limiting cases.</p>
+
+<div class="eq">Rate &nbsp;=&nbsp; V<sub>max</sub> · C / (K<sub>m</sub> + C)
+<span class="where">V<sub>max</sub> = maximum rate when enzyme is saturated · K<sub>m</sub> = concentration at half V<sub>max</sub></span></div>
+
+<div class="chain">
+<div class="step">When C is much less than K<sub>m</sub>, the denominator is approximately K<sub>m</sub>, a constant.</div>
+<div class="step">Rate ≈ (V<sub>max</sub>/K<sub>m</sub>) × C, which is proportional to concentration. First-order.</div>
+<div class="step">When C is much greater than K<sub>m</sub>, the denominator is approximately C.</div>
+<div class="step">Rate ≈ V<sub>max</sub>, independent of concentration. Zero-order.</div>
+<div class="step">Between the two, kinetics are mixed and behaviour is non-linear and unpredictable.</div>
+</div>
+
+<p>So a drug is not intrinsically first- or zero-order. It is first-order at concentrations below its K<sub>m</sub> and zero-order above. Most drugs at clinical doses sit far below K<sub>m</sub>, which is why first-order is the normal case.</p>
+
+<h3>The drugs that saturate at ordinary doses</h3>
+<table>
+<tr><th>Drug</th><th>Consequence</th></tr>
+<tr><td>Ethanol</td><td>Roughly 10 g/hr regardless of how much was consumed</td></tr>
+<tr><td>Phenytoin</td><td>Saturates within the therapeutic range</td></tr>
+<tr><td>Aspirin</td><td>First-order at analgesic dose, zero-order in overdose</td></tr>
+<tr><td>Theophylline</td><td>Approaches saturation at high therapeutic concentrations</td></tr>
+</table>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>Phenytoin is the standard example and the reason this matters. Because it saturates inside the therapeutic range, a small dose increase can produce a disproportionate and dangerous rise in concentration. Going from 300 mg to 400 mg daily may more than double the plasma level rather than raising it by a third. Dose adjustments must be small and levels must be checked.</p>
+<p>The same logic explains why an intoxicated patient's alcohol level falls linearly rather than exponentially, and why you can predict a time to sobriety with a ruler but not with a half-life.</p></div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>Half-life is <strong>undefined</strong> in zero-order kinetics. Since a constant amount is removed per unit time, the time to fall by half depends entirely on where you started. From 200 to 100 takes twice as long as from 100 to 50. Quoting a half-life for ethanol is a category error.</p></div>
+
+<details class="recall"><summary>Why does the semi-log plot distinguish the two orders so cleanly?</summary>
+<div class="ans"><p>Taking logs of an exponential gives a straight line, so first-order elimination linearises with slope −k. Zero-order decay is already linear on ordinary axes, so taking logs of it produces a curve. The two plots swap which one looks straight, and that swap is the diagnostic.</p></div></details>
+
+<details class="recall"><summary>A patient's phenytoin level is 15 mg/L on 300 mg daily. Why not simply increase to 450 mg to reach 22?</summary>
+<div class="ans"><p>Because phenytoin saturates within the therapeutic range, so the relationship between dose and steady-state concentration is not proportional. A 50% dose increase can produce a threefold or greater rise in level and precipitate toxicity. Increase in small increments, typically 25 to 50 mg, and recheck.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Zero-order elimination removes:</div>
+<div class="opts">
+<button class="opt">An exponentially decreasing amount</button>
+<button class="opt">A constant fraction per unit time</button>
+<button class="opt" data-correct="1">A constant amount per unit time</button>
+<button class="opt">A fraction proportional to clearance</button>
+</div>
+<div class="why" data-plain="The eliminating process is saturated, so it works at maximum rate regardless of concentration. A constant fraction per unit time defines first-order kinetics."><b>Mechanism</b>The eliminating process is saturated, so it works at maximum rate regardless of concentration. A constant fraction per unit time defines first-order kinetics.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Half-life is not a meaningful concept in zero-order kinetics because:</div>
+<div class="opts">
+<button class="opt" data-correct="1">Time to halve depends on starting concentration</button>
+<button class="opt">Clearance is too rapid to measure</button>
+<button class="opt">The volume of distribution changes continuously</button>
+<button class="opt">Concentration falls exponentially</button>
+</div>
+<div class="why" data-plain="With a fixed amount removed per unit time, falling from 200 to 100 takes twice as long as from 100 to 50, so no single half-life exists."><b>Mechanism</b>With a fixed amount removed per unit time, falling from 200 to 100 takes twice as long as from 100 to 50, so no single half-life exists.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">First-order kinetics apply when drug concentration is:</div>
+<div class="opts">
+<button class="opt">Well above Km</button>
+<button class="opt">Independent of enzyme activity</button>
+<button class="opt">Equal to Vmax</button>
+<button class="opt" data-correct="1">Well below Km</button>
+</div>
+<div class="why" data-plain="Below Km the Michaelis-Menten denominator is approximately constant, making rate proportional to concentration. Above Km the enzyme saturates and kinetics become zero-order."><b>Mechanism</b>Below Km the Michaelis-Menten denominator is approximately constant, making rate proportional to concentration. Above Km the enzyme saturates and kinetics become zero-order.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Which drug most characteristically exhibits saturable kinetics within its therapeutic range?</div>
+<div class="opts">
+<button class="opt">Propofol</button>
+<button class="opt">Rocuronium</button>
+<button class="opt" data-correct="1">Phenytoin</button>
+<button class="opt">Fentanyl</button>
+</div>
+<div class="why" data-plain="Phenytoin saturates at therapeutic concentrations, so small dose increases produce disproportionate rises in plasma level. This is why titration is done in small increments with level monitoring."><b>Mechanism</b>Phenytoin saturates at therapeutic concentrations, so small dose increases produce disproportionate rises in plasma level. This is why titration is done in small increments with level monitoring.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">A drug is intrinsically either first-order or zero-order regardless of concentration.</div>
+<div class="opts">
+<button class="opt" data-correct="1">False</button>
+<button class="opt">True</button>
+</div>
+<div class="why" data-plain="Both are limiting cases of Michaelis-Menten kinetics. Any drug is first-order below its Km and zero-order above it; most sit far below at clinical doses."><b>Mechanism</b>Both are limiting cases of Michaelis-Menten kinetics. Any drug is first-order below its Km and zero-order above it; most sit far below at clinical doses.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">On a semi-logarithmic plot of concentration against time, first-order elimination appears as:</div>
+<div class="opts">
+<button class="opt">An upward curve</button>
+<button class="opt" data-correct="1">A straight line</button>
+<button class="opt">A horizontal line</button>
+<button class="opt">A downward curve</button>
+</div>
+<div class="why" data-plain="Taking the log of an exponential linearises it, with slope equal to the negative elimination rate constant. Zero-order decay curves on semi-log axes."><b>Mechanism</b>Taking the log of an exponential linearises it, with slope equal to the negative elimination rate constant. Zero-order decay curves on semi-log axes.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Write the Michaelis-Menten rate equation.</div>
+<div class="fib" data-answers='["rate = vmax c/(km + c)", "vmax x c / (km + c)", "rate = vmax*c/(km+c)", "vmaxc/(km+c)", "rate = (vmax x c)/(km + c)"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Rate = Vmax·C/(Km + C). Below Km it reduces to first-order proportionality; above Km it reduces to the constant Vmax, which is zero-order."><b>Mechanism</b>Rate = Vmax·C/(Km + C). Below Km it reduces to first-order proportionality; above Km it reduces to the constant Vmax, which is zero-order.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="7-3-clearance.html">&larr; 7.3 Clearance</a><span class="sp"></span><a href="7-5-one-compartment-model.html">7.5 The One-Compartment Model &rarr;</a></div><footer>Anesthesia Basic Sciences · Track II · Module 7</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

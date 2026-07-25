@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.2 &amp;nbsp;Volume of Distribution</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track II</a> &nbsp;›&nbsp; <a href="index.html">Module 7</a> &nbsp;›&nbsp; M7.S2</div><header class="top"><h1>7.2 &nbsp;Volume of Distribution</h1><p class="tagline">A volume that is not a volume, routinely exceeds the size of the patient, and tells you the loading dose.</p></header><div class="accentbar" style="background:var(--pk)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Define apparent volume of distribution and explain why it is apparent.</li><li>Calculate Vd from dose and initial concentration.</li><li>Calculate a loading dose from Vd and target concentration.</li><li>Predict Vd from a drug's physicochemical properties.</li></ul></div>
+<h3>The definition</h3>
+<div class="eq">V<sub>d</sub> &nbsp;=&nbsp; Dose / C<sub>0</sub>
+<span class="where">C<sub>0</sub> = plasma concentration extrapolated back to time zero. Units of volume, typically L or L/kg.</span></div>
+
+<p>Read it as the answer to a hypothetical: <em>if</em> the drug distributed evenly throughout the body at the concentration measured in plasma, what volume would be required to hold the dose given? That is why it is called the <em class="term">apparent</em> volume of distribution. It is a proportionality constant with units of volume, not a space you could drain.</p>
+
+<h3>Why it can exceed body size</h3>
+<div class="chain">
+<div class="step">A drug leaves plasma and binds avidly to tissue.</div>
+<div class="step">Plasma concentration therefore falls very low.</div>
+<div class="step">Vd is dose divided by that low concentration.</div>
+<div class="step">A small denominator produces a large quotient.</div>
+<div class="step">Digoxin has a Vd near 500 L in a patient who contains about 42 L of water.</div>
+</div>
+
+<p>Nothing paradoxical has happened. Vd is large precisely <em>because</em> the drug is not in the plasma, and the number is an index of tissue sequestration rather than a physical space.</p>
+
+<h3>Reading Vd against real fluid compartments</h3>
+<table>
+<tr><th>Vd (70 kg adult)</th><th>Interpretation</th><th>Example</th></tr>
+<tr><td>~3 L (0.05 L/kg)</td><td>Confined to plasma</td><td>Heparin, warfarin</td></tr>
+<tr><td>~14 L (0.2 L/kg)</td><td>Extracellular fluid</td><td>Neuromuscular blockers</td></tr>
+<tr><td>~42 L (0.6 L/kg)</td><td>Total body water</td><td>Ethanol</td></tr>
+<tr><td>&gt;42 L</td><td>Tissue sequestration</td><td>Propofol, fentanyl, digoxin</td></tr>
+</table>
+
+<h3>What drives it</h3>
+<table>
+<tr><th>Large Vd</th><th>Small Vd</th></tr>
+<tr><td>Lipophilic</td><td>Hydrophilic</td></tr>
+<tr><td>High tissue binding</td><td>High plasma protein binding</td></tr>
+<tr><td>Unionised at physiological pH</td><td>Ionised at physiological pH</td></tr>
+<tr><td>Low molecular weight</td><td>Large or charged molecule</td></tr>
+</table>
+
+<div class="box clinical"><span class="label">Clinical anchor: Vd sets the loading dose</span>
+<p>This is the reason to care about the number.</p>
+<div class="eq" style="margin:12px 0">Loading dose &nbsp;=&nbsp; V<sub>d</sub> × C<sub>target</sub></div>
+<p>Note what is absent: clearance. A loading dose fills a volume, so it depends on Vd alone. A maintenance dose replaces what is removed, so it depends on clearance alone. This is why a patient in renal failure needs the <strong>same loading dose</strong> and a <strong>reduced maintenance dose</strong>, and getting that backwards is a classic and consequential error.</p></div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>Oedema, ascites, and fluid resuscitation expand Vd for hydrophilic drugs, which is why aminoglycoside and neuromuscular blocker loading doses often need to be <strong>larger</strong> in a fluid-overloaded septic patient, not smaller, despite the impulse to reduce everything in a sick patient. Their small Vd is the extracellular space, and that space has grown.</p></div>
+
+<details class="recall"><summary>A patient in renal failure needs a drug cleared entirely by the kidney. How do loading and maintenance doses change?</summary>
+<div class="ans"><p>Loading dose is unchanged, because it depends on Vd and the volume the drug distributes into has not changed. Maintenance dose must fall, because it depends on clearance and clearance has collapsed. Reducing the loading dose only delays reaching a therapeutic concentration without reducing the eventual accumulation.</p></div></details>
+
+<details class="recall"><summary>Why does high plasma protein binding produce a small Vd while high tissue binding produces a large one?</summary>
+<div class="ans"><p>Vd is dose over plasma concentration. Protein binding holds drug in plasma, raising measured plasma concentration and shrinking the quotient. Tissue binding pulls drug out of plasma, lowering plasma concentration and inflating it. The measurement is made in plasma, so anything that keeps drug there reduces Vd.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Volume of distribution is described as apparent because it:</div>
+<div class="opts">
+<button class="opt">Varies with the assay used</button>
+<button class="opt" data-correct="1">Need not correspond to any real anatomical volume</button>
+<button class="opt">Applies only to intravenous administration</button>
+<button class="opt">Is measured indirectly by dilution</button>
+</div>
+<div class="why" data-plain="It is dose divided by plasma concentration, a proportionality constant with volume units. Extensive tissue binding lowers plasma concentration and can produce values far exceeding body volume."><b>Mechanism</b>It is dose divided by plasma concentration, a proportionality constant with volume units. Extensive tissue binding lowers plasma concentration and can produce values far exceeding body volume.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">A 500 mg dose produces an extrapolated initial concentration of 10 mg/L. Vd is:</div>
+<div class="opts">
+<button class="opt" data-correct="1">50 L</button>
+<button class="opt">5000 L</button>
+<button class="opt">5 L</button>
+<button class="opt">0.02 L</button>
+</div>
+<div class="why" data-plain="Vd = Dose/C₀ = 500 mg / 10 mg/L = 50 L. Slightly above total body water, indicating modest tissue distribution."><b>Mechanism</b>Vd = Dose/C₀ = 500 mg / 10 mg/L = 50 L. Slightly above total body water, indicating modest tissue distribution.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Loading dose is determined by:</div>
+<div class="opts">
+<button class="opt">Half-life</button>
+<button class="opt">Clearance</button>
+<button class="opt" data-correct="1">Volume of distribution</button>
+<button class="opt">Bioavailability alone</button>
+</div>
+<div class="why" data-plain="A loading dose fills a volume, so LD = Vd × target concentration. Maintenance dose replaces what is eliminated and therefore depends on clearance."><b>Mechanism</b>A loading dose fills a volume, so LD = Vd × target concentration. Maintenance dose replaces what is eliminated and therefore depends on clearance.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">A patient with severe renal impairment requires a renally cleared drug. The loading dose should be:</div>
+<div class="opts">
+<button class="opt">Omitted entirely</button>
+<button class="opt">Doubled</button>
+<button class="opt">Halved</button>
+<button class="opt" data-correct="1">Unchanged</button>
+</div>
+<div class="why" data-plain="Loading dose depends on Vd, which renal failure has not altered. Only the maintenance dose needs reduction, because only clearance has fallen."><b>Mechanism</b>Loading dose depends on Vd, which renal failure has not altered. Only the maintenance dose needs reduction, because only clearance has fallen.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Which property predicts a large volume of distribution?</div>
+<div class="opts">
+<button class="opt" data-correct="1">High lipid solubility</button>
+<button class="opt">Ionisation at physiological pH</button>
+<button class="opt">Large molecular weight</button>
+<button class="opt">High plasma protein binding</button>
+</div>
+<div class="why" data-plain="Lipophilic drugs partition into tissue, lowering plasma concentration and inflating the calculated volume. The other three all retain drug in plasma and shrink it."><b>Mechanism</b>Lipophilic drugs partition into tissue, lowering plasma concentration and inflating the calculated volume. The other three all retain drug in plasma and shrink it.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">A drug confined entirely to plasma would have a volume of distribution of about 3 litres in a 70 kg adult.</div>
+<div class="opts">
+<button class="opt">False</button>
+<button class="opt" data-correct="1">True</button>
+</div>
+<div class="why" data-plain="Plasma volume is roughly 3 L. Heparin and warfarin approach this, being large or highly protein-bound and unable to leave the vascular space."><b>Mechanism</b>Plasma volume is roughly 3 L. Heparin and warfarin approach this, being large or highly protein-bound and unable to leave the vascular space.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Write the equation for loading dose.</div>
+<div class="fib" data-answers='["vd x ctarget", "vd x c", "loading dose = vd x ctarget", "vd*ctarget", "vd x target concentration", "vd x cp"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="LD = Vd × target concentration. Clearance does not appear, which is why renal or hepatic failure changes the maintenance dose but not the loading dose."><b>Mechanism</b>LD = Vd × target concentration. Clearance does not appear, which is why renal or hepatic failure changes the maintenance dose but not the loading dose.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="7-1-what-pk-models.html">&larr; 7.1 What PK Models</a><span class="sp"></span><a href="7-3-clearance.html">7.3 Clearance &rarr;</a></div><footer>Anesthesia Basic Sciences · Track II · Module 7</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

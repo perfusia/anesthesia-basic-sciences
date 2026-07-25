@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.6 &amp;nbsp;Half-Life as a Derived Quantity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track II</a> &nbsp;›&nbsp; <a href="index.html">Module 7</a> &nbsp;›&nbsp; M7.S6</div><header class="top"><h1>7.6 &nbsp;Half-Life as a Derived Quantity</h1><p class="tagline">The most quoted number in pharmacology and the most misused, because it is a ratio of two things that move independently.</p></header><div class="accentbar" style="background:var(--pk)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Derive half-life from the elimination rate constant.</li><li>Express half-life in terms of volume of distribution and clearance.</li><li>Explain why a change in half-life is ambiguous without knowing which parameter moved.</li><li>Apply the five-half-life rule to elimination and to attainment of steady state.</li></ul></div>
+<h3>The derivation</h3>
+<div class="chain">
+<div class="step">Start from C = C₀e<sup>−kt</sup>.</div>
+<div class="step">Set C = C₀/2 and solve for t.</div>
+<div class="step">½ = e<sup>−kt½</sup>, so ln(½) = −kt½.</div>
+<div class="step">t½ = ln2 / k = 0.693 / k.</div>
+<div class="step">Substituting k = Cl/Vd from 7.5 gives the form that matters.</div>
+</div>
+
+<div class="eq">t<sub>½</sub> &nbsp;=&nbsp; 0.693 × V<sub>d</sub> / Cl
+<span class="where">Half-life rises with volume of distribution and falls with clearance. It is a ratio, not a property.</span></div>
+
+<div class="box trap"><span class="label">The central point of Module 7</span>
+<p>A prolonged half-life is <strong>ambiguous</strong>. It means Vd went up, or Cl went down, or both moved. These demand opposite responses:</p>
+<ul>
+<li><strong>Clearance fell</strong> (renal or hepatic failure): the drug accumulates on repeated dosing. Reduce the maintenance dose.</li>
+<li><strong>Volume rose</strong> (oedema, third-spacing, obesity for lipophilic drugs): the drug is diluted, not retained. The loading dose may need to <em>increase</em>, and the maintenance dose is unchanged if clearance is intact.</li>
+</ul>
+<p>Reading a long half-life and reflexively cutting the dose is right in one case and wrong in the other. The half-life alone cannot distinguish them.</p></div>
+
+<h3>The five-half-life rule, in both directions</h3>
+<table>
+<tr><th>Half-lives</th><th>Fraction eliminated</th><th>Fraction of steady state reached</th></tr>
+<tr><td>1</td><td>50%</td><td>50%</td></tr>
+<tr><td>2</td><td>75%</td><td>75%</td></tr>
+<tr><td>3</td><td>87.5%</td><td>87.5%</td></tr>
+<tr><td>4</td><td>93.8%</td><td>93.8%</td></tr>
+<tr><td>5</td><td>96.9%</td><td>96.9%</td></tr>
+</table>
+
+<p>The symmetry is not a coincidence. Washing out and filling up are the same exponential run in opposite directions, so the rule of roughly five half-lives applies equally to eliminating a drug and to reaching steady state on a constant infusion.</p>
+
+<div class="box math"><span class="label">Time to steady state is independent of dose</span>
+<p>Raising the infusion rate raises the steady-state concentration but does not shorten the time to reach it, because that time is set by the exponential's rate constant alone. If you need a therapeutic concentration sooner than five half-lives, the only answer is a <strong>loading dose</strong>. This is the clinical reason section 7.2 exists.</p></div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>The rule also sets when to check a level. A trough drawn before four or five half-lives have elapsed is not a steady-state trough, and adjusting a dose on it will overshoot. For a drug with a 12-hour half-life, that is roughly 60 hours, which is why levels drawn on the morning after starting a drug are so often misleading.</p></div>
+
+<details class="recall"><summary>A septic patient's aminoglycoside half-life doubles. What are the two possible causes and how do you tell them apart?</summary>
+<div class="ans"><p>Either clearance halved, from acute kidney injury, or volume of distribution doubled, from fluid resuscitation into an expanded extracellular space. Check renal function. If creatinine clearance is intact, the volume expanded and you need a larger loading dose with an unchanged maintenance dose. If creatinine clearance has fallen, extend the dosing interval instead.</p></div></details>
+
+<details class="recall"><summary>Why does doubling an infusion rate not halve the time to steady state?</summary>
+<div class="ans"><p>Because the approach to steady state is exponential with a rate constant of k, which depends on Cl and Vd and not on the rate of administration. Doubling the rate doubles the plateau and reaches it on exactly the same schedule. Only a loading dose changes the timing.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Half-life is correctly expressed as:</div>
+<div class="opts">
+<button class="opt">Vd/Cl</button>
+<button class="opt">0.693 × Cl</button>
+<button class="opt">0.693 × Cl/Vd</button>
+<button class="opt" data-correct="1">0.693 × Vd/Cl</button>
+</div>
+<div class="why" data-plain="From t½ = ln2/k with k = Cl/Vd. Half-life rises with volume of distribution and falls with clearance, making it derived rather than primary."><b>Mechanism</b>From t½ = ln2/k with k = Cl/Vd. Half-life rises with volume of distribution and falls with clearance, making it derived rather than primary.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">After five half-lives, the fraction of drug eliminated is approximately:</div>
+<div class="opts">
+<button class="opt">80%</button>
+<button class="opt" data-correct="1">97%</button>
+<button class="opt">50%</button>
+<button class="opt">99.9%</button>
+</div>
+<div class="why" data-plain="Each half-life removes half of what remains, giving 96.9% after five. The same figure describes the fraction of steady state reached on a constant infusion."><b>Mechanism</b>Each half-life removes half of what remains, giving 96.9% after five. The same figure describes the fraction of steady state reached on a constant infusion.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">A patient's drug half-life has doubled. This indicates:</div>
+<div class="opts">
+<button class="opt">Clearance fell, necessarily</button>
+<button class="opt">Volume rose, necessarily</button>
+<button class="opt">Bioavailability increased</button>
+<button class="opt" data-correct="1">Clearance fell, volume rose, or both</button>
+</div>
+<div class="why" data-plain="Half-life is a ratio of the two independent parameters, so a change in either produces it. Distinguishing them matters because reduced clearance and expanded volume demand opposite dose adjustments."><b>Mechanism</b>Half-life is a ratio of the two independent parameters, so a change in either produces it. Distinguishing them matters because reduced clearance and expanded volume demand opposite dose adjustments.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Doubling an infusion rate affects time to steady state how?</div>
+<div class="opts">
+<button class="opt">Quarters it</button>
+<button class="opt">Halves it</button>
+<button class="opt" data-correct="1">Not at all</button>
+<button class="opt">Doubles it</button>
+</div>
+<div class="why" data-plain="Approach to steady state is governed by the elimination rate constant, which depends on Cl and Vd. A higher rate raises the plateau on the same timescale; only a loading dose accelerates it."><b>Mechanism</b>Approach to steady state is governed by the elimination rate constant, which depends on Cl and Vd. A higher rate raises the plateau on the same timescale; only a loading dose accelerates it.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">A prolonged half-life always indicates impaired drug elimination.</div>
+<div class="opts">
+<button class="opt" data-correct="1">False</button>
+<button class="opt">True</button>
+</div>
+<div class="why" data-plain="An expanded volume of distribution prolongs half-life with clearance entirely intact. Fluid resuscitation in sepsis does exactly this to hydrophilic drugs."><b>Mechanism</b>An expanded volume of distribution prolongs half-life with clearance entirely intact. Fluid resuscitation in sepsis does exactly this to hydrophilic drugs.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">A trough level drawn 12 hours after starting a drug with a 10-hour half-life is:</div>
+<div class="opts">
+<button class="opt">A valid steady-state trough</button>
+<button class="opt">Above the true steady-state value</button>
+<button class="opt">Uninterpretable in principle</button>
+<button class="opt" data-correct="1">Not a steady-state level</button>
+</div>
+<div class="why" data-plain="Steady state requires four to five half-lives, so 40 to 50 hours here. A level at 12 hours reflects only about 57% of the eventual plateau and will underestimate accumulation."><b>Mechanism</b>Steady state requires four to five half-lives, so 40 to 50 hours here. A level at 12 hours reflects only about 57% of the eventual plateau and will underestimate accumulation.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Clearance 4 L/hr, volume of distribution 40 L. Give half-life in hours to one decimal.</div>
+<div class="fib" data-answers='["6.9", "6.9 hours", "6.93", "7", "6.9 hr"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="t½ = 0.693 × Vd/Cl = 0.693 × 40/4 = 6.93 hours. Equivalently k = 0.1 hr⁻¹ and 0.693/0.1 = 6.93."><b>Mechanism</b>t½ = 0.693 × Vd/Cl = 0.693 × 40/4 = 6.93 hours. Equivalently k = 0.1 hr⁻¹ and 0.693/0.1 = 6.93.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="7-5-one-compartment-model.html">&larr; 7.5 The One-Compartment Model</a><span class="sp"></span><a href="7-7-bioavailability.html">7.7 Bioavailability &rarr;</a></div><footer>Anesthesia Basic Sciences · Track II · Module 7</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.3 &amp;nbsp;Clearance and Extraction Ratio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track II</a> &nbsp;›&nbsp; <a href="index.html">Module 7</a> &nbsp;›&nbsp; M7.S3</div><header class="top"><h1>7.3 &nbsp;Clearance and Extraction Ratio</h1><p class="tagline">The primary parameter. It decides maintenance dosing, and whether cardiac output or enzyme function is the thing that matters for a given drug.</p></header><div class="accentbar" style="background:var(--pk)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Define clearance and state its units.</li><li>Express organ clearance as the product of blood flow and extraction ratio.</li><li>Distinguish flow-limited from capacity-limited elimination.</li><li>Predict the effect of reduced cardiac output or enzyme inhibition for each class.</li></ul></div>
+<h3>The definition</h3>
+<p><em class="term">Clearance</em> is the volume of plasma completely cleared of drug per unit time. It is not an amount and not a rate of removal; it is a volume per time.</p>
+
+<div class="eq">Rate of elimination &nbsp;=&nbsp; Cl × C
+<span class="where">Which is why a first-order drug's absolute elimination rate falls as concentration falls, while clearance itself stays constant.</span></div>
+
+<div class="box trap"><span class="label">Discrimination trap</span>
+<p>Clearance is <strong>constant</strong> in first-order kinetics. The <strong>rate of elimination</strong> is not, because it is the product of that constant and a falling concentration. Statements like "elimination slows as the drug wears off" describe the rate, not the clearance, and conflating them makes zero-order kinetics incomprehensible later.</p></div>
+
+<h3>Organ clearance</h3>
+<div class="eq">Cl<sub>organ</sub> &nbsp;=&nbsp; Q × ER
+<span class="where">Q = blood flow to the organ · ER = extraction ratio = (C<sub>arterial</sub> − C<sub>venous</sub>) / C<sub>arterial</sub></span></div>
+
+<p>Extraction ratio is the fraction of drug removed in a single pass. It runs from 0, nothing removed, to 1, everything removed. Total clearance is the sum across organs: hepatic plus renal plus everything else.</p>
+
+<p>Reference flows worth holding: hepatic blood flow around <strong>1.5 L/min</strong>, renal blood flow around <strong>1.1 L/min</strong>, glomerular filtration around <strong>125 mL/min</strong>.</p>
+
+<h3>The distinction that carries the clinical weight</h3>
+<table>
+<tr><th></th><th>High extraction (ER &gt; 0.7)</th><th>Low extraction (ER &lt; 0.3)</th></tr>
+<tr><td>Rate-limiting step</td><td>Delivery of drug to the organ</td><td>Enzyme capacity</td></tr>
+<tr><td>Also called</td><td>Flow-limited, perfusion-dependent</td><td>Capacity-limited, enzyme-dependent</td></tr>
+<tr><td>Sensitive to</td><td>Cardiac output, hepatic blood flow</td><td>Enzyme induction and inhibition, protein binding</td></tr>
+<tr><td>Relatively insensitive to</td><td>Enzyme activity</td><td>Blood flow</td></tr>
+<tr><td>Large first-pass effect</td><td>Yes</td><td>No</td></tr>
+<tr><td>Examples</td><td>Propofol, fentanyl, morphine, lidocaine, ketamine, metoprolol</td><td>Diazepam, phenytoin, warfarin, methadone, theophylline</td></tr>
+</table>
+
+<div class="chain">
+<div class="step">A high-extraction drug is removed almost completely on each pass through the liver.</div>
+<div class="step">The enzymes are therefore working well below capacity, and adding more enzyme changes nothing.</div>
+<div class="step">The only way to clear more is to deliver more, so clearance tracks blood flow.</div>
+<div class="step">A low-extraction drug leaves the liver largely intact, so the enzymes are the bottleneck.</div>
+<div class="step">Delivering more drug does not help; the enzymes are already the limiting step.</div>
+</div>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>This predicts what will go wrong in a specific patient. In haemorrhagic shock or heart failure, hepatic blood flow falls, so <strong>propofol, fentanyl, and lidocaine</strong> clearances fall and those drugs accumulate. Enzyme inhibition would barely touch them.</p>
+<p>Conversely, an erythromycin or fluconazole interaction meaningfully raises <strong>warfarin</strong> or <strong>phenytoin</strong> concentrations, because those are capacity-limited and the enzyme is the constraint. Reduced cardiac output would barely touch them.</p>
+<p>Same organ, opposite vulnerabilities, and the extraction ratio is what tells you which patient you are looking at.</p></div>
+
+<details class="recall"><summary>Why do high-extraction drugs have poor oral bioavailability?</summary>
+<div class="ans"><p>Because the entire absorbed dose passes through the liver via the portal vein before reaching the systemic circulation, and a high extraction ratio means most of it is removed on that single pass. Morphine's oral bioavailability of roughly 25% is exactly this. Low-extraction drugs pass through largely intact and have high oral bioavailability.</p></div></details>
+
+<details class="recall"><summary>A patient on a propofol infusion becomes profoundly hypotensive with a low cardiac output. What happens kinetically?</summary>
+<div class="ans"><p>Propofol is high-extraction, so its clearance is proportional to hepatic blood flow. Falling cardiac output reduces hepatic delivery and therefore clearance, and the drug accumulates at an unchanged infusion rate. The effect is self-reinforcing, since accumulating propofol worsens the hypotension that is reducing its clearance.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Clearance is best defined as:</div>
+<div class="opts">
+<button class="opt">Amount of drug eliminated per unit time</button>
+<button class="opt">Time required to eliminate half the drug</button>
+<button class="opt" data-correct="1">Volume of plasma cleared of drug per unit time</button>
+<button class="opt">Fraction of drug removed per unit time</button>
+</div>
+<div class="why" data-plain="Clearance has units of volume per time and is constant in first-order kinetics. The amount eliminated per unit time is Cl × C and therefore falls as concentration falls."><b>Mechanism</b>Clearance has units of volume per time and is constant in first-order kinetics. The amount eliminated per unit time is Cl × C and therefore falls as concentration falls.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Organ clearance equals:</div>
+<div class="opts">
+<button class="opt">Extraction ratio divided by volume of distribution</button>
+<button class="opt">Blood flow divided by extraction ratio</button>
+<button class="opt">Blood flow multiplied by half-life</button>
+<button class="opt" data-correct="1">Blood flow multiplied by extraction ratio</button>
+</div>
+<div class="why" data-plain="Cl = Q × ER. Extraction ratio is the fraction removed per pass, so multiplying by the flow presented gives the volume fully cleared per unit time."><b>Mechanism</b>Cl = Q × ER. Extraction ratio is the fraction removed per pass, so multiplying by the flow presented gives the volume fully cleared per unit time.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Clearance of a high-extraction drug is most reduced by:</div>
+<div class="opts">
+<button class="opt" data-correct="1">Reduced hepatic blood flow</button>
+<button class="opt">Enzyme induction</button>
+<button class="opt">Increased plasma protein binding</button>
+<button class="opt">Enzyme inhibition</button>
+</div>
+<div class="why" data-plain="High extraction means enzyme capacity is far in excess of delivery, so delivery is rate-limiting. Enzyme changes have little effect on a process not limited by enzymes."><b>Mechanism</b>High extraction means enzyme capacity is far in excess of delivery, so delivery is rate-limiting. Enzyme changes have little effect on a process not limited by enzymes.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Which drug's clearance is most vulnerable to enzyme inhibition?</div>
+<div class="opts">
+<button class="opt">Propofol</button>
+<button class="opt" data-correct="1">Warfarin</button>
+<button class="opt">Fentanyl</button>
+<button class="opt">Lidocaine</button>
+</div>
+<div class="why" data-plain="Warfarin is low-extraction and capacity-limited, so enzyme activity is the bottleneck. The other three are high-extraction and flow-limited."><b>Mechanism</b>Warfarin is low-extraction and capacity-limited, so enzyme activity is the bottleneck. The other three are high-extraction and flow-limited.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">In first-order kinetics, clearance remains constant while the rate of elimination falls as concentration falls.</div>
+<div class="opts">
+<button class="opt">False</button>
+<button class="opt" data-correct="1">True</button>
+</div>
+<div class="why" data-plain="Rate = Cl × C. With Cl fixed, the rate scales with concentration. Conflating the constant with the falling rate makes zero-order kinetics impossible to reason about."><b>Mechanism</b>Rate = Cl × C. With Cl fixed, the rate scales with concentration. Conflating the constant with the falling rate makes zero-order kinetics impossible to reason about.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">An extraction ratio of 0.9 implies that per pass through the organ:</div>
+<div class="opts">
+<button class="opt">10% of presented drug is removed</button>
+<button class="opt">The organ receives 90% of cardiac output</button>
+<button class="opt">90% of the total body burden is removed</button>
+<button class="opt" data-correct="1">90% of presented drug is removed</button>
+</div>
+<div class="why" data-plain="ER is the fraction of drug removed from the blood presented, computed as (arterial − venous)/arterial. It says nothing about total body burden or the fraction of cardiac output received."><b>Mechanism</b>ER is the fraction of drug removed from the blood presented, computed as (arterial − venous)/arterial. It says nothing about total body burden or the fraction of cardiac output received.</div></div>
+<div class="q"><div class="qnum">Q7</div><div class="qtext">Approximate hepatic blood flow in litres per minute.</div>
+<div class="fib" data-answers='["1.5", "1.5 l/min", "1.5l/min", "1.4", "1.5 litres"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="About 1.5 L/min, roughly a quarter of cardiac output. It is the ceiling on clearance for any drug with an extraction ratio approaching 1."><b>Mechanism</b>About 1.5 L/min, roughly a quarter of cardiac output. It is the ceiling on clearance for any drug with an extraction ratio approaching 1.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="7-2-volume-of-distribution.html">&larr; 7.2 Volume of Distribution</a><span class="sp"></span><a href="7-4-order-of-kinetics.html">7.4 Order of Kinetics &rarr;</a></div><footer>Anesthesia Basic Sciences · Track II · Module 7</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

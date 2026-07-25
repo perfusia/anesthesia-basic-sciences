@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.5 &amp;nbsp;The One-Compartment Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track II</a> &nbsp;›&nbsp; <a href="index.html">Module 7</a> &nbsp;›&nbsp; M7.S5</div><header class="top"><h1>7.5 &nbsp;The One-Compartment Model</h1><p class="tagline">One differential equation, one solution, and the relationship that ties clearance and volume together into a single rate constant.</p></header><div class="accentbar" style="background:var(--pk)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Write and solve the differential equation for one-compartment first-order elimination.</li><li>Define the elimination rate constant and state its units.</li><li>Derive k = Cl/Vd and explain what it means physically.</li><li>Interpret a semi-logarithmic concentration-time plot.</li></ul></div>
+<h3>The equation</h3>
+<p>Drug leaves the compartment at a rate proportional to how much is there.</p>
+
+<div class="eq">dC/dt &nbsp;=&nbsp; −kC
+<span class="where">k = elimination rate constant, units of inverse time (hr<sup>−1</sup>, min<sup>−1</sup>). The negative sign is elimination.</span></div>
+
+<p>Separate and integrate:</p>
+
+<div class="eq">C(t) &nbsp;=&nbsp; C<sub>0</sub> e<sup>−kt</sup> &nbsp;&nbsp;&nbsp;&nbsp; ln C(t) &nbsp;=&nbsp; ln C<sub>0</sub> − kt
+<span class="where">The second form is the first with logs taken. It is a straight line of slope −k, which is how k is measured in practice.</span></div>
+
+<div class="box known"><span class="label">What you already have</span>
+<p>This is the simplest possible first-order ODE and you have solved it in half a dozen contexts: radioactive decay, RC discharge, Newton's cooling. The pharmacology adds one thing worth pausing on, which is the physical interpretation of k below.</p></div>
+
+<h3>Where k comes from</h3>
+<p>The elimination rate constant is not a primary property. It falls out of the two parameters from 7.2 and 7.3.</p>
+
+<div class="chain">
+<div class="step">Rate of elimination in amount per time is Cl × C.</div>
+<div class="step">Amount in the body is Vd × C.</div>
+<div class="step">The fractional rate of loss is (amount lost per time) / (amount present) = Cl·C / Vd·C.</div>
+<div class="step">The concentration cancels.</div>
+<div class="step">k = Cl / Vd.</div>
+</div>
+
+<div class="eq">k &nbsp;=&nbsp; Cl / V<sub>d</sub>
+<span class="where">Physically: the fraction of the distribution volume cleared per unit time. A k of 0.1 hr<sup>−1</sup> means 10% of the volume is cleared each hour.</span></div>
+
+<div class="box math"><span class="label">Why the concentration cancels</span>
+<p>That cancellation is the whole reason first-order systems have a constant rate constant and a constant half-life. Both the amount present and the amount removed scale with C, so their ratio does not. The moment a process saturates, the numerator stops scaling with C, the cancellation fails, and you are in zero-order territory with no constant to speak of.</p></div>
+
+<h3>Reading the semi-log plot</h3>
+<table>
+<tr><th>Observation</th><th>Interpretation</th></tr>
+<tr><td>Straight line</td><td>One compartment, first-order</td></tr>
+<tr><td>Slope</td><td>−k</td></tr>
+<tr><td>Intercept at t = 0</td><td>ln C<sub>0</sub>, from which Vd = Dose/C<sub>0</sub></td></tr>
+<tr><td>Curved, steep then shallow</td><td>Two or more compartments (Module 8)</td></tr>
+<tr><td>Curved, shallow then steep</td><td>Saturable elimination becoming first-order as C falls</td></tr>
+</table>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>Almost no anaesthetic drug is genuinely one-compartment. Propofol, fentanyl, and the volatiles all need three. The one-compartment model earns its place as the base case whose behaviour you must know cold, because a three-compartment model is three of these running in parallel with transfer terms, and every intuition you build here carries forward. Module 8 is this section with more indices.</p></div>
+
+<details class="recall"><summary>Two drugs have identical clearances but one has ten times the volume of distribution. Compare their elimination rate constants.</summary>
+<div class="ans"><p>k = Cl/Vd, so the drug with the larger volume has a tenfold smaller k and therefore a tenfold longer half-life, despite identical clearance. This is why half-life alone tells you nothing about how well the body is removing a drug. A long half-life can mean poor clearance or extensive distribution, and those are entirely different clinical situations.</p></div></details>
+
+<details class="recall"><summary>What does an elimination rate constant of 0.35 hr⁻¹ mean in plain terms?</summary>
+<div class="ans"><p>35% of the drug present is eliminated each hour, or equivalently, a volume equal to 35% of the volume of distribution is cleared each hour. Since 0.693/0.35 ≈ 2, the half-life is about two hours.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">The solution to dC/dt = −kC is:</div>
+<div class="opts">
+<button class="opt">C = C₀ln(kt)</button>
+<button class="opt">C = C₀ − kt</button>
+<button class="opt" data-correct="1">C = C₀e^(−kt)</button>
+<button class="opt">C = C₀/(1 + kt)</button>
+</div>
+<div class="why" data-plain="Separating and integrating a first-order homogeneous ODE gives exponential decay. The linear form describes zero-order elimination instead."><b>Mechanism</b>Separating and integrating a first-order homogeneous ODE gives exponential decay. The linear form describes zero-order elimination instead.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">The elimination rate constant equals:</div>
+<div class="opts">
+<button class="opt">Vd/Cl</button>
+<button class="opt">Cl × Vd</button>
+<button class="opt">0.693 × Cl</button>
+<button class="opt" data-correct="1">Cl/Vd</button>
+</div>
+<div class="why" data-plain="k = Cl/Vd, obtained by dividing the elimination rate Cl·C by the amount present Vd·C. The concentration cancels, which is why k is constant."><b>Mechanism</b>k = Cl/Vd, obtained by dividing the elimination rate Cl·C by the amount present Vd·C. The concentration cancels, which is why k is constant.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">On a semi-log plot of concentration against time, the slope equals:</div>
+<div class="opts">
+<button class="opt">−Cl</button>
+<button class="opt">−Vd</button>
+<button class="opt" data-correct="1">−k</button>
+<button class="opt">−t½</button>
+</div>
+<div class="why" data-plain="Taking logs gives ln C = ln C₀ − kt, a straight line whose slope is the negative elimination rate constant. This is how k is measured in practice."><b>Mechanism</b>Taking logs gives ln C = ln C₀ − kt, a straight line whose slope is the negative elimination rate constant. This is how k is measured in practice.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Two drugs have equal clearance but drug A has four times the volume of distribution. Drug A's half-life is:</div>
+<div class="opts">
+<button class="opt">Identical</button>
+<button class="opt" data-correct="1">Four times longer</button>
+<button class="opt">Four times shorter</button>
+<button class="opt">Sixteen times longer</button>
+</div>
+<div class="why" data-plain="k = Cl/Vd, so quadrupling Vd quarters k and quadruples half-life. Identical clearance with different half-lives is the standard demonstration that half-life is derived rather than primary."><b>Mechanism</b>k = Cl/Vd, so quadrupling Vd quarters k and quadruples half-life. Identical clearance with different half-lives is the standard demonstration that half-life is derived rather than primary.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">The units of the elimination rate constant are inverse time.</div>
+<div class="opts">
+<button class="opt" data-correct="1">True</button>
+<button class="opt">False</button>
+</div>
+<div class="why" data-plain="k is a fractional rate, so it carries units of hr⁻¹ or min⁻¹. It represents the fraction of the distribution volume cleared per unit time."><b>Mechanism</b>k is a fractional rate, so it carries units of hr⁻¹ or min⁻¹. It represents the fraction of the distribution volume cleared per unit time.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">A drug has clearance 6 L/hr and volume of distribution 30 L. Give k in per hour.</div>
+<div class="fib" data-answers='["0.2", "0.2 /hr", "0.2/hr", "0.2 hr-1", ".2"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="k = Cl/Vd = 6/30 = 0.2 hr⁻¹, meaning 20% of the distribution volume is cleared each hour. Half-life follows as 0.693/0.2 ≈ 3.5 hours."><b>Mechanism</b>k = Cl/Vd = 6/30 = 0.2 hr⁻¹, meaning 20% of the distribution volume is cleared each hour. Half-life follows as 0.693/0.2 ≈ 3.5 hours.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="7-4-order-of-kinetics.html">&larr; 7.4 Order of Kinetics</a><span class="sp"></span><a href="7-6-half-life.html">7.6 Half-Life &rarr;</a></div><footer>Anesthesia Basic Sciences · Track II · Module 7</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

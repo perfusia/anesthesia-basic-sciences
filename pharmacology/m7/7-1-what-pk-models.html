@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.1 &amp;nbsp;What a Pharmacokinetic Model Actually Models</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track II</a> &nbsp;›&nbsp; <a href="index.html">Module 7</a> &nbsp;›&nbsp; M7.S1</div><header class="top"><h1>7.1 &nbsp;What a Pharmacokinetic Model Actually Models</h1><p class="tagline">Compartments are not anatomy. They are the smallest number of exponentials that fit the data, and knowing that changes how you read every number downstream.</p></header><div class="accentbar" style="background:var(--pk)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Distinguish pharmacokinetics from pharmacodynamics.</li><li>Explain what a compartment represents and what it does not.</li><li>State the assumptions of a linear pharmacokinetic model.</li><li>Identify volume of distribution and clearance as the two independent parameters.</li></ul></div>
+<h3>Two questions, not one</h3>
+<table>
+<tr><th></th><th>Question</th><th>Output</th></tr>
+<tr><td><em class="term">Pharmacokinetics</em></td><td>What does the body do to the drug?</td><td>Concentration as a function of time</td></tr>
+<tr><td><em class="term">Pharmacodynamics</em></td><td>What does the drug do to the body?</td><td>Effect as a function of concentration</td></tr>
+</table>
+
+<p>Module 7 and 8 are entirely the first question. Module 9 is the second. They are joined by concentration, which is the output of one and the input of the other, and the join is looser than it looks, because the concentration that matters for effect is at the receptor rather than in the plasma. That gap is section 8.8.</p>
+
+<h3>What a compartment is</h3>
+<p>A compartment is not an organ, a tissue, or a fluid space. It is a mathematical fiction: a hypothetical volume within which drug is assumed to distribute instantaneously and uniformly.</p>
+
+<div class="chain">
+<div class="step">Measure plasma concentration after a bolus at many time points.</div>
+<div class="step">Plot the natural log of concentration against time.</div>
+<div class="step">If the result is a straight line, one exponential describes the data, so one compartment suffices.</div>
+<div class="step">If it curves, the residuals reveal a second exponential, and a second compartment is added.</div>
+<div class="step">Compartments are added until the residuals are noise.</div>
+</div>
+
+<div class="box math"><span class="label">The honest framing</span>
+<p>The number of compartments is a property of <strong>the data and the sampling schedule</strong>, not of the patient. Sample early enough and often enough and a two-compartment drug becomes three-compartment. Nothing about the patient changed. The model got better resolution.</p>
+<p>This is worth internalising because it explains why published values for the same drug differ between studies, and why parameters are not physical constants in the way a boiling point is.</p></div>
+
+<div class="box known"><span class="label">What you already have</span>
+<p>This is curve fitting to a sum of exponentials, and the compartment count is a model selection problem. You have made this exact trade before, between fit and overparameterisation. The pharmacology adds no new mathematics, only a physiological story laid over the fitted terms.</p></div>
+
+<h3>The assumptions</h3>
+<ol>
+<li><strong>Instantaneous mixing</strong> within each compartment. False, but fast relative to the timescale of interest.</li>
+<li><strong>First-order transfer</strong> between compartments and out of the body. Rate proportional to concentration.</li>
+<li><strong>Linearity.</strong> Doubling the dose doubles every concentration at every time point. Fails when any process saturates (7.4).</li>
+<li><strong>Constant parameters.</strong> Vd and Cl do not change during the period modelled. Frequently false in critical illness.</li>
+</ol>
+
+<h3>Two independent parameters, everything else derived</h3>
+<div class="box trap"><span class="label">The structural point of this module</span>
+<p><strong>Volume of distribution</strong> and <strong>clearance</strong> are the two independent parameters. They are physiologically separate: one describes how widely a drug spreads, the other how fast the body removes it.</p>
+<p><strong>Half-life is derived from both.</strong> It is not a primary property of a drug, and treating it as one is the most common conceptual error in clinical pharmacology. A half-life can change because Vd changed, because Cl changed, or because both changed in opposite directions and one won. Those situations demand different responses, and the half-life alone cannot tell you which occurred.</p></div>
+
+<details class="recall"><summary>Why do published values for a drug's volume of distribution vary between studies?</summary>
+<div class="ans"><p>Because Vd is a fitted parameter, not a measured volume. It depends on the model chosen, the sampling schedule, the duration of sampling, and the population studied. A study that stops sampling at four hours will fit a smaller terminal volume than one that samples for twenty-four, because it never observes the slow compartment emptying.</p></div></details>
+
+<details class="recall"><summary>If a compartment is not anatomical, why do textbooks describe compartment two as "muscle" and three as "fat"?</summary>
+<div class="ans"><p>Because the fitted rate constants correlate loosely with tissue perfusion, so the fast peripheral compartment behaves roughly like well-perfused tissue and the slow one roughly like poorly perfused fat. It is a useful mnemonic and a false statement. No compartment maps onto a tissue you could dissect, and drugs that behave identically kinetically may distribute into entirely different tissues.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">A pharmacokinetic compartment represents:</div>
+<div class="opts">
+<button class="opt">The vascular space plus interstitium</button>
+<button class="opt">A defined anatomical tissue space</button>
+<button class="opt">The total body water of the patient</button>
+<button class="opt" data-correct="1">A mathematical volume fitted to concentration data</button>
+</div>
+<div class="why" data-plain="Compartments are hypothetical volumes added until fitted exponentials describe the observed data. They correlate loosely with perfusion but map onto no dissectible structure."><b>Mechanism</b>Compartments are hypothetical volumes added until fitted exponentials describe the observed data. They correlate loosely with perfusion but map onto no dissectible structure.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Pharmacodynamics describes:</div>
+<div class="opts">
+<button class="opt">The relationship between dose and plasma concentration</button>
+<button class="opt">The rate of hepatic metabolism</button>
+<button class="opt" data-correct="1">The relationship between concentration and effect</button>
+<button class="opt">The distribution of drug into tissue</button>
+</div>
+<div class="why" data-plain="Pharmacodynamics is what the drug does to the body, taking concentration as input and producing effect. Pharmacokinetics produces that concentration from a dose."><b>Mechanism</b>Pharmacodynamics is what the drug does to the body, taking concentration as input and producing effect. Pharmacokinetics produces that concentration from a dose.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">The two independent parameters of a pharmacokinetic model are:</div>
+<div class="opts">
+<button class="opt">Half-life and volume of distribution</button>
+<button class="opt">Bioavailability and elimination rate constant</button>
+<button class="opt">Half-life and clearance</button>
+<button class="opt" data-correct="1">Volume of distribution and clearance</button>
+</div>
+<div class="why" data-plain="Vd describes distribution and Cl describes removal, and they vary independently. Half-life and the elimination rate constant are both derived from their ratio."><b>Mechanism</b>Vd describes distribution and Cl describes removal, and they vary independently. Half-life and the elimination rate constant are both derived from their ratio.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">The number of compartments in a model is a property of the patient rather than of the data.</div>
+<div class="opts">
+<button class="opt" data-correct="1">False</button>
+<button class="opt">True</button>
+</div>
+<div class="why" data-plain="It reflects the sampling schedule and the resolution of the data. Sampling earlier and more frequently can reveal an additional exponential without anything about the patient having changed."><b>Mechanism</b>It reflects the sampling schedule and the resolution of the data. Sampling earlier and more frequently can reveal an additional exponential without anything about the patient having changed.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Linear pharmacokinetics implies that:</div>
+<div class="opts">
+<button class="opt">The concentration-time curve is a straight line</button>
+<button class="opt">Only one compartment is required</button>
+<button class="opt" data-correct="1">Doubling the dose doubles concentration at every time point</button>
+<button class="opt">Elimination proceeds at a constant rate</button>
+</div>
+<div class="why" data-plain="Linearity means proportionality between dose and concentration. The curve itself is exponential, and a constant elimination rate would be zero-order kinetics, which is the non-linear case."><b>Mechanism</b>Linearity means proportionality between dose and concentration. The curve itself is exponential, and a constant elimination rate would be zero-order kinetics, which is the non-linear case.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Name the two independent pharmacokinetic parameters, distribution first then elimination.</div>
+<div class="fib" data-answers='["volume of distribution; clearance", "vd; cl", "vd; clearance", "volume of distribution; cl", "distribution volume; clearance"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="Volume of distribution and clearance. Half-life is derived from both as 0.693 × Vd/Cl, which is why it cannot on its own tell you which one changed."><b>Mechanism</b>Volume of distribution and clearance. Half-life is derived from both as 0.693 × Vd/Cl, which is why it cannot on its own tell you which one changed.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><span class="sp"></span><a href="7-2-volume-of-distribution.html">7.2 Volume of Distribution &rarr;</a></div><footer>Anesthesia Basic Sciences · Track II · Module 7</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

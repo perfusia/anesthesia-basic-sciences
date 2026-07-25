@@ -32,7 +32,7 @@ has a recency problem.
 | 4 | The Anesthesia Delivery System | — | — |
 | 5 | Physics of Monitoring | — | — |
 | 6 | Electricity, Safety, and Hazards in the OR | — | — |
-| 7 | Pharmacokinetics I — Single Compartment | — | — |
+| 7 | Pharmacokinetics I — Single Compartment | 11 | 95 |
 | 8 | Pharmacokinetics II — Multicompartment and Infusion | — | — |
 | 9 | Pharmacodynamics and Inhalational Uptake | — | — |
 
@@ -53,7 +53,8 @@ has a recency problem.
 │   ├── m2/
 │   └── m3/
 └── pharmacology/
-    └── index.html                  Track II landing
+    ├── index.html                  Track II landing
+    └── m7/
 ```
 
 Tracks own their own path but share one engine. Adding a module means dropping a data
@@ -64,7 +65,7 @@ file in and registering it in `site.py`; nothing else changes.
 ```bash
 git init
 git add .
-git commit -m "modules 1-3"
+git commit -m "modules 1-3, 7"
 git branch -M main
 git remote add origin https://github.com/<user>/anesthesia-basic-sciences.git
 git push -u origin main

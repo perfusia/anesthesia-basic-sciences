@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.7 &amp;nbsp;Bioavailability and Area Under the Curve</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track II</a> &nbsp;›&nbsp; <a href="index.html">Module 7</a> &nbsp;›&nbsp; M7.S7</div><header class="top"><h1>7.7 &nbsp;Bioavailability and Area Under the Curve</h1><p class="tagline">How much of what you gave actually arrived, why the liver takes a cut first, and which routes avoid it.</p></header><div class="accentbar" style="background:var(--pk)"></div><div class="objectives"><span class="label">On finishing this section you should be able to</span><ul><li>Define bioavailability and state its value for intravenous administration.</li><li>List the factors reducing oral bioavailability.</li><li>Relate area under the curve to dose and clearance.</li><li>Identify routes that bypass first-pass hepatic metabolism.</li></ul></div>
+<h3>Definition</h3>
+<p><em class="term">Bioavailability</em> (F) is the fraction of an administered dose that reaches the systemic circulation chemically unchanged. Intravenous administration is F = 1 by definition, since the drug is placed directly into the systemic circulation.</p>
+
+<div class="eq">F &nbsp;=&nbsp; (AUC<sub>oral</sub> / AUC<sub>IV</sub>) × (Dose<sub>IV</sub> / Dose<sub>oral</sub>)
+<span class="where">Comparing total exposure by each route, corrected for any difference in dose given.</span></div>
+
+<h3>What reduces it</h3>
+<div class="chain">
+<div class="step">Incomplete dissolution or absorption across gut mucosa.</div>
+<div class="step">Degradation by gastric acid or intestinal enzymes.</div>
+<div class="step">Efflux back into the lumen by P-glycoprotein.</div>
+<div class="step">Metabolism in the gut wall itself, principally CYP3A4.</div>
+<div class="step">First-pass hepatic extraction, since portal blood traverses the liver before reaching the systemic circulation.</div>
+</div>
+
+<div class="box math"><span class="label">First-pass and extraction ratio are the same idea</span>
+<p>A drug with a hepatic extraction ratio of 0.7 loses 70% of the absorbed dose on its first pass, so F cannot exceed 0.3 even with perfect absorption. High extraction ratio and low oral bioavailability are two descriptions of one property, which is why the drug lists in 7.3 and this section overlap so heavily.</p></div>
+
+<table>
+<tr><th>Drug</th><th>Oral F</th><th>Consequence</th></tr>
+<tr><td>Morphine</td><td>~25%</td><td>Oral dose roughly three times the IV dose</td></tr>
+<tr><td>Propranolol</td><td>~25%</td><td>Large and variable first-pass effect</td></tr>
+<tr><td>Midazolam</td><td>~40%</td><td>Substantial gut wall plus hepatic metabolism</td></tr>
+<tr><td>Diazepam</td><td>~95%</td><td>Low extraction, reliable oral absorption</td></tr>
+</table>
+
+<h3>Routes bypassing the portal circulation</h3>
+<table>
+<tr><th>Route</th><th>Drains to</th></tr>
+<tr><td>Intravenous</td><td>Systemic directly</td></tr>
+<tr><td>Sublingual and buccal</td><td>Superior vena cava, bypassing portal</td></tr>
+<tr><td>Transdermal</td><td>Systemic capillaries</td></tr>
+<tr><td>Intranasal</td><td>Systemic, with some direct CNS access</td></tr>
+<tr><td>Inhalational</td><td>Pulmonary veins to left heart</td></tr>
+<tr><td>Rectal</td><td>Partially; lower rectum bypasses, upper does not</td></tr>
+</table>
+
+<div class="box clinical"><span class="label">Clinical anchor</span>
+<p>Sublingual glyceryl trinitrate exists because oral GTN is almost entirely destroyed on first pass. Buprenorphine is given sublingually for the same reason. The rectal route is deliberately unreliable in this respect: absorption from the lower rectum drains into the inferior rectal veins and bypasses the liver, while the upper rectum drains portally, so the fraction escaping first pass depends on how far the suppository travelled.</p></div>
+
+<h3>AUC as a readout of clearance</h3>
+<div class="eq">AUC &nbsp;=&nbsp; F × Dose / Cl
+<span class="where">Total exposure over time depends only on how much arrived and how fast it was removed. It does not depend on volume of distribution.</span></div>
+
+<p>That independence is worth noting. Vd shapes the concentration-time curve, making it higher and shorter or lower and longer, but it does not change the area beneath it. Only the amount delivered and the clearance do.</p>
+
+<details class="recall"><summary>A patient on oral morphine is converted to intravenous. Why is the IV dose smaller?</summary>
+<div class="ans"><p>Oral bioavailability is roughly 25% because morphine is high-extraction and loses most of the absorbed dose on first pass. An intravenous dose bypasses this entirely, so approximately one third of the oral dose produces equivalent systemic exposure. Failing to make this conversion is a recognised cause of opioid overdose.</p></div></details>
+
+<details class="recall"><summary>Why does AUC not depend on volume of distribution?</summary>
+<div class="ans"><p>Because AUC integrates concentration over all time, and total exposure is determined by how much drug entered and how fast it was removed. A large Vd spreads the same quantity of drug over a lower concentration for a longer duration, and the two effects cancel exactly in the integral.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">Bioavailability following intravenous administration is:</div>
+<div class="opts">
+<button class="opt">Variable with injection rate</button>
+<button class="opt">Reduced by first-pass metabolism</button>
+<button class="opt" data-correct="1">1 by definition</button>
+<button class="opt">Dependent on cardiac output</button>
+</div>
+<div class="why" data-plain="The dose is placed directly into the systemic circulation, so the entire amount is available by definition. It is the reference against which other routes are measured."><b>Mechanism</b>The dose is placed directly into the systemic circulation, so the entire amount is available by definition. It is the reference against which other routes are measured.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Oral morphine has a bioavailability of about 25% principally because of:</div>
+<div class="opts">
+<button class="opt" data-correct="1">High hepatic extraction on first pass</button>
+<button class="opt">Binding to intestinal contents</button>
+<button class="opt">Poor absorption across gut mucosa</button>
+<button class="opt">Degradation by gastric acid</button>
+</div>
+<div class="why" data-plain="Morphine is a high-extraction drug, so most of the absorbed dose is removed during its first pass through the liver via the portal circulation."><b>Mechanism</b>Morphine is a high-extraction drug, so most of the absorbed dose is removed during its first pass through the liver via the portal circulation.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">Which route most reliably bypasses first-pass hepatic metabolism?</div>
+<div class="opts">
+<button class="opt">Upper rectal</button>
+<button class="opt" data-correct="1">Sublingual</button>
+<button class="opt">Oral</button>
+<button class="opt">Nasogastric</button>
+</div>
+<div class="why" data-plain="Sublingual venous drainage enters the superior vena cava directly. Oral and upper rectal absorption both drain into the portal circulation."><b>Mechanism</b>Sublingual venous drainage enters the superior vena cava directly. Oral and upper rectal absorption both drain into the portal circulation.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Area under the concentration-time curve is determined by:</div>
+<div class="opts">
+<button class="opt">Dose and volume of distribution</button>
+<button class="opt">Volume of distribution and elimination rate constant</button>
+<button class="opt">Clearance and half-life</button>
+<button class="opt" data-correct="1">Dose, bioavailability, and clearance</button>
+</div>
+<div class="why" data-plain="AUC = F × Dose/Cl. Volume of distribution changes the shape of the curve but not the area beneath it, since the concentration and duration effects cancel."><b>Mechanism</b>AUC = F × Dose/Cl. Volume of distribution changes the shape of the curve but not the area beneath it, since the concentration and duration effects cancel.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">A drug with a hepatic extraction ratio of 0.8 can have an oral bioavailability of 50%.</div>
+<div class="opts">
+<button class="opt" data-correct="1">False</button>
+<button class="opt">True</button>
+</div>
+<div class="why" data-plain="An extraction ratio of 0.8 removes 80% on first pass, capping bioavailability at 20% even with complete absorption. High extraction and low oral bioavailability are the same property."><b>Mechanism</b>An extraction ratio of 0.8 removes 80% on first pass, capping bioavailability at 20% even with complete absorption. High extraction and low oral bioavailability are the same property.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Write the equation relating AUC to dose, bioavailability, and clearance.</div>
+<div class="fib" data-answers='["auc = f x dose/cl", "auc = f dose / cl", "auc=f x dose/cl", "auc = (f x dose)/cl", "f x dose / cl"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="AUC = F × Dose/Cl. Total exposure depends only on how much arrived systemically and how fast it was removed, which is why AUC is used to measure clearance."><b>Mechanism</b>AUC = F × Dose/Cl. Total exposure depends only on how much arrived systemically and how fast it was removed, which is why AUC is used to measure clearance.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="7-6-half-life.html">&larr; 7.6 Half-Life</a><span class="sp"></span><a href="7-8-protein-binding.html">7.8 Protein Binding &rarr;</a></div><footer>Anesthesia Basic Sciences · Track II · Module 7</footer></div><script src="../../assets/engine.js"></script>
+</body></html>

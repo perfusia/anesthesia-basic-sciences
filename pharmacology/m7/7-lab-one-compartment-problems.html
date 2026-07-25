@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 7 &amp;nbsp;· &amp;nbsp;One-Compartment Problem Set</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/engine.css">
+
+</head>
+<body><div class="wrap"><div class="crumb"><a href="../../index.html">Anesthesia Basic Sciences</a> &nbsp;›&nbsp; <a href="../index.html">Track II</a> &nbsp;›&nbsp; <a href="index.html">Module 7</a> &nbsp;›&nbsp; M7.L7</div><header class="top"><h1>Lab 7 &nbsp;· &nbsp;One-Compartment Problem Set</h1><p class="tagline">Work each on paper before revealing. The exam is calculation-weighted and these are the calculations.</p></header><div class="accentbar" style="background:var(--spo2)"></div><div class="objectives"><span class="label">Lab objectives</span><ul><li>Compute Vd, Cl, k, and half-life from clinical data.</li><li>Calculate loading and maintenance doses.</li><li>Apply the five-half-life rule in both directions.</li><li>Compute unionised fraction and predict clinical consequence.</li></ul></div>
+<div class="box"><span class="label">Reference</span>
+<p>Vd = Dose/C₀ · Cl = k × Vd · k = Cl/Vd · t½ = 0.693 Vd/Cl · LD = Vd × C<sub>target</sub> · Maintenance rate = Cl × C<sub>target</sub> · AUC = F·Dose/Cl · % unionised (base) = 100/(1 + 10^(pKa − pH))</p></div>
+
+<h3>Problem 1</h3>
+<p>A 400 mg intravenous bolus produces an extrapolated C₀ of 8 mg/L. Half-life is measured at 4 hours. Find Vd, k, and Cl.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Vd = 400 / 8 = <strong>50 L</strong>.</p>
+<p>k = 0.693 / 4 = <strong>0.173 hr⁻¹</strong>.</p>
+<p>Cl = k × Vd = 0.173 × 50 = <strong>8.7 L/hr</strong>.</p>
+<p>Note the order. Vd and half-life were measured; clearance was derived. In a real study it is usually the reverse, with clearance from AUC and Vd from extrapolation, and half-life falling out last.</p></div></details>
+
+<h3>Problem 2</h3>
+<p>Same drug. You want a steady-state concentration of 12 mg/L. Give the loading dose and the maintenance infusion rate.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>LD = Vd × C = 50 × 12 = <strong>600 mg</strong>.</p>
+<p>Maintenance = Cl × C = 8.7 × 12 = <strong>104 mg/hr</strong>.</p>
+<p>The loading dose fills the volume and depends only on Vd. The infusion replaces what is cleared and depends only on Cl. Two different parameters answering two different questions.</p></div></details>
+
+<h3>Problem 3</h3>
+<p>Without a loading dose, how long until that infusion reaches 94% of steady state?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>94% corresponds to four half-lives. 4 × 4 hours = <strong>16 hours</strong>.</p>
+<p>Doubling the infusion rate would not shorten this at all. It would double the plateau and arrive on the same schedule. Only the loading dose changes the timing, which is the entire clinical reason loading doses exist.</p></div></details>
+
+<h3>Problem 4</h3>
+<p>A patient develops acute kidney injury and this drug's clearance halves. Vd is unchanged. What happens to k, half-life, the loading dose, and the maintenance rate?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>k = Cl/Vd, so k halves to <strong>0.087 hr⁻¹</strong>.</p>
+<p>t½ = 0.693/k, so half-life doubles to <strong>8 hours</strong>.</p>
+<p>Loading dose is <strong>unchanged at 600 mg</strong>, because Vd did not change.</p>
+<p>Maintenance rate <strong>halves to 52 mg/hr</strong>, because clearance did.</p>
+<p>Time to the new steady state also doubles, to 32 hours for 94%.</p></div></details>
+
+<h3>Problem 5</h3>
+<p>A different patient is fluid-resuscitated and Vd doubles from 50 to 100 L. Clearance is intact. Same questions.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>k = 8.7/100 = <strong>0.087 hr⁻¹</strong>, halved.</p>
+<p>t½ = <strong>8 hours</strong>, doubled.</p>
+<p>Loading dose <strong>doubles to 1200 mg</strong>, because the volume to fill doubled.</p>
+<p>Maintenance rate is <strong>unchanged at 104 mg/hr</strong>, because clearance is unchanged.</p>
+<p>Compare with Problem 4. Identical half-life change, opposite dosing consequences. This is why a half-life alone is not actionable.</p></div></details>
+
+<h3>Problem 6</h3>
+<p>Bupivacaine has a pKa of 8.1. Compute the unionised percentage at pH 7.4 and at pH 7.0.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>At pH 7.4: 10^(8.1 − 7.4) = 10^0.7 = 5.01. 100/(1 + 5.01) = <strong>16.6%</strong>.</p>
+<p>At pH 7.0: 10^(8.1 − 7.0) = 10^1.1 = 12.6. 100/(1 + 12.6) = <strong>7.4%</strong>.</p>
+<p>A 0.4 unit fall in pH more than halves the membrane-permeable fraction. This is the mechanism of both failed blocks in infected tissue and fetal ion trapping.</p></div></details>
+
+<h3>Problem 7</h3>
+<p>A drug has hepatic extraction ratio 0.9 and hepatic blood flow is 1.5 L/min. Compute clearance, then recompute for a shocked patient whose hepatic blood flow falls to 0.8 L/min.</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>Normal: Cl = Q × ER = 1.5 × 0.9 = <strong>1.35 L/min</strong>.</p>
+<p>Shocked: Cl = 0.8 × 0.9 = <strong>0.72 L/min</strong>, a 47% fall.</p>
+<p>Clearance of a high-extraction drug tracks blood flow almost exactly, because the enzymes were never the constraint. An unchanged infusion rate in this patient produces roughly double the intended steady-state concentration.</p></div></details>
+
+<h3>Problem 8</h3>
+<p>Oral bioavailability of a drug is 0.3 and clearance is 20 L/hr. What oral dose gives the same AUC as a 60 mg intravenous dose?</p>
+<details class="recall"><summary>Work it</summary><div class="ans">
+<p>AUC<sub>IV</sub> = 1 × 60 / 20 = <strong>3 mg·hr/L</strong>.</p>
+<p>For the oral route: 3 = 0.3 × Dose / 20, so Dose = 3 × 20 / 0.3 = <strong>200 mg</strong>.</p>
+<p>Equivalently, divide the IV dose by F. This is exactly the arithmetic behind converting intravenous morphine to oral.</p></div></details>
+<div class="quiz"><h3>Check yourself</h3><div class="qhead">First answer locks · mechanism appears on lock</div><div class="q"><div class="qnum">Q1</div><div class="qtext">A 300 mg bolus gives C₀ of 6 mg/L with a half-life of 3 hours. Clearance is:</div>
+<div class="opts">
+<button class="opt">2.9 L/hr</button>
+<button class="opt">16.7 L/hr</button>
+<button class="opt" data-correct="1">11.6 L/hr</button>
+<button class="opt">50 L/hr</button>
+</div>
+<div class="why" data-plain="Vd = 300/6 = 50 L. k = 0.693/3 = 0.231 hr⁻¹. Cl = k × Vd = 0.231 × 50 = 11.6 L/hr."><b>Mechanism</b>Vd = 300/6 = 50 L. k = 0.693/3 = 0.231 hr⁻¹. Cl = k × Vd = 0.231 × 50 = 11.6 L/hr.</div></div>
+<div class="q"><div class="qnum">Q2</div><div class="qtext">Clearance 10 L/hr, target concentration 5 mg/L. The maintenance infusion rate is:</div>
+<div class="opts">
+<button class="opt" data-correct="1">50 mg/hr</button>
+<button class="opt">2 mg/hr</button>
+<button class="opt">0.5 mg/hr</button>
+<button class="opt">500 mg/hr</button>
+</div>
+<div class="why" data-plain="Maintenance rate = Cl × target concentration = 10 × 5 = 50 mg/hr. It replaces exactly what is being cleared and does not involve Vd."><b>Mechanism</b>Maintenance rate = Cl × target concentration = 10 × 5 = 50 mg/hr. It replaces exactly what is being cleared and does not involve Vd.</div></div>
+<div class="q"><div class="qnum">Q3</div><div class="qtext">A drug with a 6-hour half-life reaches approximately 97% of steady state after:</div>
+<div class="opts">
+<button class="opt">12 hours</button>
+<button class="opt">60 hours</button>
+<button class="opt">6 hours</button>
+<button class="opt" data-correct="1">30 hours</button>
+</div>
+<div class="why" data-plain="Five half-lives gives 96.9%, so 5 × 6 = 30 hours. Raising the infusion rate would not shorten this."><b>Mechanism</b>Five half-lives gives 96.9%, so 5 × 6 = 30 hours. Raising the infusion rate would not shorten this.</div></div>
+<div class="q"><div class="qnum">Q4</div><div class="qtext">Hepatic blood flow falls from 1.5 to 0.75 L/min in a drug with extraction ratio 0.9. Clearance falls by:</div>
+<div class="opts">
+<button class="opt">It is unchanged</button>
+<button class="opt">10%</button>
+<button class="opt" data-correct="1">50%</button>
+<button class="opt">90%</button>
+</div>
+<div class="why" data-plain="Cl = Q × ER, and ER is unchanged, so clearance tracks flow exactly. Halving flow halves clearance for a high-extraction drug."><b>Mechanism</b>Cl = Q × ER, and ER is unchanged, so clearance tracks flow exactly. Halving flow halves clearance for a high-extraction drug.</div></div>
+<div class="q"><div class="qnum">Q5</div><div class="qtext">Vd 60 L, clearance 12 L/hr. Give half-life in hours to one decimal.</div>
+<div class="fib" data-answers='["3.5", "3.5 hours", "3.47", "3.5 hr", "3.465"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="t½ = 0.693 × Vd/Cl = 0.693 × 60/12 = 3.47 hours."><b>Mechanism</b>t½ = 0.693 × Vd/Cl = 0.693 × 60/12 = 3.47 hours.</div></div>
+<div class="q"><div class="qnum">Q6</div><div class="qtext">Lidocaine pKa 7.9. Give percentage unionised at pH 7.4, to the nearest whole number.</div>
+<div class="fib" data-answers='["24", "24%", "24 percent", "23", "25"]'><input type="text" placeholder="type your answer"><button>Check</button></div>
+<div class="why" data-plain="10^(7.9 − 7.4) = 10^0.5 = 3.16, so 100/(1 + 3.16) = 24%. At pH 6.4 in infected tissue this falls to about 3%."><b>Mechanism</b>10^(7.9 − 7.4) = 10^0.5 = 3.16, so 100/(1 + 3.16) = 24%. At pH 6.4 in infected tissue this falls to about 3%.</div></div><div class="scorebar"><span class="score">0 / 0 answered</span><button class="btn copymiss">Copy my misses</button></div></div><div class="pagenav"><a href="7-9-ionisation-and-ion-trapping.html">&larr; 7.9 Ionisation and Ion Trapping</a><span class="sp"></span><a href="7-exam.html">Module 7 Exam &rarr;</a></div><footer>Anesthesia Basic Sciences · Track II · Module 7</footer></div><script src="../../assets/engine.js"></script>
+</body></html>
